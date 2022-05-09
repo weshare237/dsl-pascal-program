@@ -117,6 +117,12 @@ public class DemoFkdFactoryImpl extends EFactoryImpl implements DemoFkdFactory
       case DemoFkdPackage.DYNAMIC_ARRAY_TYPE: return createdynamic_array_type();
       case DemoFkdPackage.INDEX_TYPE: return createindex_type();
       case DemoFkdPackage.RECORD_TYPE: return createrecord_type();
+      case DemoFkdPackage.CLASS_TYPE: return createclass_type();
+      case DemoFkdPackage.MEMBER_LIST: return createmember_list();
+      case DemoFkdPackage.PROPERTIES_PART: return createproperties_part();
+      case DemoFkdPackage.PROPERTY_SECTION: return createproperty_section();
+      case DemoFkdPackage.PROPERTY_LIST: return createproperty_list();
+      case DemoFkdPackage.METHOD_PART: return createmethod_part();
       case DemoFkdPackage.FIELD_LIST: return createfield_list();
       case DemoFkdPackage.FIXED_PART: return createfixed_part();
       case DemoFkdPackage.VARIABLE_IDENTIFIER_LIST: return createvariable_identifier_list();
@@ -768,6 +774,78 @@ public class DemoFkdFactoryImpl extends EFactoryImpl implements DemoFkdFactory
   {
     record_typeImpl record_type = new record_typeImpl();
     return record_type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public class_type createclass_type()
+  {
+    class_typeImpl class_type = new class_typeImpl();
+    return class_type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public member_list createmember_list()
+  {
+    member_listImpl member_list = new member_listImpl();
+    return member_list;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public properties_part createproperties_part()
+  {
+    properties_partImpl properties_part = new properties_partImpl();
+    return properties_part;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public property_section createproperty_section()
+  {
+    property_sectionImpl property_section = new property_sectionImpl();
+    return property_section;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public property_list createproperty_list()
+  {
+    property_listImpl property_list = new property_listImpl();
+    return property_list;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public method_part createmethod_part()
+  {
+    method_partImpl method_part = new method_partImpl();
+    return method_part;
   }
 
   /**

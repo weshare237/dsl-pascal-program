@@ -206,7 +206,7 @@ structured_type:
 ;
 
 unpacked_structured_type: //TODO: ADDED DYNAMIC_ARRAY_TYPE
-	array=array_type | dynamic=dynamic_array_type | record=record_type | set=set_type | file=file_type
+	array=array_type | dynamic=dynamic_array_type | record=record_type | set=set_type | file=file_type | class=class_type
 ;
 
 array_type:
@@ -224,6 +224,34 @@ index_type:
 record_type:
 	recordKeyword="record" fields=field_list? endKeyword="end"	
 ; 
+
+class_type:
+	classKeyword="class" members=member_list? endKeyword="end"
+;
+
+member_list:
+	( properties_part ( ";"  methods+=method_part ) ? | methods+=method_part ) ( ";" ) ?
+;
+
+properties_part:
+	visibility=VISIBILITY_SUPPORTED sections+=property_section ( ";" sections+=property_section ) *
+;
+
+property_section:
+	properties=property_list ":" type=type
+;
+
+property_list:
+	names+=ID ( "," names+=ID ) *	
+;
+
+terminal VISIBILITY_SUPPORTED:
+	"private" | "public" | "protected"
+;
+
+method_part:
+	VISIBILITY_SUPPORTED procedure_and_function_declaration_part
+;
 
 field_list:
 	( fixed=fixed_part ( ";" variants+=variant_part ) ? | variants+=variant_part ) ( ";" ) ? 

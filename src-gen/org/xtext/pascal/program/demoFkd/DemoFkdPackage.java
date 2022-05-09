@@ -2014,13 +2014,22 @@ public interface DemoFkdPackage extends EPackage
   int UNPACKED_STRUCTURED_TYPE__FILE = 4;
 
   /**
+   * The feature id for the '<em><b>Class</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int UNPACKED_STRUCTURED_TYPE__CLASS = 5;
+
+  /**
    * The number of structural features of the '<em>unpacked structured type</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int UNPACKED_STRUCTURED_TYPE_FEATURE_COUNT = 5;
+  int UNPACKED_STRUCTURED_TYPE_FEATURE_COUNT = 6;
 
   /**
    * The meta object id for the '{@link org.xtext.pascal.program.demoFkd.impl.array_typeImpl <em>array type</em>}' class.
@@ -2162,6 +2171,210 @@ public interface DemoFkdPackage extends EPackage
   int RECORD_TYPE_FEATURE_COUNT = 3;
 
   /**
+   * The meta object id for the '{@link org.xtext.pascal.program.demoFkd.impl.class_typeImpl <em>class type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.pascal.program.demoFkd.impl.class_typeImpl
+   * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getclass_type()
+   * @generated
+   */
+  int CLASS_TYPE = 52;
+
+  /**
+   * The feature id for the '<em><b>Class Keyword</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLASS_TYPE__CLASS_KEYWORD = 0;
+
+  /**
+   * The feature id for the '<em><b>Members</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLASS_TYPE__MEMBERS = 1;
+
+  /**
+   * The feature id for the '<em><b>End Keyword</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLASS_TYPE__END_KEYWORD = 2;
+
+  /**
+   * The number of structural features of the '<em>class type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLASS_TYPE_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.pascal.program.demoFkd.impl.member_listImpl <em>member list</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.pascal.program.demoFkd.impl.member_listImpl
+   * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getmember_list()
+   * @generated
+   */
+  int MEMBER_LIST = 53;
+
+  /**
+   * The feature id for the '<em><b>Methods</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MEMBER_LIST__METHODS = 0;
+
+  /**
+   * The number of structural features of the '<em>member list</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MEMBER_LIST_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.pascal.program.demoFkd.impl.properties_partImpl <em>properties part</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.pascal.program.demoFkd.impl.properties_partImpl
+   * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getproperties_part()
+   * @generated
+   */
+  int PROPERTIES_PART = 54;
+
+  /**
+   * The feature id for the '<em><b>Methods</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTIES_PART__METHODS = MEMBER_LIST__METHODS;
+
+  /**
+   * The feature id for the '<em><b>Visibility</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTIES_PART__VISIBILITY = MEMBER_LIST_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Sections</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTIES_PART__SECTIONS = MEMBER_LIST_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>properties part</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTIES_PART_FEATURE_COUNT = MEMBER_LIST_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.pascal.program.demoFkd.impl.property_sectionImpl <em>property section</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.pascal.program.demoFkd.impl.property_sectionImpl
+   * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getproperty_section()
+   * @generated
+   */
+  int PROPERTY_SECTION = 55;
+
+  /**
+   * The feature id for the '<em><b>Properties</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTY_SECTION__PROPERTIES = 0;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTY_SECTION__TYPE = 1;
+
+  /**
+   * The number of structural features of the '<em>property section</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTY_SECTION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.pascal.program.demoFkd.impl.property_listImpl <em>property list</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.pascal.program.demoFkd.impl.property_listImpl
+   * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getproperty_list()
+   * @generated
+   */
+  int PROPERTY_LIST = 56;
+
+  /**
+   * The feature id for the '<em><b>Names</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTY_LIST__NAMES = 0;
+
+  /**
+   * The number of structural features of the '<em>property list</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTY_LIST_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.pascal.program.demoFkd.impl.method_partImpl <em>method part</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.pascal.program.demoFkd.impl.method_partImpl
+   * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getmethod_part()
+   * @generated
+   */
+  int METHOD_PART = 57;
+
+  /**
+   * The number of structural features of the '<em>method part</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int METHOD_PART_FEATURE_COUNT = 0;
+
+  /**
    * The meta object id for the '{@link org.xtext.pascal.program.demoFkd.impl.field_listImpl <em>field list</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2169,7 +2382,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getfield_list()
    * @generated
    */
-  int FIELD_LIST = 52;
+  int FIELD_LIST = 58;
 
   /**
    * The feature id for the '<em><b>Fixed</b></em>' containment reference.
@@ -2206,7 +2419,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getfixed_part()
    * @generated
    */
-  int FIXED_PART = 53;
+  int FIXED_PART = 59;
 
   /**
    * The feature id for the '<em><b>Sections</b></em>' containment reference list.
@@ -2234,7 +2447,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getvariable_identifier_list()
    * @generated
    */
-  int VARIABLE_IDENTIFIER_LIST = 54;
+  int VARIABLE_IDENTIFIER_LIST = 60;
 
   /**
    * The feature id for the '<em><b>Names</b></em>' attribute list.
@@ -2262,7 +2475,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getvariable_section()
    * @generated
    */
-  int VARIABLE_SECTION = 55;
+  int VARIABLE_SECTION = 61;
 
   /**
    * The feature id for the '<em><b>Identifiers</b></em>' containment reference.
@@ -2299,7 +2512,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getrecord_section()
    * @generated
    */
-  int RECORD_SECTION = 56;
+  int RECORD_SECTION = 62;
 
   /**
    * The feature id for the '<em><b>Identifiers</b></em>' containment reference.
@@ -2336,7 +2549,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getvariant_part()
    * @generated
    */
-  int VARIANT_PART = 57;
+  int VARIANT_PART = 63;
 
   /**
    * The feature id for the '<em><b>Tag</b></em>' containment reference.
@@ -2382,7 +2595,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#gettag_field()
    * @generated
    */
-  int TAG_FIELD = 58;
+  int TAG_FIELD = 64;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2410,7 +2623,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getvariant()
    * @generated
    */
-  int VARIANT = 59;
+  int VARIANT = 65;
 
   /**
    * The feature id for the '<em><b>Labels</b></em>' containment reference.
@@ -2447,7 +2660,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getset_type()
    * @generated
    */
-  int SET_TYPE = 60;
+  int SET_TYPE = 66;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -2475,7 +2688,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getfile_type()
    * @generated
    */
-  int FILE_TYPE = 61;
+  int FILE_TYPE = 67;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -2503,7 +2716,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getpointer_type()
    * @generated
    */
-  int POINTER_TYPE = 62;
+  int POINTER_TYPE = 68;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -2531,7 +2744,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getvariable_declaration_part()
    * @generated
    */
-  int VARIABLE_DECLARATION_PART = 63;
+  int VARIABLE_DECLARATION_PART = 69;
 
   /**
    * The feature id for the '<em><b>Sections</b></em>' containment reference list.
@@ -2559,7 +2772,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getprocedure_and_function_declaration_part()
    * @generated
    */
-  int PROCEDURE_AND_FUNCTION_DECLARATION_PART = 64;
+  int PROCEDURE_AND_FUNCTION_DECLARATION_PART = 70;
 
   /**
    * The feature id for the '<em><b>Procedures</b></em>' containment reference list.
@@ -2568,7 +2781,7 @@ public interface DemoFkdPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROCEDURE_AND_FUNCTION_DECLARATION_PART__PROCEDURES = 0;
+  int PROCEDURE_AND_FUNCTION_DECLARATION_PART__PROCEDURES = METHOD_PART_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Functions</b></em>' containment reference list.
@@ -2577,7 +2790,7 @@ public interface DemoFkdPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROCEDURE_AND_FUNCTION_DECLARATION_PART__FUNCTIONS = 1;
+  int PROCEDURE_AND_FUNCTION_DECLARATION_PART__FUNCTIONS = METHOD_PART_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>procedure and function declaration part</em>' class.
@@ -2586,7 +2799,7 @@ public interface DemoFkdPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROCEDURE_AND_FUNCTION_DECLARATION_PART_FEATURE_COUNT = 2;
+  int PROCEDURE_AND_FUNCTION_DECLARATION_PART_FEATURE_COUNT = METHOD_PART_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.xtext.pascal.program.demoFkd.impl.abstraction_declarationImpl <em>abstraction declaration</em>}' class.
@@ -2596,7 +2809,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getabstraction_declaration()
    * @generated
    */
-  int ABSTRACTION_DECLARATION = 65;
+  int ABSTRACTION_DECLARATION = 71;
 
   /**
    * The feature id for the '<em><b>Heading</b></em>' containment reference.
@@ -2642,7 +2855,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getabstraction_heading()
    * @generated
    */
-  int ABSTRACTION_HEADING = 66;
+  int ABSTRACTION_HEADING = 72;
 
   /**
    * The feature id for the '<em><b>Heading</b></em>' containment reference.
@@ -2715,7 +2928,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getformal_parameter_list()
    * @generated
    */
-  int FORMAL_PARAMETER_LIST = 67;
+  int FORMAL_PARAMETER_LIST = 73;
 
   /**
    * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
@@ -2743,7 +2956,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getformal_parameter_section()
    * @generated
    */
-  int FORMAL_PARAMETER_SECTION = 68;
+  int FORMAL_PARAMETER_SECTION = 74;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -2798,7 +3011,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getvalue_parameter_section()
    * @generated
    */
-  int VALUE_PARAMETER_SECTION = 69;
+  int VALUE_PARAMETER_SECTION = 75;
 
   /**
    * The feature id for the '<em><b>Identifiers</b></em>' containment reference.
@@ -2835,7 +3048,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getparameter_type()
    * @generated
    */
-  int PARAMETER_TYPE = 70;
+  int PARAMETER_TYPE = 76;
 
   /**
    * The feature id for the '<em><b>Array</b></em>' containment reference.
@@ -2872,7 +3085,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getconformant_array_schema()
    * @generated
    */
-  int CONFORMANT_ARRAY_SCHEMA = 71;
+  int CONFORMANT_ARRAY_SCHEMA = 77;
 
   /**
    * The feature id for the '<em><b>Packed</b></em>' containment reference.
@@ -2909,7 +3122,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getpacked_conformant_array_schema()
    * @generated
    */
-  int PACKED_CONFORMANT_ARRAY_SCHEMA = 72;
+  int PACKED_CONFORMANT_ARRAY_SCHEMA = 78;
 
   /**
    * The feature id for the '<em><b>Bound</b></em>' containment reference.
@@ -2946,7 +3159,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getbound_specification()
    * @generated
    */
-  int BOUND_SPECIFICATION = 73;
+  int BOUND_SPECIFICATION = 79;
 
   /**
    * The feature id for the '<em><b>Initial</b></em>' attribute.
@@ -2992,7 +3205,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getunpacked_conformant_array_schema()
    * @generated
    */
-  int UNPACKED_CONFORMANT_ARRAY_SCHEMA = 74;
+  int UNPACKED_CONFORMANT_ARRAY_SCHEMA = 80;
 
   /**
    * The feature id for the '<em><b>Bounds</b></em>' containment reference list.
@@ -3029,7 +3242,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getvariable_parameter_section()
    * @generated
    */
-  int VARIABLE_PARAMETER_SECTION = 75;
+  int VARIABLE_PARAMETER_SECTION = 81;
 
   /**
    * The feature id for the '<em><b>Identifiers</b></em>' containment reference.
@@ -4827,6 +5040,17 @@ public interface DemoFkdPackage extends EPackage
   EReference getunpacked_structured_type_File();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.pascal.program.demoFkd.unpacked_structured_type#getClass_ <em>Class</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Class</em>'.
+   * @see org.xtext.pascal.program.demoFkd.unpacked_structured_type#getClass_()
+   * @see #getunpacked_structured_type()
+   * @generated
+   */
+  EReference getunpacked_structured_type_Class();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.pascal.program.demoFkd.array_type <em>array type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -4942,6 +5166,165 @@ public interface DemoFkdPackage extends EPackage
    * @generated
    */
   EAttribute getrecord_type_EndKeyword();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.pascal.program.demoFkd.class_type <em>class type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>class type</em>'.
+   * @see org.xtext.pascal.program.demoFkd.class_type
+   * @generated
+   */
+  EClass getclass_type();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.pascal.program.demoFkd.class_type#getClassKeyword <em>Class Keyword</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Class Keyword</em>'.
+   * @see org.xtext.pascal.program.demoFkd.class_type#getClassKeyword()
+   * @see #getclass_type()
+   * @generated
+   */
+  EAttribute getclass_type_ClassKeyword();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.pascal.program.demoFkd.class_type#getMembers <em>Members</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Members</em>'.
+   * @see org.xtext.pascal.program.demoFkd.class_type#getMembers()
+   * @see #getclass_type()
+   * @generated
+   */
+  EReference getclass_type_Members();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.pascal.program.demoFkd.class_type#getEndKeyword <em>End Keyword</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>End Keyword</em>'.
+   * @see org.xtext.pascal.program.demoFkd.class_type#getEndKeyword()
+   * @see #getclass_type()
+   * @generated
+   */
+  EAttribute getclass_type_EndKeyword();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.pascal.program.demoFkd.member_list <em>member list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>member list</em>'.
+   * @see org.xtext.pascal.program.demoFkd.member_list
+   * @generated
+   */
+  EClass getmember_list();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.pascal.program.demoFkd.member_list#getMethods <em>Methods</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Methods</em>'.
+   * @see org.xtext.pascal.program.demoFkd.member_list#getMethods()
+   * @see #getmember_list()
+   * @generated
+   */
+  EReference getmember_list_Methods();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.pascal.program.demoFkd.properties_part <em>properties part</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>properties part</em>'.
+   * @see org.xtext.pascal.program.demoFkd.properties_part
+   * @generated
+   */
+  EClass getproperties_part();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.pascal.program.demoFkd.properties_part#getVisibility <em>Visibility</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Visibility</em>'.
+   * @see org.xtext.pascal.program.demoFkd.properties_part#getVisibility()
+   * @see #getproperties_part()
+   * @generated
+   */
+  EAttribute getproperties_part_Visibility();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.pascal.program.demoFkd.properties_part#getSections <em>Sections</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Sections</em>'.
+   * @see org.xtext.pascal.program.demoFkd.properties_part#getSections()
+   * @see #getproperties_part()
+   * @generated
+   */
+  EReference getproperties_part_Sections();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.pascal.program.demoFkd.property_section <em>property section</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>property section</em>'.
+   * @see org.xtext.pascal.program.demoFkd.property_section
+   * @generated
+   */
+  EClass getproperty_section();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.pascal.program.demoFkd.property_section#getProperties <em>Properties</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Properties</em>'.
+   * @see org.xtext.pascal.program.demoFkd.property_section#getProperties()
+   * @see #getproperty_section()
+   * @generated
+   */
+  EReference getproperty_section_Properties();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.pascal.program.demoFkd.property_section#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type</em>'.
+   * @see org.xtext.pascal.program.demoFkd.property_section#getType()
+   * @see #getproperty_section()
+   * @generated
+   */
+  EReference getproperty_section_Type();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.pascal.program.demoFkd.property_list <em>property list</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>property list</em>'.
+   * @see org.xtext.pascal.program.demoFkd.property_list
+   * @generated
+   */
+  EClass getproperty_list();
+
+  /**
+   * Returns the meta object for the attribute list '{@link org.xtext.pascal.program.demoFkd.property_list#getNames <em>Names</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Names</em>'.
+   * @see org.xtext.pascal.program.demoFkd.property_list#getNames()
+   * @see #getproperty_list()
+   * @generated
+   */
+  EAttribute getproperty_list_Names();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.pascal.program.demoFkd.method_part <em>method part</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>method part</em>'.
+   * @see org.xtext.pascal.program.demoFkd.method_part
+   * @generated
+   */
+  EClass getmethod_part();
 
   /**
    * Returns the meta object for class '{@link org.xtext.pascal.program.demoFkd.field_list <em>field list</em>}'.
@@ -7129,6 +7512,14 @@ public interface DemoFkdPackage extends EPackage
     EReference UNPACKED_STRUCTURED_TYPE__FILE = eINSTANCE.getunpacked_structured_type_File();
 
     /**
+     * The meta object literal for the '<em><b>Class</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference UNPACKED_STRUCTURED_TYPE__CLASS = eINSTANCE.getunpacked_structured_type_Class();
+
+    /**
      * The meta object literal for the '{@link org.xtext.pascal.program.demoFkd.impl.array_typeImpl <em>array type</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7223,6 +7614,138 @@ public interface DemoFkdPackage extends EPackage
      * @generated
      */
     EAttribute RECORD_TYPE__END_KEYWORD = eINSTANCE.getrecord_type_EndKeyword();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.pascal.program.demoFkd.impl.class_typeImpl <em>class type</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.pascal.program.demoFkd.impl.class_typeImpl
+     * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getclass_type()
+     * @generated
+     */
+    EClass CLASS_TYPE = eINSTANCE.getclass_type();
+
+    /**
+     * The meta object literal for the '<em><b>Class Keyword</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CLASS_TYPE__CLASS_KEYWORD = eINSTANCE.getclass_type_ClassKeyword();
+
+    /**
+     * The meta object literal for the '<em><b>Members</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CLASS_TYPE__MEMBERS = eINSTANCE.getclass_type_Members();
+
+    /**
+     * The meta object literal for the '<em><b>End Keyword</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CLASS_TYPE__END_KEYWORD = eINSTANCE.getclass_type_EndKeyword();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.pascal.program.demoFkd.impl.member_listImpl <em>member list</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.pascal.program.demoFkd.impl.member_listImpl
+     * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getmember_list()
+     * @generated
+     */
+    EClass MEMBER_LIST = eINSTANCE.getmember_list();
+
+    /**
+     * The meta object literal for the '<em><b>Methods</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MEMBER_LIST__METHODS = eINSTANCE.getmember_list_Methods();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.pascal.program.demoFkd.impl.properties_partImpl <em>properties part</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.pascal.program.demoFkd.impl.properties_partImpl
+     * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getproperties_part()
+     * @generated
+     */
+    EClass PROPERTIES_PART = eINSTANCE.getproperties_part();
+
+    /**
+     * The meta object literal for the '<em><b>Visibility</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROPERTIES_PART__VISIBILITY = eINSTANCE.getproperties_part_Visibility();
+
+    /**
+     * The meta object literal for the '<em><b>Sections</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PROPERTIES_PART__SECTIONS = eINSTANCE.getproperties_part_Sections();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.pascal.program.demoFkd.impl.property_sectionImpl <em>property section</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.pascal.program.demoFkd.impl.property_sectionImpl
+     * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getproperty_section()
+     * @generated
+     */
+    EClass PROPERTY_SECTION = eINSTANCE.getproperty_section();
+
+    /**
+     * The meta object literal for the '<em><b>Properties</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PROPERTY_SECTION__PROPERTIES = eINSTANCE.getproperty_section_Properties();
+
+    /**
+     * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PROPERTY_SECTION__TYPE = eINSTANCE.getproperty_section_Type();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.pascal.program.demoFkd.impl.property_listImpl <em>property list</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.pascal.program.demoFkd.impl.property_listImpl
+     * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getproperty_list()
+     * @generated
+     */
+    EClass PROPERTY_LIST = eINSTANCE.getproperty_list();
+
+    /**
+     * The meta object literal for the '<em><b>Names</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROPERTY_LIST__NAMES = eINSTANCE.getproperty_list_Names();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.pascal.program.demoFkd.impl.method_partImpl <em>method part</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.pascal.program.demoFkd.impl.method_partImpl
+     * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getmethod_part()
+     * @generated
+     */
+    EClass METHOD_PART = eINSTANCE.getmethod_part();
 
     /**
      * The meta object literal for the '{@link org.xtext.pascal.program.demoFkd.impl.field_listImpl <em>field list</em>}' class.

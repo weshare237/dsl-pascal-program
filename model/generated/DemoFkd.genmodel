@@ -218,6 +218,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//unpacked_structured_type/record"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//unpacked_structured_type/set"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//unpacked_structured_type/file"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//unpacked_structured_type/class"/>
     </genClasses>
     <genClasses ecoreClass="DemoFkd.ecore#//array_type">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//array_type/indexes"/>
@@ -234,6 +235,26 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//record_type/fields"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DemoFkd.ecore#//record_type/endKeyword"/>
     </genClasses>
+    <genClasses ecoreClass="DemoFkd.ecore#//class_type">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DemoFkd.ecore#//class_type/classKeyword"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//class_type/members"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DemoFkd.ecore#//class_type/endKeyword"/>
+    </genClasses>
+    <genClasses ecoreClass="DemoFkd.ecore#//member_list">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//member_list/methods"/>
+    </genClasses>
+    <genClasses ecoreClass="DemoFkd.ecore#//properties_part">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DemoFkd.ecore#//properties_part/visibility"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//properties_part/sections"/>
+    </genClasses>
+    <genClasses ecoreClass="DemoFkd.ecore#//property_section">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//property_section/properties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//property_section/type"/>
+    </genClasses>
+    <genClasses ecoreClass="DemoFkd.ecore#//property_list">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DemoFkd.ecore#//property_list/names"/>
+    </genClasses>
+    <genClasses ecoreClass="DemoFkd.ecore#//method_part"/>
     <genClasses ecoreClass="DemoFkd.ecore#//field_list">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//field_list/fixed"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//field_list/variants"/>

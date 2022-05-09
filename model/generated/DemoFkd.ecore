@@ -306,6 +306,8 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="file" eType="#//file_type"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="class" eType="#//class_type"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="array_type">
     <eStructuralFeatures xsi:type="ecore:EReference" name="indexes" upperBound="-1"
@@ -325,6 +327,31 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="endKeyword" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="class_type">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="classKeyword" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="members" eType="#//member_list"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endKeyword" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="member_list">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="methods" upperBound="-1"
+        eType="#//method_part" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="properties_part" eSuperTypes="#//member_list">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="visibility" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sections" upperBound="-1"
+        eType="#//property_section" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="property_section">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" eType="#//property_list"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//type" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="property_list">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="names" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="method_part"/>
   <eClassifiers xsi:type="ecore:EClass" name="field_list">
     <eStructuralFeatures xsi:type="ecore:EReference" name="fixed" eType="#//fixed_part"
         containment="true"/>
@@ -378,7 +405,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="sections" upperBound="-1"
         eType="#//variable_section" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="procedure_and_function_declaration_part">
+  <eClassifiers xsi:type="ecore:EClass" name="procedure_and_function_declaration_part"
+      eSuperTypes="#//method_part">
     <eStructuralFeatures xsi:type="ecore:EReference" name="procedures" upperBound="-1"
         eType="#//abstraction_heading" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="functions" upperBound="-1"

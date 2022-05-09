@@ -437,6 +437,49 @@ public class DemoFkdSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case DemoFkdPackage.CLASS_TYPE:
+      {
+        class_type class_type = (class_type)theEObject;
+        T result = caseclass_type(class_type);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DemoFkdPackage.MEMBER_LIST:
+      {
+        member_list member_list = (member_list)theEObject;
+        T result = casemember_list(member_list);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DemoFkdPackage.PROPERTIES_PART:
+      {
+        properties_part properties_part = (properties_part)theEObject;
+        T result = caseproperties_part(properties_part);
+        if (result == null) result = casemember_list(properties_part);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DemoFkdPackage.PROPERTY_SECTION:
+      {
+        property_section property_section = (property_section)theEObject;
+        T result = caseproperty_section(property_section);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DemoFkdPackage.PROPERTY_LIST:
+      {
+        property_list property_list = (property_list)theEObject;
+        T result = caseproperty_list(property_list);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DemoFkdPackage.METHOD_PART:
+      {
+        method_part method_part = (method_part)theEObject;
+        T result = casemethod_part(method_part);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case DemoFkdPackage.FIELD_LIST:
       {
         field_list field_list = (field_list)theEObject;
@@ -525,6 +568,7 @@ public class DemoFkdSwitch<T> extends Switch<T>
       {
         procedure_and_function_declaration_part procedure_and_function_declaration_part = (procedure_and_function_declaration_part)theEObject;
         T result = caseprocedure_and_function_declaration_part(procedure_and_function_declaration_part);
+        if (result == null) result = casemethod_part(procedure_and_function_declaration_part);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1438,6 +1482,102 @@ public class DemoFkdSwitch<T> extends Switch<T>
    * @generated
    */
   public T caserecord_type(record_type object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>class type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>class type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseclass_type(class_type object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>member list</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>member list</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casemember_list(member_list object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>properties part</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>properties part</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseproperties_part(properties_part object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>property section</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>property section</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseproperty_section(property_section object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>property list</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>property list</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseproperty_list(property_list object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>method part</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>method part</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casemethod_part(method_part object)
   {
     return null;
   }

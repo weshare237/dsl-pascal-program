@@ -336,6 +336,36 @@ public class DemoFkdAdapterFactory extends AdapterFactoryImpl
         return createrecord_typeAdapter();
       }
       @Override
+      public Adapter caseclass_type(class_type object)
+      {
+        return createclass_typeAdapter();
+      }
+      @Override
+      public Adapter casemember_list(member_list object)
+      {
+        return createmember_listAdapter();
+      }
+      @Override
+      public Adapter caseproperties_part(properties_part object)
+      {
+        return createproperties_partAdapter();
+      }
+      @Override
+      public Adapter caseproperty_section(property_section object)
+      {
+        return createproperty_sectionAdapter();
+      }
+      @Override
+      public Adapter caseproperty_list(property_list object)
+      {
+        return createproperty_listAdapter();
+      }
+      @Override
+      public Adapter casemethod_part(method_part object)
+      {
+        return createmethod_partAdapter();
+      }
+      @Override
       public Adapter casefield_list(field_list object)
       {
         return createfield_listAdapter();
@@ -1253,6 +1283,96 @@ public class DemoFkdAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createrecord_typeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.pascal.program.demoFkd.class_type <em>class type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.pascal.program.demoFkd.class_type
+   * @generated
+   */
+  public Adapter createclass_typeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.pascal.program.demoFkd.member_list <em>member list</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.pascal.program.demoFkd.member_list
+   * @generated
+   */
+  public Adapter createmember_listAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.pascal.program.demoFkd.properties_part <em>properties part</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.pascal.program.demoFkd.properties_part
+   * @generated
+   */
+  public Adapter createproperties_partAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.pascal.program.demoFkd.property_section <em>property section</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.pascal.program.demoFkd.property_section
+   * @generated
+   */
+  public Adapter createproperty_sectionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.pascal.program.demoFkd.property_list <em>property list</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.pascal.program.demoFkd.property_list
+   * @generated
+   */
+  public Adapter createproperty_listAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.pascal.program.demoFkd.method_part <em>method part</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.pascal.program.demoFkd.method_part
+   * @generated
+   */
+  public Adapter createmethod_partAdapter()
   {
     return null;
   }

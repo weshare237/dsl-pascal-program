@@ -24,6 +24,7 @@ public class DemoFkdSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_case_statement_SemicolonKeyword_5_q;
 	protected AbstractElementAlias match_field_list_SemicolonKeyword_1_q;
 	protected AbstractElementAlias match_for_statement_DowntoKeyword_2_1_or_ToKeyword_2_0;
+	protected AbstractElementAlias match_member_list_SemicolonKeyword_1_q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
@@ -31,13 +32,26 @@ public class DemoFkdSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_case_statement_SemicolonKeyword_5_q = new TokenAlias(false, true, grammarAccess.getCase_statementAccess().getSemicolonKeyword_5());
 		match_field_list_SemicolonKeyword_1_q = new TokenAlias(false, true, grammarAccess.getField_listAccess().getSemicolonKeyword_1());
 		match_for_statement_DowntoKeyword_2_1_or_ToKeyword_2_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getFor_statementAccess().getDowntoKeyword_2_1()), new TokenAlias(false, false, grammarAccess.getFor_statementAccess().getToKeyword_2_0()));
+		match_member_list_SemicolonKeyword_1_q = new TokenAlias(false, true, grammarAccess.getMember_listAccess().getSemicolonKeyword_1());
 	}
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (ruleCall.getRule() == grammarAccess.getVISIBILITY_SUPPORTEDRule())
+			return getVISIBILITY_SUPPORTEDToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
+	/**
+	 * terminal VISIBILITY_SUPPORTED:
+	 * 	"private" | "public" | "protected"
+	 * ;
+	 */
+	protected String getVISIBILITY_SUPPORTEDToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "private";
+	}
 	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
@@ -51,6 +65,8 @@ public class DemoFkdSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_field_list_SemicolonKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_for_statement_DowntoKeyword_2_1_or_ToKeyword_2_0.equals(syntax))
 				emit_for_statement_DowntoKeyword_2_1_or_ToKeyword_2_0(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_member_list_SemicolonKeyword_1_q.equals(syntax))
+				emit_member_list_SemicolonKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -95,6 +111,21 @@ public class DemoFkdSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * </pre>
 	 */
 	protected void emit_for_statement_DowntoKeyword_2_1_or_ToKeyword_2_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * <pre>
+	 * Ambiguous syntax:
+	 *     ';'?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     methods+=method_part (ambiguity) (rule end)
+	 *     sections+=property_section (ambiguity) (rule end)
+	 
+	 * </pre>
+	 */
+	protected void emit_member_list_SemicolonKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

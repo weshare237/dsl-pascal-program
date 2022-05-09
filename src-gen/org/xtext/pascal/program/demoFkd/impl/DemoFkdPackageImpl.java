@@ -22,6 +22,7 @@ import org.xtext.pascal.program.demoFkd.bound_specification;
 import org.xtext.pascal.program.demoFkd.case_label_list;
 import org.xtext.pascal.program.demoFkd.case_limb;
 import org.xtext.pascal.program.demoFkd.case_statement;
+import org.xtext.pascal.program.demoFkd.class_type;
 import org.xtext.pascal.program.demoFkd.compound_statement;
 import org.xtext.pascal.program.demoFkd.conditional_statement;
 import org.xtext.pascal.program.demoFkd.conformant_array_schema;
@@ -46,6 +47,8 @@ import org.xtext.pascal.program.demoFkd.if_statement;
 import org.xtext.pascal.program.demoFkd.index_type;
 import org.xtext.pascal.program.demoFkd.label;
 import org.xtext.pascal.program.demoFkd.label_declaration_part;
+import org.xtext.pascal.program.demoFkd.member_list;
+import org.xtext.pascal.program.demoFkd.method_part;
 import org.xtext.pascal.program.demoFkd.number;
 import org.xtext.pascal.program.demoFkd.packed_conformant_array_schema;
 import org.xtext.pascal.program.demoFkd.parameter_type;
@@ -54,6 +57,9 @@ import org.xtext.pascal.program.demoFkd.pointer_type;
 import org.xtext.pascal.program.demoFkd.procedure_and_function_declaration_part;
 import org.xtext.pascal.program.demoFkd.program;
 import org.xtext.pascal.program.demoFkd.program_heading_block;
+import org.xtext.pascal.program.demoFkd.properties_part;
+import org.xtext.pascal.program.demoFkd.property_list;
+import org.xtext.pascal.program.demoFkd.property_section;
 import org.xtext.pascal.program.demoFkd.record_section;
 import org.xtext.pascal.program.demoFkd.record_type;
 import org.xtext.pascal.program.demoFkd.repeat_statement;
@@ -460,6 +466,48 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
    * @generated
    */
   private EClass record_typeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass class_typeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass member_listEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass properties_partEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass property_sectionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass property_listEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass method_partEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -2513,6 +2561,17 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
    * @generated
    */
   @Override
+  public EReference getunpacked_structured_type_Class()
+  {
+    return (EReference)unpacked_structured_typeEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getarray_type()
   {
     return array_typeEClass;
@@ -2626,6 +2685,171 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
   public EAttribute getrecord_type_EndKeyword()
   {
     return (EAttribute)record_typeEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getclass_type()
+  {
+    return class_typeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getclass_type_ClassKeyword()
+  {
+    return (EAttribute)class_typeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getclass_type_Members()
+  {
+    return (EReference)class_typeEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getclass_type_EndKeyword()
+  {
+    return (EAttribute)class_typeEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getmember_list()
+  {
+    return member_listEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getmember_list_Methods()
+  {
+    return (EReference)member_listEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getproperties_part()
+  {
+    return properties_partEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getproperties_part_Visibility()
+  {
+    return (EAttribute)properties_partEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getproperties_part_Sections()
+  {
+    return (EReference)properties_partEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getproperty_section()
+  {
+    return property_sectionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getproperty_section_Properties()
+  {
+    return (EReference)property_sectionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getproperty_section_Type()
+  {
+    return (EReference)property_sectionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getproperty_list()
+  {
+    return property_listEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getproperty_list_Names()
+  {
+    return (EAttribute)property_listEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getmethod_part()
+  {
+    return method_partEClass;
   }
 
   /**
@@ -3641,6 +3865,7 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
     createEReference(unpacked_structured_typeEClass, UNPACKED_STRUCTURED_TYPE__RECORD);
     createEReference(unpacked_structured_typeEClass, UNPACKED_STRUCTURED_TYPE__SET);
     createEReference(unpacked_structured_typeEClass, UNPACKED_STRUCTURED_TYPE__FILE);
+    createEReference(unpacked_structured_typeEClass, UNPACKED_STRUCTURED_TYPE__CLASS);
 
     array_typeEClass = createEClass(ARRAY_TYPE);
     createEReference(array_typeEClass, ARRAY_TYPE__INDEXES);
@@ -3656,6 +3881,27 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
     createEAttribute(record_typeEClass, RECORD_TYPE__RECORD_KEYWORD);
     createEReference(record_typeEClass, RECORD_TYPE__FIELDS);
     createEAttribute(record_typeEClass, RECORD_TYPE__END_KEYWORD);
+
+    class_typeEClass = createEClass(CLASS_TYPE);
+    createEAttribute(class_typeEClass, CLASS_TYPE__CLASS_KEYWORD);
+    createEReference(class_typeEClass, CLASS_TYPE__MEMBERS);
+    createEAttribute(class_typeEClass, CLASS_TYPE__END_KEYWORD);
+
+    member_listEClass = createEClass(MEMBER_LIST);
+    createEReference(member_listEClass, MEMBER_LIST__METHODS);
+
+    properties_partEClass = createEClass(PROPERTIES_PART);
+    createEAttribute(properties_partEClass, PROPERTIES_PART__VISIBILITY);
+    createEReference(properties_partEClass, PROPERTIES_PART__SECTIONS);
+
+    property_sectionEClass = createEClass(PROPERTY_SECTION);
+    createEReference(property_sectionEClass, PROPERTY_SECTION__PROPERTIES);
+    createEReference(property_sectionEClass, PROPERTY_SECTION__TYPE);
+
+    property_listEClass = createEClass(PROPERTY_LIST);
+    createEAttribute(property_listEClass, PROPERTY_LIST__NAMES);
+
+    method_partEClass = createEClass(METHOD_PART);
 
     field_listEClass = createEClass(FIELD_LIST);
     createEReference(field_listEClass, FIELD_LIST__FIXED);
@@ -3781,6 +4027,8 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    properties_partEClass.getESuperTypes().add(this.getmember_list());
+    procedure_and_function_declaration_partEClass.getESuperTypes().add(this.getmethod_part());
     abstraction_headingEClass.getESuperTypes().add(this.getabstraction_declaration());
 
     // Initialize classes and features; add operations and parameters
@@ -3996,6 +4244,7 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
     initEReference(getunpacked_structured_type_Record(), this.getrecord_type(), null, "record", null, 0, 1, unpacked_structured_type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getunpacked_structured_type_Set(), this.getset_type(), null, "set", null, 0, 1, unpacked_structured_type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getunpacked_structured_type_File(), this.getfile_type(), null, "file", null, 0, 1, unpacked_structured_type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getunpacked_structured_type_Class(), this.getclass_type(), null, "class", null, 0, 1, unpacked_structured_type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(array_typeEClass, array_type.class, "array_type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getarray_type_Indexes(), this.getindex_type(), null, "indexes", null, 0, -1, array_type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4011,6 +4260,27 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
     initEAttribute(getrecord_type_RecordKeyword(), ecorePackage.getEString(), "recordKeyword", null, 0, 1, record_type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getrecord_type_Fields(), this.getfield_list(), null, "fields", null, 0, 1, record_type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getrecord_type_EndKeyword(), ecorePackage.getEString(), "endKeyword", null, 0, 1, record_type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(class_typeEClass, class_type.class, "class_type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getclass_type_ClassKeyword(), ecorePackage.getEString(), "classKeyword", null, 0, 1, class_type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getclass_type_Members(), this.getmember_list(), null, "members", null, 0, 1, class_type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getclass_type_EndKeyword(), ecorePackage.getEString(), "endKeyword", null, 0, 1, class_type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(member_listEClass, member_list.class, "member_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getmember_list_Methods(), this.getmethod_part(), null, "methods", null, 0, -1, member_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(properties_partEClass, properties_part.class, "properties_part", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getproperties_part_Visibility(), ecorePackage.getEString(), "visibility", null, 0, 1, properties_part.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getproperties_part_Sections(), this.getproperty_section(), null, "sections", null, 0, -1, properties_part.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(property_sectionEClass, property_section.class, "property_section", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getproperty_section_Properties(), this.getproperty_list(), null, "properties", null, 0, 1, property_section.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getproperty_section_Type(), this.gettype(), null, "type", null, 0, 1, property_section.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(property_listEClass, property_list.class, "property_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getproperty_list_Names(), ecorePackage.getEString(), "names", null, 0, -1, property_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(method_partEClass, method_part.class, "method_part", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(field_listEClass, field_list.class, "field_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getfield_list_Fixed(), this.getfixed_part(), null, "fixed", null, 0, 1, field_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

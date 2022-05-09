@@ -25,6 +25,7 @@ import org.xtext.pascal.program.demoFkd.bound_specification;
 import org.xtext.pascal.program.demoFkd.case_label_list;
 import org.xtext.pascal.program.demoFkd.case_limb;
 import org.xtext.pascal.program.demoFkd.case_statement;
+import org.xtext.pascal.program.demoFkd.class_type;
 import org.xtext.pascal.program.demoFkd.compound_statement;
 import org.xtext.pascal.program.demoFkd.conditional_statement;
 import org.xtext.pascal.program.demoFkd.conformant_array_schema;
@@ -49,6 +50,7 @@ import org.xtext.pascal.program.demoFkd.if_statement;
 import org.xtext.pascal.program.demoFkd.index_type;
 import org.xtext.pascal.program.demoFkd.label;
 import org.xtext.pascal.program.demoFkd.label_declaration_part;
+import org.xtext.pascal.program.demoFkd.member_list;
 import org.xtext.pascal.program.demoFkd.number;
 import org.xtext.pascal.program.demoFkd.packed_conformant_array_schema;
 import org.xtext.pascal.program.demoFkd.parameter_type;
@@ -57,6 +59,9 @@ import org.xtext.pascal.program.demoFkd.pointer_type;
 import org.xtext.pascal.program.demoFkd.procedure_and_function_declaration_part;
 import org.xtext.pascal.program.demoFkd.program;
 import org.xtext.pascal.program.demoFkd.program_heading_block;
+import org.xtext.pascal.program.demoFkd.properties_part;
+import org.xtext.pascal.program.demoFkd.property_list;
+import org.xtext.pascal.program.demoFkd.property_section;
 import org.xtext.pascal.program.demoFkd.record_section;
 import org.xtext.pascal.program.demoFkd.record_type;
 import org.xtext.pascal.program.demoFkd.repeat_statement;
@@ -164,6 +169,9 @@ public class DemoFkdSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case DemoFkdPackage.CASE_STATEMENT:
 				sequence_case_statement(context, (case_statement) semanticObject); 
 				return; 
+			case DemoFkdPackage.CLASS_TYPE:
+				sequence_class_type(context, (class_type) semanticObject); 
+				return; 
 			case DemoFkdPackage.COMPOUND_STATEMENT:
 				sequence_compound_statement(context, (compound_statement) semanticObject); 
 				return; 
@@ -236,6 +244,9 @@ public class DemoFkdSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case DemoFkdPackage.LABEL_DECLARATION_PART:
 				sequence_label_declaration_part(context, (label_declaration_part) semanticObject); 
 				return; 
+			case DemoFkdPackage.MEMBER_LIST:
+				sequence_member_list(context, (member_list) semanticObject); 
+				return; 
 			case DemoFkdPackage.NUMBER:
 				sequence_number(context, (number) semanticObject); 
 				return; 
@@ -259,6 +270,22 @@ public class DemoFkdSemanticSequencer extends AbstractDelegatingSemanticSequence
 				return; 
 			case DemoFkdPackage.PROGRAM_HEADING_BLOCK:
 				sequence_program_heading_block(context, (program_heading_block) semanticObject); 
+				return; 
+			case DemoFkdPackage.PROPERTIES_PART:
+				if (rule == grammarAccess.getMember_listRule()) {
+					sequence_member_list_properties_part(context, (properties_part) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getProperties_partRule()) {
+					sequence_properties_part(context, (properties_part) semanticObject); 
+					return; 
+				}
+				else break;
+			case DemoFkdPackage.PROPERTY_LIST:
+				sequence_property_list(context, (property_list) semanticObject); 
+				return; 
+			case DemoFkdPackage.PROPERTY_SECTION:
+				sequence_property_section(context, (property_section) semanticObject); 
 				return; 
 			case DemoFkdPackage.RECORD_SECTION:
 				sequence_record_section(context, (record_section) semanticObject); 
@@ -499,6 +526,20 @@ public class DemoFkdSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 * </pre>
 	 */
 	protected void sequence_case_statement(ISerializationContext context, case_statement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     class_type returns class_type
+	 *
+	 * Constraint:
+	 *     (classKeyword='class' members=member_list? endKeyword='end')
+	 * </pre>
+	 */
+	protected void sequence_class_type(ISerializationContext context, class_type semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -953,6 +994,34 @@ public class DemoFkdSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     member_list returns member_list
+	 *
+	 * Constraint:
+	 *     methods+=method_part
+	 * </pre>
+	 */
+	protected void sequence_member_list(ISerializationContext context, member_list semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     member_list returns properties_part
+	 *
+	 * Constraint:
+	 *     (visibility=VISIBILITY_SUPPORTED sections+=property_section sections+=property_section* methods+=method_part?)
+	 * </pre>
+	 */
+	protected void sequence_member_list_properties_part(ISerializationContext context, properties_part semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     number returns number
 	 *
 	 * Constraint:
@@ -1044,6 +1113,7 @@ public class DemoFkdSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     method_part returns procedure_and_function_declaration_part
 	 *     procedure_and_function_declaration_part returns procedure_and_function_declaration_part
 	 *
 	 * Constraint:
@@ -1117,6 +1187,57 @@ public class DemoFkdSemanticSequencer extends AbstractDelegatingSemanticSequence
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getProgramAccess().getHeadingProgram_heading_blockParserRuleCall_0_0(), semanticObject.getHeading());
 		feeder.accept(grammarAccess.getProgramAccess().getBlockBlockParserRuleCall_1_0(), semanticObject.getBlock());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     properties_part returns properties_part
+	 *
+	 * Constraint:
+	 *     (visibility=VISIBILITY_SUPPORTED sections+=property_section sections+=property_section*)
+	 * </pre>
+	 */
+	protected void sequence_properties_part(ISerializationContext context, properties_part semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     property_list returns property_list
+	 *
+	 * Constraint:
+	 *     (names+=ID names+=ID*)
+	 * </pre>
+	 */
+	protected void sequence_property_list(ISerializationContext context, property_list semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     property_section returns property_section
+	 *
+	 * Constraint:
+	 *     (properties=property_list type=type)
+	 * </pre>
+	 */
+	protected void sequence_property_section(ISerializationContext context, property_section semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, DemoFkdPackage.Literals.PROPERTY_SECTION__PROPERTIES) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DemoFkdPackage.Literals.PROPERTY_SECTION__PROPERTIES));
+			if (transientValues.isValueTransient(semanticObject, DemoFkdPackage.Literals.PROPERTY_SECTION__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DemoFkdPackage.Literals.PROPERTY_SECTION__TYPE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getProperty_sectionAccess().getPropertiesProperty_listParserRuleCall_0_0(), semanticObject.getProperties());
+		feeder.accept(grammarAccess.getProperty_sectionAccess().getTypeTypeParserRuleCall_2_0(), semanticObject.getType());
 		feeder.finish();
 	}
 	
@@ -1494,7 +1615,14 @@ public class DemoFkdSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     unpacked_structured_type returns unpacked_structured_type
 	 *
 	 * Constraint:
-	 *     (array=array_type | dynamic=dynamic_array_type | record=record_type | set=set_type | file=file_type)
+	 *     (
+	 *         array=array_type | 
+	 *         dynamic=dynamic_array_type | 
+	 *         record=record_type | 
+	 *         set=set_type | 
+	 *         file=file_type | 
+	 *         class=class_type
+	 *     )
 	 * </pre>
 	 */
 	protected void sequence_unpacked_structured_type(ISerializationContext context, unpacked_structured_type semanticObject) {

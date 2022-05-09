@@ -5,8 +5,6 @@ package org.xtext.pascal.program.demoFkd;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>procedure and function declaration part</b></em>'.
@@ -24,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface procedure_and_function_declaration_part extends EObject
+public interface procedure_and_function_declaration_part extends method_part
 {
   /**
    * Returns the value of the '<em><b>Procedures</b></em>' containment reference list.

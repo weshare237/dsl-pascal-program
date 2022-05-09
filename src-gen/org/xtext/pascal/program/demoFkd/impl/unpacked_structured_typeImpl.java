@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.pascal.program.demoFkd.DemoFkdPackage;
 import org.xtext.pascal.program.demoFkd.array_type;
+import org.xtext.pascal.program.demoFkd.class_type;
 import org.xtext.pascal.program.demoFkd.dynamic_array_type;
 import org.xtext.pascal.program.demoFkd.file_type;
 import org.xtext.pascal.program.demoFkd.record_type;
@@ -33,6 +34,7 @@ import org.xtext.pascal.program.demoFkd.unpacked_structured_type;
  *   <li>{@link org.xtext.pascal.program.demoFkd.impl.unpacked_structured_typeImpl#getRecord <em>Record</em>}</li>
  *   <li>{@link org.xtext.pascal.program.demoFkd.impl.unpacked_structured_typeImpl#getSet <em>Set</em>}</li>
  *   <li>{@link org.xtext.pascal.program.demoFkd.impl.unpacked_structured_typeImpl#getFile <em>File</em>}</li>
+ *   <li>{@link org.xtext.pascal.program.demoFkd.impl.unpacked_structured_typeImpl#getClass_ <em>Class</em>}</li>
  * </ul>
  *
  * @generated
@@ -88,6 +90,16 @@ public class unpacked_structured_typeImpl extends MinimalEObjectImpl.Container i
    * @ordered
    */
   protected file_type file;
+
+  /**
+   * The cached value of the '{@link #getClass_() <em>Class</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getClass_()
+   * @generated
+   * @ordered
+   */
+  protected class_type class_;
 
   /**
    * <!-- begin-user-doc -->
@@ -366,6 +378,56 @@ public class unpacked_structured_typeImpl extends MinimalEObjectImpl.Container i
    * @generated
    */
   @Override
+  public class_type getClass_()
+  {
+    return class_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetClass(class_type newClass, NotificationChain msgs)
+  {
+    class_type oldClass = class_;
+    class_ = newClass;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DemoFkdPackage.UNPACKED_STRUCTURED_TYPE__CLASS, oldClass, newClass);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setClass(class_type newClass)
+  {
+    if (newClass != class_)
+    {
+      NotificationChain msgs = null;
+      if (class_ != null)
+        msgs = ((InternalEObject)class_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DemoFkdPackage.UNPACKED_STRUCTURED_TYPE__CLASS, null, msgs);
+      if (newClass != null)
+        msgs = ((InternalEObject)newClass).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DemoFkdPackage.UNPACKED_STRUCTURED_TYPE__CLASS, null, msgs);
+      msgs = basicSetClass(newClass, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DemoFkdPackage.UNPACKED_STRUCTURED_TYPE__CLASS, newClass, newClass));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
@@ -380,6 +442,8 @@ public class unpacked_structured_typeImpl extends MinimalEObjectImpl.Container i
         return basicSetSet(null, msgs);
       case DemoFkdPackage.UNPACKED_STRUCTURED_TYPE__FILE:
         return basicSetFile(null, msgs);
+      case DemoFkdPackage.UNPACKED_STRUCTURED_TYPE__CLASS:
+        return basicSetClass(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -404,6 +468,8 @@ public class unpacked_structured_typeImpl extends MinimalEObjectImpl.Container i
         return getSet();
       case DemoFkdPackage.UNPACKED_STRUCTURED_TYPE__FILE:
         return getFile();
+      case DemoFkdPackage.UNPACKED_STRUCTURED_TYPE__CLASS:
+        return getClass_();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -432,6 +498,9 @@ public class unpacked_structured_typeImpl extends MinimalEObjectImpl.Container i
         return;
       case DemoFkdPackage.UNPACKED_STRUCTURED_TYPE__FILE:
         setFile((file_type)newValue);
+        return;
+      case DemoFkdPackage.UNPACKED_STRUCTURED_TYPE__CLASS:
+        setClass((class_type)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -462,6 +531,9 @@ public class unpacked_structured_typeImpl extends MinimalEObjectImpl.Container i
       case DemoFkdPackage.UNPACKED_STRUCTURED_TYPE__FILE:
         setFile((file_type)null);
         return;
+      case DemoFkdPackage.UNPACKED_STRUCTURED_TYPE__CLASS:
+        setClass((class_type)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -486,6 +558,8 @@ public class unpacked_structured_typeImpl extends MinimalEObjectImpl.Container i
         return set != null;
       case DemoFkdPackage.UNPACKED_STRUCTURED_TYPE__FILE:
         return file != null;
+      case DemoFkdPackage.UNPACKED_STRUCTURED_TYPE__CLASS:
+        return class_ != null;
     }
     return super.eIsSet(featureID);
   }

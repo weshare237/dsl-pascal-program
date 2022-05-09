@@ -2100,14 +2100,16 @@ public class DemoFkdGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final RuleCall cSetSet_typeParserRuleCall_3_0 = (RuleCall)cSetAssignment_3.eContents().get(0);
 		private final Assignment cFileAssignment_4 = (Assignment)cAlternatives.eContents().get(4);
 		private final RuleCall cFileFile_typeParserRuleCall_4_0 = (RuleCall)cFileAssignment_4.eContents().get(0);
+		private final Assignment cClassAssignment_5 = (Assignment)cAlternatives.eContents().get(5);
+		private final RuleCall cClassClass_typeParserRuleCall_5_0 = (RuleCall)cClassAssignment_5.eContents().get(0);
 		
 		//unpacked_structured_type: //TODO: ADDED DYNAMIC_ARRAY_TYPE
-		//    array=array_type | dynamic=dynamic_array_type | record=record_type | set=set_type | file=file_type
+		//    array=array_type | dynamic=dynamic_array_type | record=record_type | set=set_type | file=file_type | class=class_type
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
 		////TODO: ADDED DYNAMIC_ARRAY_TYPE
-		//   array=array_type | dynamic=dynamic_array_type | record=record_type | set=set_type | file=file_type
+		//   array=array_type | dynamic=dynamic_array_type | record=record_type | set=set_type | file=file_type | class=class_type
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		////TODO: ADDED DYNAMIC_ARRAY_TYPE
@@ -2140,6 +2142,12 @@ public class DemoFkdGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		
 		//file_type
 		public RuleCall getFileFile_typeParserRuleCall_4_0() { return cFileFile_typeParserRuleCall_4_0; }
+		
+		//class=class_type
+		public Assignment getClassAssignment_5() { return cClassAssignment_5; }
+		
+		//class_type
+		public RuleCall getClassClass_typeParserRuleCall_5_0() { return cClassClass_typeParserRuleCall_5_0; }
 	}
 	public class Array_typeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.pascal.program.DemoFkd.array_type");
@@ -2280,6 +2288,226 @@ public class DemoFkdGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		
 		//"end"
 		public Keyword getEndKeywordEndKeyword_2_0() { return cEndKeywordEndKeyword_2_0; }
+	}
+	public class Class_typeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.pascal.program.DemoFkd.class_type");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cClassKeywordAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cClassKeywordClassKeyword_0_0 = (Keyword)cClassKeywordAssignment_0.eContents().get(0);
+		private final Assignment cMembersAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cMembersMember_listParserRuleCall_1_0 = (RuleCall)cMembersAssignment_1.eContents().get(0);
+		private final Assignment cEndKeywordAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Keyword cEndKeywordEndKeyword_2_0 = (Keyword)cEndKeywordAssignment_2.eContents().get(0);
+		
+		//class_type:
+		//    classKeyword="class" members=member_list? endKeyword="end"
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//classKeyword="class" members=member_list? endKeyword="end"
+		public Group getGroup() { return cGroup; }
+		
+		//classKeyword="class"
+		public Assignment getClassKeywordAssignment_0() { return cClassKeywordAssignment_0; }
+		
+		//"class"
+		public Keyword getClassKeywordClassKeyword_0_0() { return cClassKeywordClassKeyword_0_0; }
+		
+		//members=member_list?
+		public Assignment getMembersAssignment_1() { return cMembersAssignment_1; }
+		
+		//member_list
+		public RuleCall getMembersMember_listParserRuleCall_1_0() { return cMembersMember_listParserRuleCall_1_0; }
+		
+		//endKeyword="end"
+		public Assignment getEndKeywordAssignment_2() { return cEndKeywordAssignment_2; }
+		
+		//"end"
+		public Keyword getEndKeywordEndKeyword_2_0() { return cEndKeywordEndKeyword_2_0; }
+	}
+	public class Member_listElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.pascal.program.DemoFkd.member_list");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
+		private final Group cGroup_0_0 = (Group)cAlternatives_0.eContents().get(0);
+		private final RuleCall cProperties_partParserRuleCall_0_0_0 = (RuleCall)cGroup_0_0.eContents().get(0);
+		private final Group cGroup_0_0_1 = (Group)cGroup_0_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_0_0_1_0 = (Keyword)cGroup_0_0_1.eContents().get(0);
+		private final Assignment cMethodsAssignment_0_0_1_1 = (Assignment)cGroup_0_0_1.eContents().get(1);
+		private final RuleCall cMethodsMethod_partParserRuleCall_0_0_1_1_0 = (RuleCall)cMethodsAssignment_0_0_1_1.eContents().get(0);
+		private final Assignment cMethodsAssignment_0_1 = (Assignment)cAlternatives_0.eContents().get(1);
+		private final RuleCall cMethodsMethod_partParserRuleCall_0_1_0 = (RuleCall)cMethodsAssignment_0_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		
+		//member_list:
+		//    ( properties_part ( ";"  methods+=method_part ) ? | methods+=method_part ) ( ";" ) ?
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//( properties_part ( ";"  methods+=method_part ) ? | methods+=method_part ) ( ";" ) ?
+		public Group getGroup() { return cGroup; }
+		
+		//( properties_part ( ";"  methods+=method_part ) ? | methods+=method_part )
+		public Alternatives getAlternatives_0() { return cAlternatives_0; }
+		
+		//properties_part ( ";"  methods+=method_part ) ?
+		public Group getGroup_0_0() { return cGroup_0_0; }
+		
+		//properties_part
+		public RuleCall getProperties_partParserRuleCall_0_0_0() { return cProperties_partParserRuleCall_0_0_0; }
+		
+		//( ";"  methods+=method_part ) ?
+		public Group getGroup_0_0_1() { return cGroup_0_0_1; }
+		
+		//";"
+		public Keyword getSemicolonKeyword_0_0_1_0() { return cSemicolonKeyword_0_0_1_0; }
+		
+		//methods+=method_part
+		public Assignment getMethodsAssignment_0_0_1_1() { return cMethodsAssignment_0_0_1_1; }
+		
+		//method_part
+		public RuleCall getMethodsMethod_partParserRuleCall_0_0_1_1_0() { return cMethodsMethod_partParserRuleCall_0_0_1_1_0; }
+		
+		//methods+=method_part
+		public Assignment getMethodsAssignment_0_1() { return cMethodsAssignment_0_1; }
+		
+		//method_part
+		public RuleCall getMethodsMethod_partParserRuleCall_0_1_0() { return cMethodsMethod_partParserRuleCall_0_1_0; }
+		
+		//( ";" ) ?
+		public Keyword getSemicolonKeyword_1() { return cSemicolonKeyword_1; }
+	}
+	public class Properties_partElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.pascal.program.DemoFkd.properties_part");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cVisibilityAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cVisibilityVISIBILITY_SUPPORTEDTerminalRuleCall_0_0 = (RuleCall)cVisibilityAssignment_0.eContents().get(0);
+		private final Assignment cSectionsAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cSectionsProperty_sectionParserRuleCall_1_0 = (RuleCall)cSectionsAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cSemicolonKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cSectionsAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cSectionsProperty_sectionParserRuleCall_2_1_0 = (RuleCall)cSectionsAssignment_2_1.eContents().get(0);
+		
+		//properties_part:
+		//    visibility=VISIBILITY_SUPPORTED sections+=property_section ( ";" sections+=property_section ) *
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//visibility=VISIBILITY_SUPPORTED sections+=property_section ( ";" sections+=property_section ) *
+		public Group getGroup() { return cGroup; }
+		
+		//visibility=VISIBILITY_SUPPORTED
+		public Assignment getVisibilityAssignment_0() { return cVisibilityAssignment_0; }
+		
+		//VISIBILITY_SUPPORTED
+		public RuleCall getVisibilityVISIBILITY_SUPPORTEDTerminalRuleCall_0_0() { return cVisibilityVISIBILITY_SUPPORTEDTerminalRuleCall_0_0; }
+		
+		//sections+=property_section
+		public Assignment getSectionsAssignment_1() { return cSectionsAssignment_1; }
+		
+		//property_section
+		public RuleCall getSectionsProperty_sectionParserRuleCall_1_0() { return cSectionsProperty_sectionParserRuleCall_1_0; }
+		
+		//( ";" sections+=property_section ) *
+		public Group getGroup_2() { return cGroup_2; }
+		
+		//";"
+		public Keyword getSemicolonKeyword_2_0() { return cSemicolonKeyword_2_0; }
+		
+		//sections+=property_section
+		public Assignment getSectionsAssignment_2_1() { return cSectionsAssignment_2_1; }
+		
+		//property_section
+		public RuleCall getSectionsProperty_sectionParserRuleCall_2_1_0() { return cSectionsProperty_sectionParserRuleCall_2_1_0; }
+	}
+	public class Property_sectionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.pascal.program.DemoFkd.property_section");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cPropertiesAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cPropertiesProperty_listParserRuleCall_0_0 = (RuleCall)cPropertiesAssignment_0.eContents().get(0);
+		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTypeTypeParserRuleCall_2_0 = (RuleCall)cTypeAssignment_2.eContents().get(0);
+		
+		//property_section:
+		//    properties=property_list ":" type=type
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//properties=property_list ":" type=type
+		public Group getGroup() { return cGroup; }
+		
+		//properties=property_list
+		public Assignment getPropertiesAssignment_0() { return cPropertiesAssignment_0; }
+		
+		//property_list
+		public RuleCall getPropertiesProperty_listParserRuleCall_0_0() { return cPropertiesProperty_listParserRuleCall_0_0; }
+		
+		//":"
+		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
+		
+		//type=type
+		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
+		
+		//type
+		public RuleCall getTypeTypeParserRuleCall_2_0() { return cTypeTypeParserRuleCall_2_0; }
+	}
+	public class Property_listElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.pascal.program.DemoFkd.property_list");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNamesAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNamesIDTerminalRuleCall_0_0 = (RuleCall)cNamesAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cCommaKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cNamesAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cNamesIDTerminalRuleCall_1_1_0 = (RuleCall)cNamesAssignment_1_1.eContents().get(0);
+		
+		//property_list:
+		//    names+=ID ( "," names+=ID ) *
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//names+=ID ( "," names+=ID ) *
+		public Group getGroup() { return cGroup; }
+		
+		//names+=ID
+		public Assignment getNamesAssignment_0() { return cNamesAssignment_0; }
+		
+		//ID
+		public RuleCall getNamesIDTerminalRuleCall_0_0() { return cNamesIDTerminalRuleCall_0_0; }
+		
+		//( "," names+=ID ) *
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//","
+		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
+		
+		//names+=ID
+		public Assignment getNamesAssignment_1_1() { return cNamesAssignment_1_1; }
+		
+		//ID
+		public RuleCall getNamesIDTerminalRuleCall_1_1_0() { return cNamesIDTerminalRuleCall_1_1_0; }
+	}
+	public class Method_partElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.pascal.program.DemoFkd.method_part");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cVISIBILITY_SUPPORTEDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final RuleCall cProcedure_and_function_declaration_partParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		
+		//method_part:
+		//    VISIBILITY_SUPPORTED procedure_and_function_declaration_part
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//VISIBILITY_SUPPORTED procedure_and_function_declaration_part
+		public Group getGroup() { return cGroup; }
+		
+		//VISIBILITY_SUPPORTED
+		public RuleCall getVISIBILITY_SUPPORTEDTerminalRuleCall_0() { return cVISIBILITY_SUPPORTEDTerminalRuleCall_0; }
+		
+		//procedure_and_function_declaration_part
+		public RuleCall getProcedure_and_function_declaration_partParserRuleCall_1() { return cProcedure_and_function_declaration_partParserRuleCall_1; }
 	}
 	public class Field_listElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.pascal.program.DemoFkd.field_list");
@@ -3383,6 +3611,13 @@ public class DemoFkdGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	private final Dynamic_array_typeElements pDynamic_array_type;
 	private final Index_typeElements pIndex_type;
 	private final Record_typeElements pRecord_type;
+	private final Class_typeElements pClass_type;
+	private final Member_listElements pMember_list;
+	private final Properties_partElements pProperties_part;
+	private final Property_sectionElements pProperty_section;
+	private final Property_listElements pProperty_list;
+	private final TerminalRule tVISIBILITY_SUPPORTED;
+	private final Method_partElements pMethod_part;
 	private final Field_listElements pField_list;
 	private final Fixed_partElements pFixed_part;
 	private final Variable_identifier_listElements pVariable_identifier_list;
@@ -3487,6 +3722,13 @@ public class DemoFkdGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		this.pDynamic_array_type = new Dynamic_array_typeElements();
 		this.pIndex_type = new Index_typeElements();
 		this.pRecord_type = new Record_typeElements();
+		this.pClass_type = new Class_typeElements();
+		this.pMember_list = new Member_listElements();
+		this.pProperties_part = new Properties_partElements();
+		this.pProperty_section = new Property_sectionElements();
+		this.pProperty_list = new Property_listElements();
+		this.tVISIBILITY_SUPPORTED = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.pascal.program.DemoFkd.VISIBILITY_SUPPORTED");
+		this.pMethod_part = new Method_partElements();
 		this.pField_list = new Field_listElements();
 		this.pFixed_part = new Fixed_partElements();
 		this.pVariable_identifier_list = new Variable_identifier_listElements();
@@ -4102,7 +4344,7 @@ public class DemoFkdGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	}
 	
 	//unpacked_structured_type: //TODO: ADDED DYNAMIC_ARRAY_TYPE
-	//    array=array_type | dynamic=dynamic_array_type | record=record_type | set=set_type | file=file_type
+	//    array=array_type | dynamic=dynamic_array_type | record=record_type | set=set_type | file=file_type | class=class_type
 	//;
 	public Unpacked_structured_typeElements getUnpacked_structured_typeAccess() {
 		return pUnpacked_structured_type;
@@ -4154,6 +4396,79 @@ public class DemoFkdGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	
 	public ParserRule getRecord_typeRule() {
 		return getRecord_typeAccess().getRule();
+	}
+	
+	//class_type:
+	//    classKeyword="class" members=member_list? endKeyword="end"
+	//;
+	public Class_typeElements getClass_typeAccess() {
+		return pClass_type;
+	}
+	
+	public ParserRule getClass_typeRule() {
+		return getClass_typeAccess().getRule();
+	}
+	
+	//member_list:
+	//    ( properties_part ( ";"  methods+=method_part ) ? | methods+=method_part ) ( ";" ) ?
+	//;
+	public Member_listElements getMember_listAccess() {
+		return pMember_list;
+	}
+	
+	public ParserRule getMember_listRule() {
+		return getMember_listAccess().getRule();
+	}
+	
+	//properties_part:
+	//    visibility=VISIBILITY_SUPPORTED sections+=property_section ( ";" sections+=property_section ) *
+	//;
+	public Properties_partElements getProperties_partAccess() {
+		return pProperties_part;
+	}
+	
+	public ParserRule getProperties_partRule() {
+		return getProperties_partAccess().getRule();
+	}
+	
+	//property_section:
+	//    properties=property_list ":" type=type
+	//;
+	public Property_sectionElements getProperty_sectionAccess() {
+		return pProperty_section;
+	}
+	
+	public ParserRule getProperty_sectionRule() {
+		return getProperty_sectionAccess().getRule();
+	}
+	
+	//property_list:
+	//    names+=ID ( "," names+=ID ) *
+	//;
+	public Property_listElements getProperty_listAccess() {
+		return pProperty_list;
+	}
+	
+	public ParserRule getProperty_listRule() {
+		return getProperty_listAccess().getRule();
+	}
+	
+	//terminal VISIBILITY_SUPPORTED:
+	//    "private" | "public" | "protected"
+	//;
+	public TerminalRule getVISIBILITY_SUPPORTEDRule() {
+		return tVISIBILITY_SUPPORTED;
+	}
+	
+	//method_part:
+	//    VISIBILITY_SUPPORTED procedure_and_function_declaration_part
+	//;
+	public Method_partElements getMethod_partAccess() {
+		return pMethod_part;
+	}
+	
+	public ParserRule getMethod_partRule() {
+		return getMethod_partAccess().getRule();
 	}
 	
 	//field_list:

@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.xtext.pascal.program.demoFkd.unpacked_structured_type#getRecord <em>Record</em>}</li>
  *   <li>{@link org.xtext.pascal.program.demoFkd.unpacked_structured_type#getSet <em>Set</em>}</li>
  *   <li>{@link org.xtext.pascal.program.demoFkd.unpacked_structured_type#getFile <em>File</em>}</li>
+ *   <li>{@link org.xtext.pascal.program.demoFkd.unpacked_structured_type#getClass_ <em>Class</em>}</li>
  * </ul>
  *
  * @see org.xtext.pascal.program.demoFkd.DemoFkdPackage#getunpacked_structured_type()
@@ -136,5 +137,27 @@ public interface unpacked_structured_type extends EObject
    * @generated
    */
   void setFile(file_type value);
+
+  /**
+   * Returns the value of the '<em><b>Class</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Class</em>' containment reference.
+   * @see #setClass(class_type)
+   * @see org.xtext.pascal.program.demoFkd.DemoFkdPackage#getunpacked_structured_type_Class()
+   * @model containment="true"
+   * @generated
+   */
+  class_type getClass_();
+
+  /**
+   * Sets the value of the '{@link org.xtext.pascal.program.demoFkd.unpacked_structured_type#getClass_ <em>Class</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Class</em>' containment reference.
+   * @see #getClass_()
+   * @generated
+   */
+  void setClass(class_type value);
 
 } // unpacked_structured_type

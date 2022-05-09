@@ -492,6 +492,60 @@ public interface DemoFkdFactory extends EFactory
   record_type createrecord_type();
 
   /**
+   * Returns a new object of class '<em>class type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>class type</em>'.
+   * @generated
+   */
+  class_type createclass_type();
+
+  /**
+   * Returns a new object of class '<em>member list</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>member list</em>'.
+   * @generated
+   */
+  member_list createmember_list();
+
+  /**
+   * Returns a new object of class '<em>properties part</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>properties part</em>'.
+   * @generated
+   */
+  properties_part createproperties_part();
+
+  /**
+   * Returns a new object of class '<em>property section</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>property section</em>'.
+   * @generated
+   */
+  property_section createproperty_section();
+
+  /**
+   * Returns a new object of class '<em>property list</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>property list</em>'.
+   * @generated
+   */
+  property_list createproperty_list();
+
+  /**
+   * Returns a new object of class '<em>method part</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>method part</em>'.
+   * @generated
+   */
+  method_part createmethod_part();
+
+  /**
    * Returns a new object of class '<em>field list</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
