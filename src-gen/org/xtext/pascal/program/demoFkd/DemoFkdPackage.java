@@ -198,13 +198,22 @@ public interface DemoFkdPackage extends EPackage
   int BLOCK = 4;
 
   /**
+   * The feature id for the '<em><b>Uses command</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BLOCK__USES_COMMAND = 0;
+
+  /**
    * The feature id for the '<em><b>Label</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BLOCK__LABEL = 0;
+  int BLOCK__LABEL = 1;
 
   /**
    * The feature id for the '<em><b>Constant</b></em>' containment reference.
@@ -213,7 +222,7 @@ public interface DemoFkdPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BLOCK__CONSTANT = 1;
+  int BLOCK__CONSTANT = 2;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -222,7 +231,7 @@ public interface DemoFkdPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BLOCK__TYPE = 2;
+  int BLOCK__TYPE = 3;
 
   /**
    * The feature id for the '<em><b>Variable</b></em>' containment reference.
@@ -231,7 +240,7 @@ public interface DemoFkdPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BLOCK__VARIABLE = 3;
+  int BLOCK__VARIABLE = 4;
 
   /**
    * The feature id for the '<em><b>Abstraction</b></em>' containment reference.
@@ -240,7 +249,7 @@ public interface DemoFkdPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BLOCK__ABSTRACTION = 4;
+  int BLOCK__ABSTRACTION = 5;
 
   /**
    * The feature id for the '<em><b>Statement</b></em>' containment reference.
@@ -249,7 +258,7 @@ public interface DemoFkdPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BLOCK__STATEMENT = 5;
+  int BLOCK__STATEMENT = 6;
 
   /**
    * The number of structural features of the '<em>block</em>' class.
@@ -258,7 +267,35 @@ public interface DemoFkdPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BLOCK_FEATURE_COUNT = 6;
+  int BLOCK_FEATURE_COUNT = 7;
+
+  /**
+   * The meta object id for the '{@link org.xtext.pascal.program.demoFkd.impl.uses_command_definition_partImpl <em>uses command definition part</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.pascal.program.demoFkd.impl.uses_command_definition_partImpl
+   * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getuses_command_definition_part()
+   * @generated
+   */
+  int USES_COMMAND_DEFINITION_PART = 5;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int USES_COMMAND_DEFINITION_PART__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>uses command definition part</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int USES_COMMAND_DEFINITION_PART_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.pascal.program.demoFkd.impl.statement_partImpl <em>statement part</em>}' class.
@@ -268,7 +305,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getstatement_part()
    * @generated
    */
-  int STATEMENT_PART = 5;
+  int STATEMENT_PART = 6;
 
   /**
    * The feature id for the '<em><b>Sequence</b></em>' containment reference.
@@ -296,7 +333,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getstatement_sequence()
    * @generated
    */
-  int STATEMENT_SEQUENCE = 6;
+  int STATEMENT_SEQUENCE = 7;
 
   /**
    * The feature id for the '<em><b>Statements</b></em>' containment reference list.
@@ -324,7 +361,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getstatement()
    * @generated
    */
-  int STATEMENT = 7;
+  int STATEMENT = 8;
 
   /**
    * The feature id for the '<em><b>Label</b></em>' containment reference.
@@ -370,7 +407,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getlabel()
    * @generated
    */
-  int LABEL = 8;
+  int LABEL = 9;
 
   /**
    * The feature id for the '<em><b>Number</b></em>' attribute.
@@ -398,7 +435,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getsimple_statement()
    * @generated
    */
-  int SIMPLE_STATEMENT = 9;
+  int SIMPLE_STATEMENT = 10;
 
   /**
    * The feature id for the '<em><b>Assignment</b></em>' containment reference.
@@ -453,7 +490,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getassignment_statement()
    * @generated
    */
-  int ASSIGNMENT_STATEMENT = 10;
+  int ASSIGNMENT_STATEMENT = 11;
 
   /**
    * The feature id for the '<em><b>Variable</b></em>' containment reference.
@@ -490,7 +527,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getvariable()
    * @generated
    */
-  int VARIABLE = 11;
+  int VARIABLE = 12;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -527,7 +564,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getvar_()
    * @generated
    */
-  int VAR_ = 12;
+  int VAR_ = 13;
 
   /**
    * The feature id for the '<em><b>Expressions</b></em>' containment reference.
@@ -600,7 +637,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getexpression_list()
    * @generated
    */
-  int EXPRESSION_LIST = 13;
+  int EXPRESSION_LIST = 14;
 
   /**
    * The feature id for the '<em><b>Expressions</b></em>' containment reference list.
@@ -628,7 +665,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getexpression()
    * @generated
    */
-  int EXPRESSION = 14;
+  int EXPRESSION = 15;
 
   /**
    * The feature id for the '<em><b>Expressions</b></em>' containment reference list.
@@ -665,7 +702,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getsimple_expression()
    * @generated
    */
-  int SIMPLE_EXPRESSION = 15;
+  int SIMPLE_EXPRESSION = 16;
 
   /**
    * The feature id for the '<em><b>Prefix Operator</b></em>' attribute.
@@ -711,7 +748,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getterm()
    * @generated
    */
-  int TERM = 16;
+  int TERM = 17;
 
   /**
    * The feature id for the '<em><b>Factors</b></em>' containment reference list.
@@ -748,7 +785,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getfactor()
    * @generated
    */
-  int FACTOR = 17;
+  int FACTOR = 18;
 
   /**
    * The feature id for the '<em><b>Variable</b></em>' containment reference.
@@ -848,7 +885,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getnumber()
    * @generated
    */
-  int NUMBER = 18;
+  int NUMBER = 19;
 
   /**
    * The feature id for the '<em><b>Number</b></em>' containment reference.
@@ -876,7 +913,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getany_number()
    * @generated
    */
-  int ANY_NUMBER = 19;
+  int ANY_NUMBER = 20;
 
   /**
    * The feature id for the '<em><b>Integer</b></em>' attribute.
@@ -913,7 +950,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getset()
    * @generated
    */
-  int SET = 20;
+  int SET = 21;
 
   /**
    * The feature id for the '<em><b>Brackets</b></em>' attribute list.
@@ -950,7 +987,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getfunction_designator()
    * @generated
    */
-  int FUNCTION_DESIGNATOR = 21;
+  int FUNCTION_DESIGNATOR = 22;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -987,7 +1024,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getstructured_statement()
    * @generated
    */
-  int STRUCTURED_STATEMENT = 22;
+  int STRUCTURED_STATEMENT = 23;
 
   /**
    * The feature id for the '<em><b>Compound</b></em>' containment reference.
@@ -1042,7 +1079,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getcompound_statement()
    * @generated
    */
-  int COMPOUND_STATEMENT = 23;
+  int COMPOUND_STATEMENT = 24;
 
   /**
    * The feature id for the '<em><b>Sequence</b></em>' containment reference.
@@ -1070,7 +1107,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getrepetitive_statement()
    * @generated
    */
-  int REPETITIVE_STATEMENT = 24;
+  int REPETITIVE_STATEMENT = 25;
 
   /**
    * The feature id for the '<em><b>While Stmt</b></em>' containment reference.
@@ -1116,7 +1153,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getwhile_statement()
    * @generated
    */
-  int WHILE_STATEMENT = 25;
+  int WHILE_STATEMENT = 26;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1153,7 +1190,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getrepeat_statement()
    * @generated
    */
-  int REPEAT_STATEMENT = 26;
+  int REPEAT_STATEMENT = 27;
 
   /**
    * The feature id for the '<em><b>Sequence</b></em>' containment reference.
@@ -1190,7 +1227,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getfor_statement()
    * @generated
    */
-  int FOR_STATEMENT = 27;
+  int FOR_STATEMENT = 28;
 
   /**
    * The feature id for the '<em><b>Assignment</b></em>' containment reference.
@@ -1236,7 +1273,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getconditional_statement()
    * @generated
    */
-  int CONDITIONAL_STATEMENT = 28;
+  int CONDITIONAL_STATEMENT = 29;
 
   /**
    * The feature id for the '<em><b>If Stmt</b></em>' containment reference.
@@ -1273,7 +1310,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getif_statement()
    * @generated
    */
-  int IF_STATEMENT = 29;
+  int IF_STATEMENT = 30;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1319,7 +1356,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getcase_statement()
    * @generated
    */
-  int CASE_STATEMENT = 30;
+  int CASE_STATEMENT = 31;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -1356,7 +1393,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getcase_limb()
    * @generated
    */
-  int CASE_LIMB = 31;
+  int CASE_LIMB = 32;
 
   /**
    * The feature id for the '<em><b>Cases</b></em>' containment reference.
@@ -1393,7 +1430,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getcase_label_list()
    * @generated
    */
-  int CASE_LABEL_LIST = 32;
+  int CASE_LABEL_LIST = 33;
 
   /**
    * The feature id for the '<em><b>Constants</b></em>' containment reference list.
@@ -1421,7 +1458,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getconstant()
    * @generated
    */
-  int CONSTANT = 33;
+  int CONSTANT = 34;
 
   /**
    * The feature id for the '<em><b>Opterator</b></em>' attribute.
@@ -1494,7 +1531,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getwith_statement()
    * @generated
    */
-  int WITH_STATEMENT = 34;
+  int WITH_STATEMENT = 35;
 
   /**
    * The feature id for the '<em><b>Variables</b></em>' containment reference list.
@@ -1531,7 +1568,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getgoto_statement()
    * @generated
    */
-  int GOTO_STATEMENT = 35;
+  int GOTO_STATEMENT = 36;
 
   /**
    * The feature id for the '<em><b>Label</b></em>' containment reference.
@@ -1559,7 +1596,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getlabel_declaration_part()
    * @generated
    */
-  int LABEL_DECLARATION_PART = 36;
+  int LABEL_DECLARATION_PART = 37;
 
   /**
    * The feature id for the '<em><b>Labels</b></em>' containment reference list.
@@ -1587,7 +1624,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getconstant_definition_part()
    * @generated
    */
-  int CONSTANT_DEFINITION_PART = 37;
+  int CONSTANT_DEFINITION_PART = 38;
 
   /**
    * The feature id for the '<em><b>Consts</b></em>' containment reference list.
@@ -1615,7 +1652,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getconstant_definition()
    * @generated
    */
-  int CONSTANT_DEFINITION = 38;
+  int CONSTANT_DEFINITION = 39;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1652,7 +1689,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#gettype_definition_part()
    * @generated
    */
-  int TYPE_DEFINITION_PART = 39;
+  int TYPE_DEFINITION_PART = 40;
 
   /**
    * The feature id for the '<em><b>Types</b></em>' containment reference list.
@@ -1680,7 +1717,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#gettype_definition()
    * @generated
    */
-  int TYPE_DEFINITION = 40;
+  int TYPE_DEFINITION = 41;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1717,7 +1754,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#gettype()
    * @generated
    */
-  int TYPE = 41;
+  int TYPE = 42;
 
   /**
    * The feature id for the '<em><b>Simple</b></em>' containment reference.
@@ -1763,7 +1800,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getsimple_type()
    * @generated
    */
-  int SIMPLE_TYPE = 42;
+  int SIMPLE_TYPE = 43;
 
   /**
    * The feature id for the '<em><b>Subrange</b></em>' containment reference.
@@ -1809,7 +1846,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getsubrange_type()
    * @generated
    */
-  int SUBRANGE_TYPE = 43;
+  int SUBRANGE_TYPE = 44;
 
   /**
    * The feature id for the '<em><b>Initial Const</b></em>' containment reference.
@@ -1864,7 +1901,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getenumerated_type()
    * @generated
    */
-  int ENUMERATED_TYPE = 44;
+  int ENUMERATED_TYPE = 45;
 
   /**
    * The feature id for the '<em><b>Identifiers</b></em>' containment reference.
@@ -1892,7 +1929,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getstructured_type()
    * @generated
    */
-  int STRUCTURED_TYPE = 45;
+  int STRUCTURED_TYPE = 46;
 
   /**
    * The feature id for the '<em><b>Packed</b></em>' attribute.
@@ -1929,7 +1966,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getunpacked_structured_type()
    * @generated
    */
-  int UNPACKED_STRUCTURED_TYPE = 46;
+  int UNPACKED_STRUCTURED_TYPE = 47;
 
   /**
    * The feature id for the '<em><b>Array</b></em>' containment reference.
@@ -1993,7 +2030,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getarray_type()
    * @generated
    */
-  int ARRAY_TYPE = 47;
+  int ARRAY_TYPE = 48;
 
   /**
    * The feature id for the '<em><b>Indexes</b></em>' containment reference list.
@@ -2030,7 +2067,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getdynamic_array_type()
    * @generated
    */
-  int DYNAMIC_ARRAY_TYPE = 48;
+  int DYNAMIC_ARRAY_TYPE = 49;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -2058,7 +2095,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getindex_type()
    * @generated
    */
-  int INDEX_TYPE = 49;
+  int INDEX_TYPE = 50;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -2086,7 +2123,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getrecord_type()
    * @generated
    */
-  int RECORD_TYPE = 50;
+  int RECORD_TYPE = 51;
 
   /**
    * The feature id for the '<em><b>Record Keyword</b></em>' attribute.
@@ -2132,7 +2169,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getfield_list()
    * @generated
    */
-  int FIELD_LIST = 51;
+  int FIELD_LIST = 52;
 
   /**
    * The feature id for the '<em><b>Fixed</b></em>' containment reference.
@@ -2169,7 +2206,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getfixed_part()
    * @generated
    */
-  int FIXED_PART = 52;
+  int FIXED_PART = 53;
 
   /**
    * The feature id for the '<em><b>Sections</b></em>' containment reference list.
@@ -2197,7 +2234,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getvariable_identifier_list()
    * @generated
    */
-  int VARIABLE_IDENTIFIER_LIST = 53;
+  int VARIABLE_IDENTIFIER_LIST = 54;
 
   /**
    * The feature id for the '<em><b>Names</b></em>' attribute list.
@@ -2225,7 +2262,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getvariable_section()
    * @generated
    */
-  int VARIABLE_SECTION = 54;
+  int VARIABLE_SECTION = 55;
 
   /**
    * The feature id for the '<em><b>Identifiers</b></em>' containment reference.
@@ -2262,7 +2299,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getrecord_section()
    * @generated
    */
-  int RECORD_SECTION = 55;
+  int RECORD_SECTION = 56;
 
   /**
    * The feature id for the '<em><b>Identifiers</b></em>' containment reference.
@@ -2299,7 +2336,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getvariant_part()
    * @generated
    */
-  int VARIANT_PART = 56;
+  int VARIANT_PART = 57;
 
   /**
    * The feature id for the '<em><b>Tag</b></em>' containment reference.
@@ -2345,7 +2382,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#gettag_field()
    * @generated
    */
-  int TAG_FIELD = 57;
+  int TAG_FIELD = 58;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2373,7 +2410,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getvariant()
    * @generated
    */
-  int VARIANT = 58;
+  int VARIANT = 59;
 
   /**
    * The feature id for the '<em><b>Labels</b></em>' containment reference.
@@ -2410,7 +2447,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getset_type()
    * @generated
    */
-  int SET_TYPE = 59;
+  int SET_TYPE = 60;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -2438,7 +2475,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getfile_type()
    * @generated
    */
-  int FILE_TYPE = 60;
+  int FILE_TYPE = 61;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -2466,7 +2503,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getpointer_type()
    * @generated
    */
-  int POINTER_TYPE = 61;
+  int POINTER_TYPE = 62;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -2494,7 +2531,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getvariable_declaration_part()
    * @generated
    */
-  int VARIABLE_DECLARATION_PART = 62;
+  int VARIABLE_DECLARATION_PART = 63;
 
   /**
    * The feature id for the '<em><b>Sections</b></em>' containment reference list.
@@ -2522,7 +2559,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getprocedure_and_function_declaration_part()
    * @generated
    */
-  int PROCEDURE_AND_FUNCTION_DECLARATION_PART = 63;
+  int PROCEDURE_AND_FUNCTION_DECLARATION_PART = 64;
 
   /**
    * The feature id for the '<em><b>Procedures</b></em>' containment reference list.
@@ -2559,7 +2596,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getabstraction_declaration()
    * @generated
    */
-  int ABSTRACTION_DECLARATION = 64;
+  int ABSTRACTION_DECLARATION = 65;
 
   /**
    * The feature id for the '<em><b>Heading</b></em>' containment reference.
@@ -2605,7 +2642,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getabstraction_heading()
    * @generated
    */
-  int ABSTRACTION_HEADING = 65;
+  int ABSTRACTION_HEADING = 66;
 
   /**
    * The feature id for the '<em><b>Heading</b></em>' containment reference.
@@ -2678,7 +2715,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getformal_parameter_list()
    * @generated
    */
-  int FORMAL_PARAMETER_LIST = 66;
+  int FORMAL_PARAMETER_LIST = 67;
 
   /**
    * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
@@ -2706,7 +2743,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getformal_parameter_section()
    * @generated
    */
-  int FORMAL_PARAMETER_SECTION = 67;
+  int FORMAL_PARAMETER_SECTION = 68;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -2761,7 +2798,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getvalue_parameter_section()
    * @generated
    */
-  int VALUE_PARAMETER_SECTION = 68;
+  int VALUE_PARAMETER_SECTION = 69;
 
   /**
    * The feature id for the '<em><b>Identifiers</b></em>' containment reference.
@@ -2798,7 +2835,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getparameter_type()
    * @generated
    */
-  int PARAMETER_TYPE = 69;
+  int PARAMETER_TYPE = 70;
 
   /**
    * The feature id for the '<em><b>Array</b></em>' containment reference.
@@ -2835,7 +2872,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getconformant_array_schema()
    * @generated
    */
-  int CONFORMANT_ARRAY_SCHEMA = 70;
+  int CONFORMANT_ARRAY_SCHEMA = 71;
 
   /**
    * The feature id for the '<em><b>Packed</b></em>' containment reference.
@@ -2872,7 +2909,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getpacked_conformant_array_schema()
    * @generated
    */
-  int PACKED_CONFORMANT_ARRAY_SCHEMA = 71;
+  int PACKED_CONFORMANT_ARRAY_SCHEMA = 72;
 
   /**
    * The feature id for the '<em><b>Bound</b></em>' containment reference.
@@ -2909,7 +2946,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getbound_specification()
    * @generated
    */
-  int BOUND_SPECIFICATION = 72;
+  int BOUND_SPECIFICATION = 73;
 
   /**
    * The feature id for the '<em><b>Initial</b></em>' attribute.
@@ -2955,7 +2992,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getunpacked_conformant_array_schema()
    * @generated
    */
-  int UNPACKED_CONFORMANT_ARRAY_SCHEMA = 73;
+  int UNPACKED_CONFORMANT_ARRAY_SCHEMA = 74;
 
   /**
    * The feature id for the '<em><b>Bounds</b></em>' containment reference list.
@@ -2992,7 +3029,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getvariable_parameter_section()
    * @generated
    */
-  int VARIABLE_PARAMETER_SECTION = 74;
+  int VARIABLE_PARAMETER_SECTION = 75;
 
   /**
    * The feature id for the '<em><b>Identifiers</b></em>' containment reference.
@@ -3139,6 +3176,17 @@ public interface DemoFkdPackage extends EPackage
   EClass getblock();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.pascal.program.demoFkd.block#getUses_command <em>Uses command</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Uses command</em>'.
+   * @see org.xtext.pascal.program.demoFkd.block#getUses_command()
+   * @see #getblock()
+   * @generated
+   */
+  EReference getblock_Uses_command();
+
+  /**
    * Returns the meta object for the containment reference '{@link org.xtext.pascal.program.demoFkd.block#getLabel <em>Label</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3203,6 +3251,27 @@ public interface DemoFkdPackage extends EPackage
    * @generated
    */
   EReference getblock_Statement();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.pascal.program.demoFkd.uses_command_definition_part <em>uses command definition part</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>uses command definition part</em>'.
+   * @see org.xtext.pascal.program.demoFkd.uses_command_definition_part
+   * @generated
+   */
+  EClass getuses_command_definition_part();
+
+  /**
+   * Returns the meta object for the attribute list '{@link org.xtext.pascal.program.demoFkd.uses_command_definition_part#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Name</em>'.
+   * @see org.xtext.pascal.program.demoFkd.uses_command_definition_part#getName()
+   * @see #getuses_command_definition_part()
+   * @generated
+   */
+  EAttribute getuses_command_definition_part_Name();
 
   /**
    * Returns the meta object for class '{@link org.xtext.pascal.program.demoFkd.statement_part <em>statement part</em>}'.
@@ -5742,6 +5811,14 @@ public interface DemoFkdPackage extends EPackage
     EClass BLOCK = eINSTANCE.getblock();
 
     /**
+     * The meta object literal for the '<em><b>Uses command</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference BLOCK__USES_COMMAND = eINSTANCE.getblock_Uses_command();
+
+    /**
      * The meta object literal for the '<em><b>Label</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5788,6 +5865,24 @@ public interface DemoFkdPackage extends EPackage
      * @generated
      */
     EReference BLOCK__STATEMENT = eINSTANCE.getblock_Statement();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.pascal.program.demoFkd.impl.uses_command_definition_partImpl <em>uses command definition part</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.pascal.program.demoFkd.impl.uses_command_definition_partImpl
+     * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getuses_command_definition_part()
+     * @generated
+     */
+    EClass USES_COMMAND_DEFINITION_PART = eINSTANCE.getuses_command_definition_part();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute USES_COMMAND_DEFINITION_PART__NAME = eINSTANCE.getuses_command_definition_part_Name();
 
     /**
      * The meta object literal for the '{@link org.xtext.pascal.program.demoFkd.impl.statement_partImpl <em>statement part</em>}' class.

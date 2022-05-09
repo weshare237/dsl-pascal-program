@@ -22,6 +22,8 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="block">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="uses_command" eType="#//uses_command_definition_part"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="label" eType="#//label_declaration_part"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="constant" eType="#//constant_definition_part"
@@ -34,6 +36,10 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="statement" eType="#//statement_part"
         containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="uses_command_definition_part">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="statement_part">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sequence" eType="#//statement_sequence"

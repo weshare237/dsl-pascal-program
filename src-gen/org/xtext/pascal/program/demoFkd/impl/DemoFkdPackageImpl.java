@@ -76,6 +76,7 @@ import org.xtext.pascal.program.demoFkd.type_definition;
 import org.xtext.pascal.program.demoFkd.type_definition_part;
 import org.xtext.pascal.program.demoFkd.unpacked_conformant_array_schema;
 import org.xtext.pascal.program.demoFkd.unpacked_structured_type;
+import org.xtext.pascal.program.demoFkd.uses_command_definition_part;
 import org.xtext.pascal.program.demoFkd.value_parameter_section;
 import org.xtext.pascal.program.demoFkd.var_;
 import org.xtext.pascal.program.demoFkd.variable;
@@ -130,6 +131,13 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
    * @generated
    */
   private EClass blockEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass uses_command_definition_partEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -811,7 +819,7 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
    * @generated
    */
   @Override
-  public EReference getblock_Label()
+  public EReference getblock_Uses_command()
   {
     return (EReference)blockEClass.getEStructuralFeatures().get(0);
   }
@@ -822,7 +830,7 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
    * @generated
    */
   @Override
-  public EReference getblock_Constant()
+  public EReference getblock_Label()
   {
     return (EReference)blockEClass.getEStructuralFeatures().get(1);
   }
@@ -833,7 +841,7 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
    * @generated
    */
   @Override
-  public EReference getblock_Type()
+  public EReference getblock_Constant()
   {
     return (EReference)blockEClass.getEStructuralFeatures().get(2);
   }
@@ -844,7 +852,7 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
    * @generated
    */
   @Override
-  public EReference getblock_Variable()
+  public EReference getblock_Type()
   {
     return (EReference)blockEClass.getEStructuralFeatures().get(3);
   }
@@ -855,7 +863,7 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
    * @generated
    */
   @Override
-  public EReference getblock_Abstraction()
+  public EReference getblock_Variable()
   {
     return (EReference)blockEClass.getEStructuralFeatures().get(4);
   }
@@ -866,9 +874,42 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
    * @generated
    */
   @Override
-  public EReference getblock_Statement()
+  public EReference getblock_Abstraction()
   {
     return (EReference)blockEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getblock_Statement()
+  {
+    return (EReference)blockEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getuses_command_definition_part()
+  {
+    return uses_command_definition_partEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getuses_command_definition_part_Name()
+  {
+    return (EAttribute)uses_command_definition_partEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3403,12 +3444,16 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
     createEAttribute(identifier_listEClass, IDENTIFIER_LIST__NAMES);
 
     blockEClass = createEClass(BLOCK);
+    createEReference(blockEClass, BLOCK__USES_COMMAND);
     createEReference(blockEClass, BLOCK__LABEL);
     createEReference(blockEClass, BLOCK__CONSTANT);
     createEReference(blockEClass, BLOCK__TYPE);
     createEReference(blockEClass, BLOCK__VARIABLE);
     createEReference(blockEClass, BLOCK__ABSTRACTION);
     createEReference(blockEClass, BLOCK__STATEMENT);
+
+    uses_command_definition_partEClass = createEClass(USES_COMMAND_DEFINITION_PART);
+    createEAttribute(uses_command_definition_partEClass, USES_COMMAND_DEFINITION_PART__NAME);
 
     statement_partEClass = createEClass(STATEMENT_PART);
     createEReference(statement_partEClass, STATEMENT_PART__SEQUENCE);
@@ -3754,12 +3799,16 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
     initEAttribute(getidentifier_list_Names(), ecorePackage.getEString(), "names", null, 0, -1, identifier_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(blockEClass, block.class, "block", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getblock_Uses_command(), this.getuses_command_definition_part(), null, "uses_command", null, 0, 1, block.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getblock_Label(), this.getlabel_declaration_part(), null, "label", null, 0, 1, block.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getblock_Constant(), this.getconstant_definition_part(), null, "constant", null, 0, 1, block.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getblock_Type(), this.gettype_definition_part(), null, "type", null, 0, 1, block.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getblock_Variable(), this.getvariable_declaration_part(), null, "variable", null, 0, 1, block.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getblock_Abstraction(), this.getprocedure_and_function_declaration_part(), null, "abstraction", null, 0, 1, block.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getblock_Statement(), this.getstatement_part(), null, "statement", null, 0, 1, block.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(uses_command_definition_partEClass, uses_command_definition_part.class, "uses_command_definition_part", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getuses_command_definition_part_Name(), ecorePackage.getEString(), "name", null, 0, -1, uses_command_definition_part.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(statement_partEClass, statement_part.class, "statement_part", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getstatement_part_Sequence(), this.getstatement_sequence(), null, "sequence", null, 0, 1, statement_part.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

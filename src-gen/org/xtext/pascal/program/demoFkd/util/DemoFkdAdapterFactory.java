@@ -101,6 +101,11 @@ public class DemoFkdAdapterFactory extends AdapterFactoryImpl
         return createblockAdapter();
       }
       @Override
+      public Adapter caseuses_command_definition_part(uses_command_definition_part object)
+      {
+        return createuses_command_definition_partAdapter();
+      }
+      @Override
       public Adapter casestatement_part(statement_part object)
       {
         return createstatement_partAdapter();
@@ -543,6 +548,21 @@ public class DemoFkdAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createblockAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.pascal.program.demoFkd.uses_command_definition_part <em>uses command definition part</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.pascal.program.demoFkd.uses_command_definition_part
+   * @generated
+   */
+  public Adapter createuses_command_definition_partAdapter()
   {
     return null;
   }

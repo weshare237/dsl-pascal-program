@@ -79,6 +79,7 @@ import org.xtext.pascal.program.demoFkd.type_definition;
 import org.xtext.pascal.program.demoFkd.type_definition_part;
 import org.xtext.pascal.program.demoFkd.unpacked_conformant_array_schema;
 import org.xtext.pascal.program.demoFkd.unpacked_structured_type;
+import org.xtext.pascal.program.demoFkd.uses_command_definition_part;
 import org.xtext.pascal.program.demoFkd.value_parameter_section;
 import org.xtext.pascal.program.demoFkd.var_;
 import org.xtext.pascal.program.demoFkd.variable;
@@ -325,6 +326,9 @@ public class DemoFkdSemanticSequencer extends AbstractDelegatingSemanticSequence
 			case DemoFkdPackage.UNPACKED_STRUCTURED_TYPE:
 				sequence_unpacked_structured_type(context, (unpacked_structured_type) semanticObject); 
 				return; 
+			case DemoFkdPackage.USES_COMMAND_DEFINITION_PART:
+				sequence_uses_command_definition_part(context, (uses_command_definition_part) semanticObject); 
+				return; 
 			case DemoFkdPackage.VALUE_PARAMETER_SECTION:
 				sequence_value_parameter_section(context, (value_parameter_section) semanticObject); 
 				return; 
@@ -407,6 +411,7 @@ public class DemoFkdSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *
 	 * Constraint:
 	 *     (
+	 *         uses_command=uses_command_definition_part? 
 	 *         label=label_declaration_part? 
 	 *         constant=constant_definition_part? 
 	 *         type=type_definition_part? 
@@ -1507,6 +1512,20 @@ public class DemoFkdSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 * </pre>
 	 */
 	protected void sequence_unsigned_number(ISerializationContext context, any_number semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     uses_command_definition_part returns uses_command_definition_part
+	 *
+	 * Constraint:
+	 *     (name+=ID name+=ID*)
+	 * </pre>
+	 */
+	protected void sequence_uses_command_definition_part(ISerializationContext context, uses_command_definition_part semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

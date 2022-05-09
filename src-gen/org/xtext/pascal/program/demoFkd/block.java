@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.pascal.program.demoFkd.block#getUses_command <em>Uses command</em>}</li>
  *   <li>{@link org.xtext.pascal.program.demoFkd.block#getLabel <em>Label</em>}</li>
  *   <li>{@link org.xtext.pascal.program.demoFkd.block#getConstant <em>Constant</em>}</li>
  *   <li>{@link org.xtext.pascal.program.demoFkd.block#getType <em>Type</em>}</li>
@@ -28,6 +29,28 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface block extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Uses command</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Uses command</em>' containment reference.
+   * @see #setUses_command(uses_command_definition_part)
+   * @see org.xtext.pascal.program.demoFkd.DemoFkdPackage#getblock_Uses_command()
+   * @model containment="true"
+   * @generated
+   */
+  uses_command_definition_part getUses_command();
+
+  /**
+   * Sets the value of the '{@link org.xtext.pascal.program.demoFkd.block#getUses_command <em>Uses command</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Uses command</em>' containment reference.
+   * @see #getUses_command()
+   * @generated
+   */
+  void setUses_command(uses_command_definition_part value);
+
   /**
    * Returns the value of the '<em><b>Label</b></em>' containment reference.
    * <!-- begin-user-doc -->

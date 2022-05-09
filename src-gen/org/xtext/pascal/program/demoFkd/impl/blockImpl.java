@@ -19,6 +19,7 @@ import org.xtext.pascal.program.demoFkd.label_declaration_part;
 import org.xtext.pascal.program.demoFkd.procedure_and_function_declaration_part;
 import org.xtext.pascal.program.demoFkd.statement_part;
 import org.xtext.pascal.program.demoFkd.type_definition_part;
+import org.xtext.pascal.program.demoFkd.uses_command_definition_part;
 import org.xtext.pascal.program.demoFkd.variable_declaration_part;
 
 /**
@@ -29,6 +30,7 @@ import org.xtext.pascal.program.demoFkd.variable_declaration_part;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.pascal.program.demoFkd.impl.blockImpl#getUses_command <em>Uses command</em>}</li>
  *   <li>{@link org.xtext.pascal.program.demoFkd.impl.blockImpl#getLabel <em>Label</em>}</li>
  *   <li>{@link org.xtext.pascal.program.demoFkd.impl.blockImpl#getConstant <em>Constant</em>}</li>
  *   <li>{@link org.xtext.pascal.program.demoFkd.impl.blockImpl#getType <em>Type</em>}</li>
@@ -41,6 +43,16 @@ import org.xtext.pascal.program.demoFkd.variable_declaration_part;
  */
 public class blockImpl extends MinimalEObjectImpl.Container implements block
 {
+  /**
+   * The cached value of the '{@link #getUses_command() <em>Uses command</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getUses_command()
+   * @generated
+   * @ordered
+   */
+  protected uses_command_definition_part uses_command;
+
   /**
    * The cached value of the '{@link #getLabel() <em>Label</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -120,6 +132,56 @@ public class blockImpl extends MinimalEObjectImpl.Container implements block
   protected EClass eStaticClass()
   {
     return DemoFkdPackage.Literals.BLOCK;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public uses_command_definition_part getUses_command()
+  {
+    return uses_command;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetUses_command(uses_command_definition_part newUses_command, NotificationChain msgs)
+  {
+    uses_command_definition_part oldUses_command = uses_command;
+    uses_command = newUses_command;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, DemoFkdPackage.BLOCK__USES_COMMAND, oldUses_command, newUses_command);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setUses_command(uses_command_definition_part newUses_command)
+  {
+    if (newUses_command != uses_command)
+    {
+      NotificationChain msgs = null;
+      if (uses_command != null)
+        msgs = ((InternalEObject)uses_command).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - DemoFkdPackage.BLOCK__USES_COMMAND, null, msgs);
+      if (newUses_command != null)
+        msgs = ((InternalEObject)newUses_command).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - DemoFkdPackage.BLOCK__USES_COMMAND, null, msgs);
+      msgs = basicSetUses_command(newUses_command, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, DemoFkdPackage.BLOCK__USES_COMMAND, newUses_command, newUses_command));
   }
 
   /**
@@ -432,6 +494,8 @@ public class blockImpl extends MinimalEObjectImpl.Container implements block
   {
     switch (featureID)
     {
+      case DemoFkdPackage.BLOCK__USES_COMMAND:
+        return basicSetUses_command(null, msgs);
       case DemoFkdPackage.BLOCK__LABEL:
         return basicSetLabel(null, msgs);
       case DemoFkdPackage.BLOCK__CONSTANT:
@@ -458,6 +522,8 @@ public class blockImpl extends MinimalEObjectImpl.Container implements block
   {
     switch (featureID)
     {
+      case DemoFkdPackage.BLOCK__USES_COMMAND:
+        return getUses_command();
       case DemoFkdPackage.BLOCK__LABEL:
         return getLabel();
       case DemoFkdPackage.BLOCK__CONSTANT:
@@ -484,6 +550,9 @@ public class blockImpl extends MinimalEObjectImpl.Container implements block
   {
     switch (featureID)
     {
+      case DemoFkdPackage.BLOCK__USES_COMMAND:
+        setUses_command((uses_command_definition_part)newValue);
+        return;
       case DemoFkdPackage.BLOCK__LABEL:
         setLabel((label_declaration_part)newValue);
         return;
@@ -516,6 +585,9 @@ public class blockImpl extends MinimalEObjectImpl.Container implements block
   {
     switch (featureID)
     {
+      case DemoFkdPackage.BLOCK__USES_COMMAND:
+        setUses_command((uses_command_definition_part)null);
+        return;
       case DemoFkdPackage.BLOCK__LABEL:
         setLabel((label_declaration_part)null);
         return;
@@ -548,6 +620,8 @@ public class blockImpl extends MinimalEObjectImpl.Container implements block
   {
     switch (featureID)
     {
+      case DemoFkdPackage.BLOCK__USES_COMMAND:
+        return uses_command != null;
       case DemoFkdPackage.BLOCK__LABEL:
         return label != null;
       case DemoFkdPackage.BLOCK__CONSTANT:

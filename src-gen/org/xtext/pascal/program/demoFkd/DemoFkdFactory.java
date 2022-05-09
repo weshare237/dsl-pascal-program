@@ -69,6 +69,15 @@ public interface DemoFkdFactory extends EFactory
   block createblock();
 
   /**
+   * Returns a new object of class '<em>uses command definition part</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>uses command definition part</em>'.
+   * @generated
+   */
+  uses_command_definition_part createuses_command_definition_part();
+
+  /**
    * Returns a new object of class '<em>statement part</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

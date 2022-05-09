@@ -70,6 +70,7 @@ public class DemoFkdFactoryImpl extends EFactoryImpl implements DemoFkdFactory
       case DemoFkdPackage.PROGRAM_HEADING_BLOCK: return createprogram_heading_block();
       case DemoFkdPackage.IDENTIFIER_LIST: return createidentifier_list();
       case DemoFkdPackage.BLOCK: return createblock();
+      case DemoFkdPackage.USES_COMMAND_DEFINITION_PART: return createuses_command_definition_part();
       case DemoFkdPackage.STATEMENT_PART: return createstatement_part();
       case DemoFkdPackage.STATEMENT_SEQUENCE: return createstatement_sequence();
       case DemoFkdPackage.STATEMENT: return createstatement();
@@ -203,6 +204,18 @@ public class DemoFkdFactoryImpl extends EFactoryImpl implements DemoFkdFactory
   {
     blockImpl block = new blockImpl();
     return block;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public uses_command_definition_part createuses_command_definition_part()
+  {
+    uses_command_definition_partImpl uses_command_definition_part = new uses_command_definition_partImpl();
+    return uses_command_definition_part;
   }
 
   /**

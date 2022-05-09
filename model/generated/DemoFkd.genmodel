@@ -21,12 +21,16 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DemoFkd.ecore#//identifier_list/names"/>
     </genClasses>
     <genClasses ecoreClass="DemoFkd.ecore#//block">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//block/uses_command"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//block/label"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//block/constant"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//block/type"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//block/variable"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//block/abstraction"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//block/statement"/>
+    </genClasses>
+    <genClasses ecoreClass="DemoFkd.ecore#//uses_command_definition_part">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DemoFkd.ecore#//uses_command_definition_part/name"/>
     </genClasses>
     <genClasses ecoreClass="DemoFkd.ecore#//statement_part">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//statement_part/sequence"/>

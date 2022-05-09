@@ -20,12 +20,17 @@ identifier_list:
 ;
 
 block: //TODO: INLINE DECLARATION PART
+    ( uses_command=uses_command_definition_part) ?
 	( label=label_declaration_part ) ?
 	( constant=constant_definition_part ) ? 
 	( type=type_definition_part ) ?
 	( variable=variable_declaration_part ) ? 
 	( abstraction=procedure_and_function_declaration_part ) ? 
 	statement=statement_part
+;
+
+uses_command_definition_part: 
+	"uses" name+=ID ( ',' name+=ID ) * ";"
 ;
 
 statement_part:
