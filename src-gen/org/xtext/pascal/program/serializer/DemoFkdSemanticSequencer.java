@@ -51,6 +51,8 @@ import org.xtext.pascal.program.demoFkd.index_type;
 import org.xtext.pascal.program.demoFkd.label;
 import org.xtext.pascal.program.demoFkd.label_declaration_part;
 import org.xtext.pascal.program.demoFkd.member_list;
+import org.xtext.pascal.program.demoFkd.method_part;
+import org.xtext.pascal.program.demoFkd.method_section;
 import org.xtext.pascal.program.demoFkd.number;
 import org.xtext.pascal.program.demoFkd.packed_conformant_array_schema;
 import org.xtext.pascal.program.demoFkd.parameter_type;
@@ -246,6 +248,12 @@ public class DemoFkdSemanticSequencer extends AbstractDelegatingSemanticSequence
 				return; 
 			case DemoFkdPackage.MEMBER_LIST:
 				sequence_member_list(context, (member_list) semanticObject); 
+				return; 
+			case DemoFkdPackage.METHOD_PART:
+				sequence_method_part(context, (method_part) semanticObject); 
+				return; 
+			case DemoFkdPackage.METHOD_SECTION:
+				sequence_method_section(context, (method_section) semanticObject); 
 				return; 
 			case DemoFkdPackage.NUMBER:
 				sequence_number(context, (number) semanticObject); 
@@ -1022,6 +1030,34 @@ public class DemoFkdSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     method_part returns method_part
+	 *
+	 * Constraint:
+	 *     (visibility=VISIBILITY_SUPPORTED sections+=method_section sections+=method_section*)
+	 * </pre>
+	 */
+	protected void sequence_method_part(ISerializationContext context, method_part semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     method_section returns method_section
+	 *
+	 * Constraint:
+	 *     methods+=abstraction_heading
+	 * </pre>
+	 */
+	protected void sequence_method_section(ISerializationContext context, method_section semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     number returns number
 	 *
 	 * Constraint:
@@ -1113,7 +1149,6 @@ public class DemoFkdSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     method_part returns procedure_and_function_declaration_part
 	 *     procedure_and_function_declaration_part returns procedure_and_function_declaration_part
 	 *
 	 * Constraint:

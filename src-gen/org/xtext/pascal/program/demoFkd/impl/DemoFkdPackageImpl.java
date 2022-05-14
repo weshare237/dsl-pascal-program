@@ -49,6 +49,7 @@ import org.xtext.pascal.program.demoFkd.label;
 import org.xtext.pascal.program.demoFkd.label_declaration_part;
 import org.xtext.pascal.program.demoFkd.member_list;
 import org.xtext.pascal.program.demoFkd.method_part;
+import org.xtext.pascal.program.demoFkd.method_section;
 import org.xtext.pascal.program.demoFkd.number;
 import org.xtext.pascal.program.demoFkd.packed_conformant_array_schema;
 import org.xtext.pascal.program.demoFkd.parameter_type;
@@ -508,6 +509,13 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
    * @generated
    */
   private EClass method_partEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass method_sectionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -2858,6 +2866,50 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
    * @generated
    */
   @Override
+  public EAttribute getmethod_part_Visibility()
+  {
+    return (EAttribute)method_partEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getmethod_part_Sections()
+  {
+    return (EReference)method_partEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getmethod_section()
+  {
+    return method_sectionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getmethod_section_Methods()
+  {
+    return (EReference)method_sectionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getfield_list()
   {
     return field_listEClass;
@@ -3902,6 +3954,11 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
     createEAttribute(property_listEClass, PROPERTY_LIST__NAMES);
 
     method_partEClass = createEClass(METHOD_PART);
+    createEAttribute(method_partEClass, METHOD_PART__VISIBILITY);
+    createEReference(method_partEClass, METHOD_PART__SECTIONS);
+
+    method_sectionEClass = createEClass(METHOD_SECTION);
+    createEReference(method_sectionEClass, METHOD_SECTION__METHODS);
 
     field_listEClass = createEClass(FIELD_LIST);
     createEReference(field_listEClass, FIELD_LIST__FIXED);
@@ -4028,7 +4085,6 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
 
     // Add supertypes to classes
     properties_partEClass.getESuperTypes().add(this.getmember_list());
-    procedure_and_function_declaration_partEClass.getESuperTypes().add(this.getmethod_part());
     abstraction_headingEClass.getESuperTypes().add(this.getabstraction_declaration());
 
     // Initialize classes and features; add operations and parameters
@@ -4281,6 +4337,11 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
     initEAttribute(getproperty_list_Names(), ecorePackage.getEString(), "names", null, 0, -1, property_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(method_partEClass, method_part.class, "method_part", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getmethod_part_Visibility(), ecorePackage.getEString(), "visibility", null, 0, 1, method_part.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getmethod_part_Sections(), this.getmethod_section(), null, "sections", null, 0, -1, method_part.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(method_sectionEClass, method_section.class, "method_section", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getmethod_section_Methods(), this.getabstraction_heading(), null, "methods", null, 0, -1, method_section.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(field_listEClass, field_list.class, "field_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getfield_list_Fixed(), this.getfixed_part(), null, "fixed", null, 0, 1, field_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

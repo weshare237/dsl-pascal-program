@@ -3,6 +3,12 @@
  */
 package org.xtext.pascal.program.validation;
 
+import org.eclipse.xtext.validation.Check;
+import org.xtext.pascal.program.demoFkd.DemoFkdPackage;
+import org.xtext.pascal.program.demoFkd.constant_definition;
+import org.xtext.pascal.program.demoFkd.program_heading_block;
+import org.xtext.pascal.program.demoFkd.variable;
+import org.xtext.pascal.program.demoFkd.variable_identifier_list;
 
 /**
  * This class contains custom validation rules. 
@@ -13,13 +19,35 @@ public class DemoFkdValidator extends AbstractDemoFkdValidator {
 	
 //	public static final String INVALID_NAME = "invalidName";
 //
-//	@Check
-//	public void checkGreetingStartsWithCapital(Greeting greeting) {
-//		if (!Character.isUpperCase(greeting.getName().charAt(0))) {
-//			warning("Name should start with a capital",
-//					DemoFkdPackage.Literals.GREETING__NAME,
-//					INVALID_NAME);
-//		}
-//	}
+	@Check
+	public void checkProgramNameStartsWithLowerCase(program_heading_block programHeading) {
+		if(Character.isUpperCase(programHeading.getName().charAt(0))) {
+			warning("Program name should start with a lowercase letter", DemoFkdPackage.Literals.PROGRAM_HEADING_BLOCK__NAME);
+		}
+	}
+	
+	@Check
+	public void checkConstantNameIsCapitalized(constant_definition constant) {	
+		String constName = constant.getName();
+		
+		for(int i = 0; i < constName.length(); i++) {
+			if(Character.isLowerCase(constName.charAt(i))) {
+				warning("Constant name should be capitalized", DemoFkdPackage.Literals.CONSTANT_DEFINITION__NAME);
+			}
+		}
+	}
+	
+	@Check 
+	public void checkVariableNameStartsWithLowerCase(variable_identifier_list vars) {
+		var n = vars.getNames().size();
+		var variables = vars.getNames();
+		
+		for(int i = 0; i < n; i++) {
+			if(Character.isUpperCase(variables.get(i).charAt(0))) {
+				warning("Variable name should begin with a lowercase", DemoFkdPackage.Literals.VARIABLE_IDENTIFIER_LIST__NAMES);
+			}
+		}
+		
+	}
 	
 }

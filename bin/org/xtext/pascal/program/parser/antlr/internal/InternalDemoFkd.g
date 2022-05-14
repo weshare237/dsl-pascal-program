@@ -4592,18 +4592,104 @@ rulemethod_part returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		this_VISIBILITY_SUPPORTED_0=RULE_VISIBILITY_SUPPORTED
-		{
-			newLeafNode(this_VISIBILITY_SUPPORTED_0, grammarAccess.getMethod_partAccess().getVISIBILITY_SUPPORTEDTerminalRuleCall_0());
-		}
-		{
-			newCompositeNode(grammarAccess.getMethod_partAccess().getProcedure_and_function_declaration_partParserRuleCall_1());
-		}
-		this_procedure_and_function_declaration_part_1=ruleprocedure_and_function_declaration_part
-		{
-			$current = $this_procedure_and_function_declaration_part_1.current;
-			afterParserOrEnumRuleCall();
-		}
+		(
+			(
+				lv_visibility_0_0=RULE_VISIBILITY_SUPPORTED
+				{
+					newLeafNode(lv_visibility_0_0, grammarAccess.getMethod_partAccess().getVisibilityVISIBILITY_SUPPORTEDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getMethod_partRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"visibility",
+						lv_visibility_0_0,
+						"org.xtext.pascal.program.DemoFkd.VISIBILITY_SUPPORTED");
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getMethod_partAccess().getSectionsMethod_sectionParserRuleCall_1_0());
+				}
+				lv_sections_1_0=rulemethod_section
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getMethod_partRule());
+					}
+					add(
+						$current,
+						"sections",
+						lv_sections_1_0,
+						"org.xtext.pascal.program.DemoFkd.method_section");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			otherlv_2=';'
+			{
+				newLeafNode(otherlv_2, grammarAccess.getMethod_partAccess().getSemicolonKeyword_2_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getMethod_partAccess().getSectionsMethod_sectionParserRuleCall_2_1_0());
+					}
+					lv_sections_3_0=rulemethod_section
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getMethod_partRule());
+						}
+						add(
+							$current,
+							"sections",
+							lv_sections_3_0,
+							"org.xtext.pascal.program.DemoFkd.method_section");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)*
+	)
+;
+
+// Entry rule entryRulemethod_section
+entryRulemethod_section returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getMethod_sectionRule()); }
+	iv_rulemethod_section=rulemethod_section
+	{ $current=$iv_rulemethod_section.current; }
+	EOF;
+
+// Rule method_section
+rulemethod_section returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				newCompositeNode(grammarAccess.getMethod_sectionAccess().getMethodsAbstraction_headingParserRuleCall_0());
+			}
+			lv_methods_0_0=ruleabstraction_heading
+			{
+				if ($current==null) {
+					$current = createModelElementForParent(grammarAccess.getMethod_sectionRule());
+				}
+				add(
+					$current,
+					"methods",
+					lv_methods_0_0,
+					"org.xtext.pascal.program.DemoFkd.abstraction_heading");
+				afterParserOrEnumRuleCall();
+			}
+		)
 	)
 ;
 
@@ -5431,6 +5517,42 @@ ruleprocedure_and_function_declaration_part returns [EObject current=null]
 			newLeafNode(otherlv_2, grammarAccess.getProcedure_and_function_declaration_partAccess().getSemicolonKeyword_1());
 		}
 	)+
+;
+
+// Entry rule entryRuleabstraction_heading
+entryRuleabstraction_heading returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getAbstraction_headingRule()); }
+	iv_ruleabstraction_heading=ruleabstraction_heading
+	{ $current=$iv_ruleabstraction_heading.current; }
+	EOF;
+
+// Rule abstraction_heading
+ruleabstraction_heading returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			newCompositeNode(grammarAccess.getAbstraction_headingAccess().getProcedure_headingParserRuleCall_0());
+		}
+		this_procedure_heading_0=ruleprocedure_heading
+		{
+			$current = $this_procedure_heading_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getAbstraction_headingAccess().getFunction_headingParserRuleCall_1());
+		}
+		this_function_heading_1=rulefunction_heading
+		{
+			$current = $this_function_heading_1.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
 ;
 
 // Entry rule entryRuleprocedure_declaration

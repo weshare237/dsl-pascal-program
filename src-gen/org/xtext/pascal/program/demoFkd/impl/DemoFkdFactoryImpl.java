@@ -123,6 +123,7 @@ public class DemoFkdFactoryImpl extends EFactoryImpl implements DemoFkdFactory
       case DemoFkdPackage.PROPERTY_SECTION: return createproperty_section();
       case DemoFkdPackage.PROPERTY_LIST: return createproperty_list();
       case DemoFkdPackage.METHOD_PART: return createmethod_part();
+      case DemoFkdPackage.METHOD_SECTION: return createmethod_section();
       case DemoFkdPackage.FIELD_LIST: return createfield_list();
       case DemoFkdPackage.FIXED_PART: return createfixed_part();
       case DemoFkdPackage.VARIABLE_IDENTIFIER_LIST: return createvariable_identifier_list();
@@ -846,6 +847,18 @@ public class DemoFkdFactoryImpl extends EFactoryImpl implements DemoFkdFactory
   {
     method_partImpl method_part = new method_partImpl();
     return method_part;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public method_section createmethod_section()
+  {
+    method_sectionImpl method_section = new method_sectionImpl();
+    return method_section;
   }
 
   /**

@@ -480,6 +480,13 @@ public class DemoFkdSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case DemoFkdPackage.METHOD_SECTION:
+      {
+        method_section method_section = (method_section)theEObject;
+        T result = casemethod_section(method_section);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case DemoFkdPackage.FIELD_LIST:
       {
         field_list field_list = (field_list)theEObject;
@@ -568,7 +575,6 @@ public class DemoFkdSwitch<T> extends Switch<T>
       {
         procedure_and_function_declaration_part procedure_and_function_declaration_part = (procedure_and_function_declaration_part)theEObject;
         T result = caseprocedure_and_function_declaration_part(procedure_and_function_declaration_part);
-        if (result == null) result = casemethod_part(procedure_and_function_declaration_part);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1578,6 +1584,22 @@ public class DemoFkdSwitch<T> extends Switch<T>
    * @generated
    */
   public T casemethod_part(method_part object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>method section</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>method section</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casemethod_section(method_section object)
   {
     return null;
   }

@@ -366,6 +366,11 @@ public class DemoFkdAdapterFactory extends AdapterFactoryImpl
         return createmethod_partAdapter();
       }
       @Override
+      public Adapter casemethod_section(method_section object)
+      {
+        return createmethod_sectionAdapter();
+      }
+      @Override
       public Adapter casefield_list(field_list object)
       {
         return createfield_listAdapter();
@@ -1373,6 +1378,21 @@ public class DemoFkdAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createmethod_partAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.pascal.program.demoFkd.method_section <em>method section</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.pascal.program.demoFkd.method_section
+   * @generated
+   */
+  public Adapter createmethod_sectionAdapter()
   {
     return null;
   }

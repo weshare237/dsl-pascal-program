@@ -3,6 +3,8 @@
  */
 package org.xtext.pascal.program.demoFkd;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -10,6 +12,13 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>method part</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link org.xtext.pascal.program.demoFkd.method_part#getVisibility <em>Visibility</em>}</li>
+ *   <li>{@link org.xtext.pascal.program.demoFkd.method_part#getSections <em>Sections</em>}</li>
+ * </ul>
  *
  * @see org.xtext.pascal.program.demoFkd.DemoFkdPackage#getmethod_part()
  * @model
@@ -17,4 +26,38 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface method_part extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Visibility</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Visibility</em>' attribute.
+   * @see #setVisibility(String)
+   * @see org.xtext.pascal.program.demoFkd.DemoFkdPackage#getmethod_part_Visibility()
+   * @model
+   * @generated
+   */
+  String getVisibility();
+
+  /**
+   * Sets the value of the '{@link org.xtext.pascal.program.demoFkd.method_part#getVisibility <em>Visibility</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Visibility</em>' attribute.
+   * @see #getVisibility()
+   * @generated
+   */
+  void setVisibility(String value);
+
+  /**
+   * Returns the value of the '<em><b>Sections</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.pascal.program.demoFkd.method_section}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Sections</em>' containment reference list.
+   * @see org.xtext.pascal.program.demoFkd.DemoFkdPackage#getmethod_part_Sections()
+   * @model containment="true"
+   * @generated
+   */
+  EList<method_section> getSections();
+
 } // method_part

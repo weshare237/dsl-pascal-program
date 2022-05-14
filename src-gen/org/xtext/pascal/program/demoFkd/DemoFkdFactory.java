@@ -546,6 +546,15 @@ public interface DemoFkdFactory extends EFactory
   method_part createmethod_part();
 
   /**
+   * Returns a new object of class '<em>method section</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>method section</em>'.
+   * @generated
+   */
+  method_section createmethod_section();
+
+  /**
    * Returns a new object of class '<em>field list</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

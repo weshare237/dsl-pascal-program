@@ -61,7 +61,7 @@ variable: //MISSING REFERENCED_VARIABLE BUT I THINK IT WORKS
 	name=ID variable=var_
 ;
     
-var_: //TODO: REMOVED LEFT RECURSION (ERA COMPONENT_VARIABLE)
+var_: 
 	( "[" expressions=expression_list "]" array=var_ | accessor?="." name=ID variable=var_ | "^" pointer=var_ ) ?
 ; 
 
@@ -69,7 +69,7 @@ expression_list:
 	expressions+=expression ( "," expressions+=expression ) * 	
 ;
 
-expression: //TODO: ADDED "=" PQ WAS NOT ACKNOWLEDGING IN RELATIONAL_OPERATOR
+expression: 
 	expressions+=simple_expression ( ( operators+=RELATIONAL_OPERATOR | operators+="in" | operators+="=" ) expressions+=simple_expression ) ?
 ; 
 
@@ -250,7 +250,11 @@ terminal VISIBILITY_SUPPORTED:
 ;
 
 method_part:
-	VISIBILITY_SUPPORTED procedure_and_function_declaration_part
+	visibility=VISIBILITY_SUPPORTED sections+=method_section ( ";" sections+=method_section ) *
+;
+
+method_section:
+	methods+=abstraction_heading
 ;
 
 field_list:
@@ -410,4 +414,5 @@ terminal DIGIT:
 	"0".."9"
 ;
 
+@Override 
 terminal ML_COMMENT : '(*' -> '*)' | '{' -> '}';

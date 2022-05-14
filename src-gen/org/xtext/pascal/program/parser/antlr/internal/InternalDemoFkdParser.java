@@ -1981,14 +1981,6 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
                         alt14=2;
                         }
                         break;
-                    case 23:
-                    case 33:
-                    case 34:
-                    case 36:
-                        {
-                        alt14=1;
-                        }
-                        break;
                     case EOF:
                     case 27:
                     case 31:
@@ -1996,6 +1988,14 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
                     case 56:
                         {
                         alt14=4;
+                        }
+                        break;
+                    case 23:
+                    case 33:
+                    case 34:
+                    case 36:
+                        {
+                        alt14=1;
                         }
                         break;
                 }
@@ -11570,40 +11570,149 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulemethod_part"
-    // InternalDemoFkd.g:4587:1: rulemethod_part returns [EObject current=null] : (this_VISIBILITY_SUPPORTED_0= RULE_VISIBILITY_SUPPORTED this_procedure_and_function_declaration_part_1= ruleprocedure_and_function_declaration_part ) ;
+    // InternalDemoFkd.g:4587:1: rulemethod_part returns [EObject current=null] : ( ( (lv_visibility_0_0= RULE_VISIBILITY_SUPPORTED ) ) ( (lv_sections_1_0= rulemethod_section ) ) (otherlv_2= ';' ( (lv_sections_3_0= rulemethod_section ) ) )* ) ;
     public final EObject rulemethod_part() throws RecognitionException {
         EObject current = null;
 
-        Token this_VISIBILITY_SUPPORTED_0=null;
-        EObject this_procedure_and_function_declaration_part_1 = null;
+        Token lv_visibility_0_0=null;
+        Token otherlv_2=null;
+        EObject lv_sections_1_0 = null;
+
+        EObject lv_sections_3_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:4593:2: ( (this_VISIBILITY_SUPPORTED_0= RULE_VISIBILITY_SUPPORTED this_procedure_and_function_declaration_part_1= ruleprocedure_and_function_declaration_part ) )
-            // InternalDemoFkd.g:4594:2: (this_VISIBILITY_SUPPORTED_0= RULE_VISIBILITY_SUPPORTED this_procedure_and_function_declaration_part_1= ruleprocedure_and_function_declaration_part )
+            // InternalDemoFkd.g:4593:2: ( ( ( (lv_visibility_0_0= RULE_VISIBILITY_SUPPORTED ) ) ( (lv_sections_1_0= rulemethod_section ) ) (otherlv_2= ';' ( (lv_sections_3_0= rulemethod_section ) ) )* ) )
+            // InternalDemoFkd.g:4594:2: ( ( (lv_visibility_0_0= RULE_VISIBILITY_SUPPORTED ) ) ( (lv_sections_1_0= rulemethod_section ) ) (otherlv_2= ';' ( (lv_sections_3_0= rulemethod_section ) ) )* )
             {
-            // InternalDemoFkd.g:4594:2: (this_VISIBILITY_SUPPORTED_0= RULE_VISIBILITY_SUPPORTED this_procedure_and_function_declaration_part_1= ruleprocedure_and_function_declaration_part )
-            // InternalDemoFkd.g:4595:3: this_VISIBILITY_SUPPORTED_0= RULE_VISIBILITY_SUPPORTED this_procedure_and_function_declaration_part_1= ruleprocedure_and_function_declaration_part
+            // InternalDemoFkd.g:4594:2: ( ( (lv_visibility_0_0= RULE_VISIBILITY_SUPPORTED ) ) ( (lv_sections_1_0= rulemethod_section ) ) (otherlv_2= ';' ( (lv_sections_3_0= rulemethod_section ) ) )* )
+            // InternalDemoFkd.g:4595:3: ( (lv_visibility_0_0= RULE_VISIBILITY_SUPPORTED ) ) ( (lv_sections_1_0= rulemethod_section ) ) (otherlv_2= ';' ( (lv_sections_3_0= rulemethod_section ) ) )*
             {
-            this_VISIBILITY_SUPPORTED_0=(Token)match(input,RULE_VISIBILITY_SUPPORTED,FOLLOW_47); 
+            // InternalDemoFkd.g:4595:3: ( (lv_visibility_0_0= RULE_VISIBILITY_SUPPORTED ) )
+            // InternalDemoFkd.g:4596:4: (lv_visibility_0_0= RULE_VISIBILITY_SUPPORTED )
+            {
+            // InternalDemoFkd.g:4596:4: (lv_visibility_0_0= RULE_VISIBILITY_SUPPORTED )
+            // InternalDemoFkd.g:4597:5: lv_visibility_0_0= RULE_VISIBILITY_SUPPORTED
+            {
+            lv_visibility_0_0=(Token)match(input,RULE_VISIBILITY_SUPPORTED,FOLLOW_47); 
 
-            			newLeafNode(this_VISIBILITY_SUPPORTED_0, grammarAccess.getMethod_partAccess().getVISIBILITY_SUPPORTEDTerminalRuleCall_0());
-            		
+            					newLeafNode(lv_visibility_0_0, grammarAccess.getMethod_partAccess().getVisibilityVISIBILITY_SUPPORTEDTerminalRuleCall_0_0());
+            				
 
-            			newCompositeNode(grammarAccess.getMethod_partAccess().getProcedure_and_function_declaration_partParserRuleCall_1());
-            		
-            pushFollow(FOLLOW_2);
-            this_procedure_and_function_declaration_part_1=ruleprocedure_and_function_declaration_part();
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getMethod_partRule());
+            					}
+            					setWithLastConsumed(
+            						current,
+            						"visibility",
+            						lv_visibility_0_0,
+            						"org.xtext.pascal.program.DemoFkd.VISIBILITY_SUPPORTED");
+            				
+
+            }
+
+
+            }
+
+            // InternalDemoFkd.g:4613:3: ( (lv_sections_1_0= rulemethod_section ) )
+            // InternalDemoFkd.g:4614:4: (lv_sections_1_0= rulemethod_section )
+            {
+            // InternalDemoFkd.g:4614:4: (lv_sections_1_0= rulemethod_section )
+            // InternalDemoFkd.g:4615:5: lv_sections_1_0= rulemethod_section
+            {
+
+            					newCompositeNode(grammarAccess.getMethod_partAccess().getSectionsMethod_sectionParserRuleCall_1_0());
+            				
+            pushFollow(FOLLOW_13);
+            lv_sections_1_0=rulemethod_section();
 
             state._fsp--;
 
 
-            			current = this_procedure_and_function_declaration_part_1;
-            			afterParserOrEnumRuleCall();
-            		
+            					if (current==null) {
+            						current = createModelElementForParent(grammarAccess.getMethod_partRule());
+            					}
+            					add(
+            						current,
+            						"sections",
+            						lv_sections_1_0,
+            						"org.xtext.pascal.program.DemoFkd.method_section");
+            					afterParserOrEnumRuleCall();
+            				
+
+            }
+
+
+            }
+
+            // InternalDemoFkd.g:4632:3: (otherlv_2= ';' ( (lv_sections_3_0= rulemethod_section ) ) )*
+            loop58:
+            do {
+                int alt58=2;
+                int LA58_0 = input.LA(1);
+
+                if ( (LA58_0==27) ) {
+                    int LA58_1 = input.LA(2);
+
+                    if ( ((LA58_1>=73 && LA58_1<=74)) ) {
+                        alt58=1;
+                    }
+
+
+                }
+
+
+                switch (alt58) {
+            	case 1 :
+            	    // InternalDemoFkd.g:4633:4: otherlv_2= ';' ( (lv_sections_3_0= rulemethod_section ) )
+            	    {
+            	    otherlv_2=(Token)match(input,27,FOLLOW_47); 
+
+            	    				newLeafNode(otherlv_2, grammarAccess.getMethod_partAccess().getSemicolonKeyword_2_0());
+            	    			
+            	    // InternalDemoFkd.g:4637:4: ( (lv_sections_3_0= rulemethod_section ) )
+            	    // InternalDemoFkd.g:4638:5: (lv_sections_3_0= rulemethod_section )
+            	    {
+            	    // InternalDemoFkd.g:4638:5: (lv_sections_3_0= rulemethod_section )
+            	    // InternalDemoFkd.g:4639:6: lv_sections_3_0= rulemethod_section
+            	    {
+
+            	    						newCompositeNode(grammarAccess.getMethod_partAccess().getSectionsMethod_sectionParserRuleCall_2_1_0());
+            	    					
+            	    pushFollow(FOLLOW_13);
+            	    lv_sections_3_0=rulemethod_section();
+
+            	    state._fsp--;
+
+
+            	    						if (current==null) {
+            	    							current = createModelElementForParent(grammarAccess.getMethod_partRule());
+            	    						}
+            	    						add(
+            	    							current,
+            	    							"sections",
+            	    							lv_sections_3_0,
+            	    							"org.xtext.pascal.program.DemoFkd.method_section");
+            	    						afterParserOrEnumRuleCall();
+            	    					
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop58;
+                }
+            } while (true);
+
 
             }
 
@@ -11626,8 +11735,109 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
     // $ANTLR end "rulemethod_part"
 
 
+    // $ANTLR start "entryRulemethod_section"
+    // InternalDemoFkd.g:4661:1: entryRulemethod_section returns [EObject current=null] : iv_rulemethod_section= rulemethod_section EOF ;
+    public final EObject entryRulemethod_section() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_rulemethod_section = null;
+
+
+        try {
+            // InternalDemoFkd.g:4661:55: (iv_rulemethod_section= rulemethod_section EOF )
+            // InternalDemoFkd.g:4662:2: iv_rulemethod_section= rulemethod_section EOF
+            {
+             newCompositeNode(grammarAccess.getMethod_sectionRule()); 
+            pushFollow(FOLLOW_1);
+            iv_rulemethod_section=rulemethod_section();
+
+            state._fsp--;
+
+             current =iv_rulemethod_section; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRulemethod_section"
+
+
+    // $ANTLR start "rulemethod_section"
+    // InternalDemoFkd.g:4668:1: rulemethod_section returns [EObject current=null] : ( (lv_methods_0_0= ruleabstraction_heading ) ) ;
+    public final EObject rulemethod_section() throws RecognitionException {
+        EObject current = null;
+
+        EObject lv_methods_0_0 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalDemoFkd.g:4674:2: ( ( (lv_methods_0_0= ruleabstraction_heading ) ) )
+            // InternalDemoFkd.g:4675:2: ( (lv_methods_0_0= ruleabstraction_heading ) )
+            {
+            // InternalDemoFkd.g:4675:2: ( (lv_methods_0_0= ruleabstraction_heading ) )
+            // InternalDemoFkd.g:4676:3: (lv_methods_0_0= ruleabstraction_heading )
+            {
+            // InternalDemoFkd.g:4676:3: (lv_methods_0_0= ruleabstraction_heading )
+            // InternalDemoFkd.g:4677:4: lv_methods_0_0= ruleabstraction_heading
+            {
+
+            				newCompositeNode(grammarAccess.getMethod_sectionAccess().getMethodsAbstraction_headingParserRuleCall_0());
+            			
+            pushFollow(FOLLOW_2);
+            lv_methods_0_0=ruleabstraction_heading();
+
+            state._fsp--;
+
+
+            				if (current==null) {
+            					current = createModelElementForParent(grammarAccess.getMethod_sectionRule());
+            				}
+            				add(
+            					current,
+            					"methods",
+            					lv_methods_0_0,
+            					"org.xtext.pascal.program.DemoFkd.abstraction_heading");
+            				afterParserOrEnumRuleCall();
+            			
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "rulemethod_section"
+
+
     // $ANTLR start "entryRulefield_list"
-    // InternalDemoFkd.g:4611:1: entryRulefield_list returns [EObject current=null] : iv_rulefield_list= rulefield_list EOF ;
+    // InternalDemoFkd.g:4697:1: entryRulefield_list returns [EObject current=null] : iv_rulefield_list= rulefield_list EOF ;
     public final EObject entryRulefield_list() throws RecognitionException {
         EObject current = null;
 
@@ -11635,8 +11845,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:4611:51: (iv_rulefield_list= rulefield_list EOF )
-            // InternalDemoFkd.g:4612:2: iv_rulefield_list= rulefield_list EOF
+            // InternalDemoFkd.g:4697:51: (iv_rulefield_list= rulefield_list EOF )
+            // InternalDemoFkd.g:4698:2: iv_rulefield_list= rulefield_list EOF
             {
              newCompositeNode(grammarAccess.getField_listRule()); 
             pushFollow(FOLLOW_1);
@@ -11663,7 +11873,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulefield_list"
-    // InternalDemoFkd.g:4618:1: rulefield_list returns [EObject current=null] : ( ( ( ( (lv_fixed_0_0= rulefixed_part ) ) (otherlv_1= ';' ( (lv_variants_2_0= rulevariant_part ) ) )? ) | ( (lv_variants_3_0= rulevariant_part ) ) ) (otherlv_4= ';' )? ) ;
+    // InternalDemoFkd.g:4704:1: rulefield_list returns [EObject current=null] : ( ( ( ( (lv_fixed_0_0= rulefixed_part ) ) (otherlv_1= ';' ( (lv_variants_2_0= rulevariant_part ) ) )? ) | ( (lv_variants_3_0= rulevariant_part ) ) ) (otherlv_4= ';' )? ) ;
     public final EObject rulefield_list() throws RecognitionException {
         EObject current = null;
 
@@ -11680,40 +11890,40 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:4624:2: ( ( ( ( ( (lv_fixed_0_0= rulefixed_part ) ) (otherlv_1= ';' ( (lv_variants_2_0= rulevariant_part ) ) )? ) | ( (lv_variants_3_0= rulevariant_part ) ) ) (otherlv_4= ';' )? ) )
-            // InternalDemoFkd.g:4625:2: ( ( ( ( (lv_fixed_0_0= rulefixed_part ) ) (otherlv_1= ';' ( (lv_variants_2_0= rulevariant_part ) ) )? ) | ( (lv_variants_3_0= rulevariant_part ) ) ) (otherlv_4= ';' )? )
+            // InternalDemoFkd.g:4710:2: ( ( ( ( ( (lv_fixed_0_0= rulefixed_part ) ) (otherlv_1= ';' ( (lv_variants_2_0= rulevariant_part ) ) )? ) | ( (lv_variants_3_0= rulevariant_part ) ) ) (otherlv_4= ';' )? ) )
+            // InternalDemoFkd.g:4711:2: ( ( ( ( (lv_fixed_0_0= rulefixed_part ) ) (otherlv_1= ';' ( (lv_variants_2_0= rulevariant_part ) ) )? ) | ( (lv_variants_3_0= rulevariant_part ) ) ) (otherlv_4= ';' )? )
             {
-            // InternalDemoFkd.g:4625:2: ( ( ( ( (lv_fixed_0_0= rulefixed_part ) ) (otherlv_1= ';' ( (lv_variants_2_0= rulevariant_part ) ) )? ) | ( (lv_variants_3_0= rulevariant_part ) ) ) (otherlv_4= ';' )? )
-            // InternalDemoFkd.g:4626:3: ( ( ( (lv_fixed_0_0= rulefixed_part ) ) (otherlv_1= ';' ( (lv_variants_2_0= rulevariant_part ) ) )? ) | ( (lv_variants_3_0= rulevariant_part ) ) ) (otherlv_4= ';' )?
+            // InternalDemoFkd.g:4711:2: ( ( ( ( (lv_fixed_0_0= rulefixed_part ) ) (otherlv_1= ';' ( (lv_variants_2_0= rulevariant_part ) ) )? ) | ( (lv_variants_3_0= rulevariant_part ) ) ) (otherlv_4= ';' )? )
+            // InternalDemoFkd.g:4712:3: ( ( ( (lv_fixed_0_0= rulefixed_part ) ) (otherlv_1= ';' ( (lv_variants_2_0= rulevariant_part ) ) )? ) | ( (lv_variants_3_0= rulevariant_part ) ) ) (otherlv_4= ';' )?
             {
-            // InternalDemoFkd.g:4626:3: ( ( ( (lv_fixed_0_0= rulefixed_part ) ) (otherlv_1= ';' ( (lv_variants_2_0= rulevariant_part ) ) )? ) | ( (lv_variants_3_0= rulevariant_part ) ) )
-            int alt59=2;
-            int LA59_0 = input.LA(1);
+            // InternalDemoFkd.g:4712:3: ( ( ( (lv_fixed_0_0= rulefixed_part ) ) (otherlv_1= ';' ( (lv_variants_2_0= rulevariant_part ) ) )? ) | ( (lv_variants_3_0= rulevariant_part ) ) )
+            int alt60=2;
+            int LA60_0 = input.LA(1);
 
-            if ( (LA59_0==RULE_ID) ) {
-                alt59=1;
+            if ( (LA60_0==RULE_ID) ) {
+                alt60=1;
             }
-            else if ( (LA59_0==57) ) {
-                alt59=2;
+            else if ( (LA60_0==57) ) {
+                alt60=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 59, 0, input);
+                    new NoViableAltException("", 60, 0, input);
 
                 throw nvae;
             }
-            switch (alt59) {
+            switch (alt60) {
                 case 1 :
-                    // InternalDemoFkd.g:4627:4: ( ( (lv_fixed_0_0= rulefixed_part ) ) (otherlv_1= ';' ( (lv_variants_2_0= rulevariant_part ) ) )? )
+                    // InternalDemoFkd.g:4713:4: ( ( (lv_fixed_0_0= rulefixed_part ) ) (otherlv_1= ';' ( (lv_variants_2_0= rulevariant_part ) ) )? )
                     {
-                    // InternalDemoFkd.g:4627:4: ( ( (lv_fixed_0_0= rulefixed_part ) ) (otherlv_1= ';' ( (lv_variants_2_0= rulevariant_part ) ) )? )
-                    // InternalDemoFkd.g:4628:5: ( (lv_fixed_0_0= rulefixed_part ) ) (otherlv_1= ';' ( (lv_variants_2_0= rulevariant_part ) ) )?
+                    // InternalDemoFkd.g:4713:4: ( ( (lv_fixed_0_0= rulefixed_part ) ) (otherlv_1= ';' ( (lv_variants_2_0= rulevariant_part ) ) )? )
+                    // InternalDemoFkd.g:4714:5: ( (lv_fixed_0_0= rulefixed_part ) ) (otherlv_1= ';' ( (lv_variants_2_0= rulevariant_part ) ) )?
                     {
-                    // InternalDemoFkd.g:4628:5: ( (lv_fixed_0_0= rulefixed_part ) )
-                    // InternalDemoFkd.g:4629:6: (lv_fixed_0_0= rulefixed_part )
+                    // InternalDemoFkd.g:4714:5: ( (lv_fixed_0_0= rulefixed_part ) )
+                    // InternalDemoFkd.g:4715:6: (lv_fixed_0_0= rulefixed_part )
                     {
-                    // InternalDemoFkd.g:4629:6: (lv_fixed_0_0= rulefixed_part )
-                    // InternalDemoFkd.g:4630:7: lv_fixed_0_0= rulefixed_part
+                    // InternalDemoFkd.g:4715:6: (lv_fixed_0_0= rulefixed_part )
+                    // InternalDemoFkd.g:4716:7: lv_fixed_0_0= rulefixed_part
                     {
 
                     							newCompositeNode(grammarAccess.getField_listAccess().getFixedFixed_partParserRuleCall_0_0_0_0());
@@ -11740,30 +11950,30 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalDemoFkd.g:4647:5: (otherlv_1= ';' ( (lv_variants_2_0= rulevariant_part ) ) )?
-                    int alt58=2;
-                    int LA58_0 = input.LA(1);
+                    // InternalDemoFkd.g:4733:5: (otherlv_1= ';' ( (lv_variants_2_0= rulevariant_part ) ) )?
+                    int alt59=2;
+                    int LA59_0 = input.LA(1);
 
-                    if ( (LA58_0==27) ) {
-                        int LA58_1 = input.LA(2);
+                    if ( (LA59_0==27) ) {
+                        int LA59_1 = input.LA(2);
 
-                        if ( (LA58_1==57) ) {
-                            alt58=1;
+                        if ( (LA59_1==57) ) {
+                            alt59=1;
                         }
                     }
-                    switch (alt58) {
+                    switch (alt59) {
                         case 1 :
-                            // InternalDemoFkd.g:4648:6: otherlv_1= ';' ( (lv_variants_2_0= rulevariant_part ) )
+                            // InternalDemoFkd.g:4734:6: otherlv_1= ';' ( (lv_variants_2_0= rulevariant_part ) )
                             {
                             otherlv_1=(Token)match(input,27,FOLLOW_48); 
 
                             						newLeafNode(otherlv_1, grammarAccess.getField_listAccess().getSemicolonKeyword_0_0_1_0());
                             					
-                            // InternalDemoFkd.g:4652:6: ( (lv_variants_2_0= rulevariant_part ) )
-                            // InternalDemoFkd.g:4653:7: (lv_variants_2_0= rulevariant_part )
+                            // InternalDemoFkd.g:4738:6: ( (lv_variants_2_0= rulevariant_part ) )
+                            // InternalDemoFkd.g:4739:7: (lv_variants_2_0= rulevariant_part )
                             {
-                            // InternalDemoFkd.g:4653:7: (lv_variants_2_0= rulevariant_part )
-                            // InternalDemoFkd.g:4654:8: lv_variants_2_0= rulevariant_part
+                            // InternalDemoFkd.g:4739:7: (lv_variants_2_0= rulevariant_part )
+                            // InternalDemoFkd.g:4740:8: lv_variants_2_0= rulevariant_part
                             {
 
                             								newCompositeNode(grammarAccess.getField_listAccess().getVariantsVariant_partParserRuleCall_0_0_1_1_0());
@@ -11803,13 +12013,13 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalDemoFkd.g:4674:4: ( (lv_variants_3_0= rulevariant_part ) )
+                    // InternalDemoFkd.g:4760:4: ( (lv_variants_3_0= rulevariant_part ) )
                     {
-                    // InternalDemoFkd.g:4674:4: ( (lv_variants_3_0= rulevariant_part ) )
-                    // InternalDemoFkd.g:4675:5: (lv_variants_3_0= rulevariant_part )
+                    // InternalDemoFkd.g:4760:4: ( (lv_variants_3_0= rulevariant_part ) )
+                    // InternalDemoFkd.g:4761:5: (lv_variants_3_0= rulevariant_part )
                     {
-                    // InternalDemoFkd.g:4675:5: (lv_variants_3_0= rulevariant_part )
-                    // InternalDemoFkd.g:4676:6: lv_variants_3_0= rulevariant_part
+                    // InternalDemoFkd.g:4761:5: (lv_variants_3_0= rulevariant_part )
+                    // InternalDemoFkd.g:4762:6: lv_variants_3_0= rulevariant_part
                     {
 
                     						newCompositeNode(grammarAccess.getField_listAccess().getVariantsVariant_partParserRuleCall_0_1_0());
@@ -11842,16 +12052,16 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalDemoFkd.g:4694:3: (otherlv_4= ';' )?
-            int alt60=2;
-            int LA60_0 = input.LA(1);
+            // InternalDemoFkd.g:4780:3: (otherlv_4= ';' )?
+            int alt61=2;
+            int LA61_0 = input.LA(1);
 
-            if ( (LA60_0==27) ) {
-                alt60=1;
+            if ( (LA61_0==27) ) {
+                alt61=1;
             }
-            switch (alt60) {
+            switch (alt61) {
                 case 1 :
-                    // InternalDemoFkd.g:4695:4: otherlv_4= ';'
+                    // InternalDemoFkd.g:4781:4: otherlv_4= ';'
                     {
                     otherlv_4=(Token)match(input,27,FOLLOW_2); 
 
@@ -11886,7 +12096,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulefixed_part"
-    // InternalDemoFkd.g:4704:1: entryRulefixed_part returns [EObject current=null] : iv_rulefixed_part= rulefixed_part EOF ;
+    // InternalDemoFkd.g:4790:1: entryRulefixed_part returns [EObject current=null] : iv_rulefixed_part= rulefixed_part EOF ;
     public final EObject entryRulefixed_part() throws RecognitionException {
         EObject current = null;
 
@@ -11894,8 +12104,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:4704:51: (iv_rulefixed_part= rulefixed_part EOF )
-            // InternalDemoFkd.g:4705:2: iv_rulefixed_part= rulefixed_part EOF
+            // InternalDemoFkd.g:4790:51: (iv_rulefixed_part= rulefixed_part EOF )
+            // InternalDemoFkd.g:4791:2: iv_rulefixed_part= rulefixed_part EOF
             {
              newCompositeNode(grammarAccess.getFixed_partRule()); 
             pushFollow(FOLLOW_1);
@@ -11922,7 +12132,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulefixed_part"
-    // InternalDemoFkd.g:4711:1: rulefixed_part returns [EObject current=null] : ( ( (lv_sections_0_0= rulerecord_section ) ) (otherlv_1= ';' ( (lv_sections_2_0= rulerecord_section ) ) )* ) ;
+    // InternalDemoFkd.g:4797:1: rulefixed_part returns [EObject current=null] : ( ( (lv_sections_0_0= rulerecord_section ) ) (otherlv_1= ';' ( (lv_sections_2_0= rulerecord_section ) ) )* ) ;
     public final EObject rulefixed_part() throws RecognitionException {
         EObject current = null;
 
@@ -11936,17 +12146,17 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:4717:2: ( ( ( (lv_sections_0_0= rulerecord_section ) ) (otherlv_1= ';' ( (lv_sections_2_0= rulerecord_section ) ) )* ) )
-            // InternalDemoFkd.g:4718:2: ( ( (lv_sections_0_0= rulerecord_section ) ) (otherlv_1= ';' ( (lv_sections_2_0= rulerecord_section ) ) )* )
+            // InternalDemoFkd.g:4803:2: ( ( ( (lv_sections_0_0= rulerecord_section ) ) (otherlv_1= ';' ( (lv_sections_2_0= rulerecord_section ) ) )* ) )
+            // InternalDemoFkd.g:4804:2: ( ( (lv_sections_0_0= rulerecord_section ) ) (otherlv_1= ';' ( (lv_sections_2_0= rulerecord_section ) ) )* )
             {
-            // InternalDemoFkd.g:4718:2: ( ( (lv_sections_0_0= rulerecord_section ) ) (otherlv_1= ';' ( (lv_sections_2_0= rulerecord_section ) ) )* )
-            // InternalDemoFkd.g:4719:3: ( (lv_sections_0_0= rulerecord_section ) ) (otherlv_1= ';' ( (lv_sections_2_0= rulerecord_section ) ) )*
+            // InternalDemoFkd.g:4804:2: ( ( (lv_sections_0_0= rulerecord_section ) ) (otherlv_1= ';' ( (lv_sections_2_0= rulerecord_section ) ) )* )
+            // InternalDemoFkd.g:4805:3: ( (lv_sections_0_0= rulerecord_section ) ) (otherlv_1= ';' ( (lv_sections_2_0= rulerecord_section ) ) )*
             {
-            // InternalDemoFkd.g:4719:3: ( (lv_sections_0_0= rulerecord_section ) )
-            // InternalDemoFkd.g:4720:4: (lv_sections_0_0= rulerecord_section )
+            // InternalDemoFkd.g:4805:3: ( (lv_sections_0_0= rulerecord_section ) )
+            // InternalDemoFkd.g:4806:4: (lv_sections_0_0= rulerecord_section )
             {
-            // InternalDemoFkd.g:4720:4: (lv_sections_0_0= rulerecord_section )
-            // InternalDemoFkd.g:4721:5: lv_sections_0_0= rulerecord_section
+            // InternalDemoFkd.g:4806:4: (lv_sections_0_0= rulerecord_section )
+            // InternalDemoFkd.g:4807:5: lv_sections_0_0= rulerecord_section
             {
 
             					newCompositeNode(grammarAccess.getFixed_partAccess().getSectionsRecord_sectionParserRuleCall_0_0());
@@ -11973,36 +12183,36 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalDemoFkd.g:4738:3: (otherlv_1= ';' ( (lv_sections_2_0= rulerecord_section ) ) )*
-            loop61:
+            // InternalDemoFkd.g:4824:3: (otherlv_1= ';' ( (lv_sections_2_0= rulerecord_section ) ) )*
+            loop62:
             do {
-                int alt61=2;
-                int LA61_0 = input.LA(1);
+                int alt62=2;
+                int LA62_0 = input.LA(1);
 
-                if ( (LA61_0==27) ) {
-                    int LA61_1 = input.LA(2);
+                if ( (LA62_0==27) ) {
+                    int LA62_1 = input.LA(2);
 
-                    if ( (LA61_1==RULE_ID) ) {
-                        alt61=1;
+                    if ( (LA62_1==RULE_ID) ) {
+                        alt62=1;
                     }
 
 
                 }
 
 
-                switch (alt61) {
+                switch (alt62) {
             	case 1 :
-            	    // InternalDemoFkd.g:4739:4: otherlv_1= ';' ( (lv_sections_2_0= rulerecord_section ) )
+            	    // InternalDemoFkd.g:4825:4: otherlv_1= ';' ( (lv_sections_2_0= rulerecord_section ) )
             	    {
             	    otherlv_1=(Token)match(input,27,FOLLOW_5); 
 
             	    				newLeafNode(otherlv_1, grammarAccess.getFixed_partAccess().getSemicolonKeyword_1_0());
             	    			
-            	    // InternalDemoFkd.g:4743:4: ( (lv_sections_2_0= rulerecord_section ) )
-            	    // InternalDemoFkd.g:4744:5: (lv_sections_2_0= rulerecord_section )
+            	    // InternalDemoFkd.g:4829:4: ( (lv_sections_2_0= rulerecord_section ) )
+            	    // InternalDemoFkd.g:4830:5: (lv_sections_2_0= rulerecord_section )
             	    {
-            	    // InternalDemoFkd.g:4744:5: (lv_sections_2_0= rulerecord_section )
-            	    // InternalDemoFkd.g:4745:6: lv_sections_2_0= rulerecord_section
+            	    // InternalDemoFkd.g:4830:5: (lv_sections_2_0= rulerecord_section )
+            	    // InternalDemoFkd.g:4831:6: lv_sections_2_0= rulerecord_section
             	    {
 
             	    						newCompositeNode(grammarAccess.getFixed_partAccess().getSectionsRecord_sectionParserRuleCall_1_1_0());
@@ -12022,163 +12232,6 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
             	    							lv_sections_2_0,
             	    							"org.xtext.pascal.program.DemoFkd.record_section");
             	    						afterParserOrEnumRuleCall();
-            	    					
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop61;
-                }
-            } while (true);
-
-
-            }
-
-
-            }
-
-
-            	leaveRule();
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "rulefixed_part"
-
-
-    // $ANTLR start "entryRulevariable_identifier_list"
-    // InternalDemoFkd.g:4767:1: entryRulevariable_identifier_list returns [EObject current=null] : iv_rulevariable_identifier_list= rulevariable_identifier_list EOF ;
-    public final EObject entryRulevariable_identifier_list() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_rulevariable_identifier_list = null;
-
-
-        try {
-            // InternalDemoFkd.g:4767:65: (iv_rulevariable_identifier_list= rulevariable_identifier_list EOF )
-            // InternalDemoFkd.g:4768:2: iv_rulevariable_identifier_list= rulevariable_identifier_list EOF
-            {
-             newCompositeNode(grammarAccess.getVariable_identifier_listRule()); 
-            pushFollow(FOLLOW_1);
-            iv_rulevariable_identifier_list=rulevariable_identifier_list();
-
-            state._fsp--;
-
-             current =iv_rulevariable_identifier_list; 
-            match(input,EOF,FOLLOW_2); 
-
-            }
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRulevariable_identifier_list"
-
-
-    // $ANTLR start "rulevariable_identifier_list"
-    // InternalDemoFkd.g:4774:1: rulevariable_identifier_list returns [EObject current=null] : ( ( (lv_names_0_0= RULE_ID ) ) (otherlv_1= ',' ( (lv_names_2_0= RULE_ID ) ) )* ) ;
-    public final EObject rulevariable_identifier_list() throws RecognitionException {
-        EObject current = null;
-
-        Token lv_names_0_0=null;
-        Token otherlv_1=null;
-        Token lv_names_2_0=null;
-
-
-        	enterRule();
-
-        try {
-            // InternalDemoFkd.g:4780:2: ( ( ( (lv_names_0_0= RULE_ID ) ) (otherlv_1= ',' ( (lv_names_2_0= RULE_ID ) ) )* ) )
-            // InternalDemoFkd.g:4781:2: ( ( (lv_names_0_0= RULE_ID ) ) (otherlv_1= ',' ( (lv_names_2_0= RULE_ID ) ) )* )
-            {
-            // InternalDemoFkd.g:4781:2: ( ( (lv_names_0_0= RULE_ID ) ) (otherlv_1= ',' ( (lv_names_2_0= RULE_ID ) ) )* )
-            // InternalDemoFkd.g:4782:3: ( (lv_names_0_0= RULE_ID ) ) (otherlv_1= ',' ( (lv_names_2_0= RULE_ID ) ) )*
-            {
-            // InternalDemoFkd.g:4782:3: ( (lv_names_0_0= RULE_ID ) )
-            // InternalDemoFkd.g:4783:4: (lv_names_0_0= RULE_ID )
-            {
-            // InternalDemoFkd.g:4783:4: (lv_names_0_0= RULE_ID )
-            // InternalDemoFkd.g:4784:5: lv_names_0_0= RULE_ID
-            {
-            lv_names_0_0=(Token)match(input,RULE_ID,FOLLOW_9); 
-
-            					newLeafNode(lv_names_0_0, grammarAccess.getVariable_identifier_listAccess().getNamesIDTerminalRuleCall_0_0());
-            				
-
-            					if (current==null) {
-            						current = createModelElement(grammarAccess.getVariable_identifier_listRule());
-            					}
-            					addWithLastConsumed(
-            						current,
-            						"names",
-            						lv_names_0_0,
-            						"org.eclipse.xtext.common.Terminals.ID");
-            				
-
-            }
-
-
-            }
-
-            // InternalDemoFkd.g:4800:3: (otherlv_1= ',' ( (lv_names_2_0= RULE_ID ) ) )*
-            loop62:
-            do {
-                int alt62=2;
-                int LA62_0 = input.LA(1);
-
-                if ( (LA62_0==28) ) {
-                    alt62=1;
-                }
-
-
-                switch (alt62) {
-            	case 1 :
-            	    // InternalDemoFkd.g:4801:4: otherlv_1= ',' ( (lv_names_2_0= RULE_ID ) )
-            	    {
-            	    otherlv_1=(Token)match(input,28,FOLLOW_5); 
-
-            	    				newLeafNode(otherlv_1, grammarAccess.getVariable_identifier_listAccess().getCommaKeyword_1_0());
-            	    			
-            	    // InternalDemoFkd.g:4805:4: ( (lv_names_2_0= RULE_ID ) )
-            	    // InternalDemoFkd.g:4806:5: (lv_names_2_0= RULE_ID )
-            	    {
-            	    // InternalDemoFkd.g:4806:5: (lv_names_2_0= RULE_ID )
-            	    // InternalDemoFkd.g:4807:6: lv_names_2_0= RULE_ID
-            	    {
-            	    lv_names_2_0=(Token)match(input,RULE_ID,FOLLOW_9); 
-
-            	    						newLeafNode(lv_names_2_0, grammarAccess.getVariable_identifier_listAccess().getNamesIDTerminalRuleCall_1_1_0());
-            	    					
-
-            	    						if (current==null) {
-            	    							current = createModelElement(grammarAccess.getVariable_identifier_listRule());
-            	    						}
-            	    						addWithLastConsumed(
-            	    							current,
-            	    							"names",
-            	    							lv_names_2_0,
-            	    							"org.eclipse.xtext.common.Terminals.ID");
             	    					
 
             	    }
@@ -12214,11 +12267,168 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
+    // $ANTLR end "rulefixed_part"
+
+
+    // $ANTLR start "entryRulevariable_identifier_list"
+    // InternalDemoFkd.g:4853:1: entryRulevariable_identifier_list returns [EObject current=null] : iv_rulevariable_identifier_list= rulevariable_identifier_list EOF ;
+    public final EObject entryRulevariable_identifier_list() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_rulevariable_identifier_list = null;
+
+
+        try {
+            // InternalDemoFkd.g:4853:65: (iv_rulevariable_identifier_list= rulevariable_identifier_list EOF )
+            // InternalDemoFkd.g:4854:2: iv_rulevariable_identifier_list= rulevariable_identifier_list EOF
+            {
+             newCompositeNode(grammarAccess.getVariable_identifier_listRule()); 
+            pushFollow(FOLLOW_1);
+            iv_rulevariable_identifier_list=rulevariable_identifier_list();
+
+            state._fsp--;
+
+             current =iv_rulevariable_identifier_list; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRulevariable_identifier_list"
+
+
+    // $ANTLR start "rulevariable_identifier_list"
+    // InternalDemoFkd.g:4860:1: rulevariable_identifier_list returns [EObject current=null] : ( ( (lv_names_0_0= RULE_ID ) ) (otherlv_1= ',' ( (lv_names_2_0= RULE_ID ) ) )* ) ;
+    public final EObject rulevariable_identifier_list() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_names_0_0=null;
+        Token otherlv_1=null;
+        Token lv_names_2_0=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalDemoFkd.g:4866:2: ( ( ( (lv_names_0_0= RULE_ID ) ) (otherlv_1= ',' ( (lv_names_2_0= RULE_ID ) ) )* ) )
+            // InternalDemoFkd.g:4867:2: ( ( (lv_names_0_0= RULE_ID ) ) (otherlv_1= ',' ( (lv_names_2_0= RULE_ID ) ) )* )
+            {
+            // InternalDemoFkd.g:4867:2: ( ( (lv_names_0_0= RULE_ID ) ) (otherlv_1= ',' ( (lv_names_2_0= RULE_ID ) ) )* )
+            // InternalDemoFkd.g:4868:3: ( (lv_names_0_0= RULE_ID ) ) (otherlv_1= ',' ( (lv_names_2_0= RULE_ID ) ) )*
+            {
+            // InternalDemoFkd.g:4868:3: ( (lv_names_0_0= RULE_ID ) )
+            // InternalDemoFkd.g:4869:4: (lv_names_0_0= RULE_ID )
+            {
+            // InternalDemoFkd.g:4869:4: (lv_names_0_0= RULE_ID )
+            // InternalDemoFkd.g:4870:5: lv_names_0_0= RULE_ID
+            {
+            lv_names_0_0=(Token)match(input,RULE_ID,FOLLOW_9); 
+
+            					newLeafNode(lv_names_0_0, grammarAccess.getVariable_identifier_listAccess().getNamesIDTerminalRuleCall_0_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getVariable_identifier_listRule());
+            					}
+            					addWithLastConsumed(
+            						current,
+            						"names",
+            						lv_names_0_0,
+            						"org.eclipse.xtext.common.Terminals.ID");
+            				
+
+            }
+
+
+            }
+
+            // InternalDemoFkd.g:4886:3: (otherlv_1= ',' ( (lv_names_2_0= RULE_ID ) ) )*
+            loop63:
+            do {
+                int alt63=2;
+                int LA63_0 = input.LA(1);
+
+                if ( (LA63_0==28) ) {
+                    alt63=1;
+                }
+
+
+                switch (alt63) {
+            	case 1 :
+            	    // InternalDemoFkd.g:4887:4: otherlv_1= ',' ( (lv_names_2_0= RULE_ID ) )
+            	    {
+            	    otherlv_1=(Token)match(input,28,FOLLOW_5); 
+
+            	    				newLeafNode(otherlv_1, grammarAccess.getVariable_identifier_listAccess().getCommaKeyword_1_0());
+            	    			
+            	    // InternalDemoFkd.g:4891:4: ( (lv_names_2_0= RULE_ID ) )
+            	    // InternalDemoFkd.g:4892:5: (lv_names_2_0= RULE_ID )
+            	    {
+            	    // InternalDemoFkd.g:4892:5: (lv_names_2_0= RULE_ID )
+            	    // InternalDemoFkd.g:4893:6: lv_names_2_0= RULE_ID
+            	    {
+            	    lv_names_2_0=(Token)match(input,RULE_ID,FOLLOW_9); 
+
+            	    						newLeafNode(lv_names_2_0, grammarAccess.getVariable_identifier_listAccess().getNamesIDTerminalRuleCall_1_1_0());
+            	    					
+
+            	    						if (current==null) {
+            	    							current = createModelElement(grammarAccess.getVariable_identifier_listRule());
+            	    						}
+            	    						addWithLastConsumed(
+            	    							current,
+            	    							"names",
+            	    							lv_names_2_0,
+            	    							"org.eclipse.xtext.common.Terminals.ID");
+            	    					
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop63;
+                }
+            } while (true);
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
     // $ANTLR end "rulevariable_identifier_list"
 
 
     // $ANTLR start "entryRulevariable_section"
-    // InternalDemoFkd.g:4828:1: entryRulevariable_section returns [EObject current=null] : iv_rulevariable_section= rulevariable_section EOF ;
+    // InternalDemoFkd.g:4914:1: entryRulevariable_section returns [EObject current=null] : iv_rulevariable_section= rulevariable_section EOF ;
     public final EObject entryRulevariable_section() throws RecognitionException {
         EObject current = null;
 
@@ -12226,8 +12436,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:4828:57: (iv_rulevariable_section= rulevariable_section EOF )
-            // InternalDemoFkd.g:4829:2: iv_rulevariable_section= rulevariable_section EOF
+            // InternalDemoFkd.g:4914:57: (iv_rulevariable_section= rulevariable_section EOF )
+            // InternalDemoFkd.g:4915:2: iv_rulevariable_section= rulevariable_section EOF
             {
              newCompositeNode(grammarAccess.getVariable_sectionRule()); 
             pushFollow(FOLLOW_1);
@@ -12254,7 +12464,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulevariable_section"
-    // InternalDemoFkd.g:4835:1: rulevariable_section returns [EObject current=null] : ( ( (lv_identifiers_0_0= rulevariable_identifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruletype ) ) ) ;
+    // InternalDemoFkd.g:4921:1: rulevariable_section returns [EObject current=null] : ( ( (lv_identifiers_0_0= rulevariable_identifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruletype ) ) ) ;
     public final EObject rulevariable_section() throws RecognitionException {
         EObject current = null;
 
@@ -12268,17 +12478,17 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:4841:2: ( ( ( (lv_identifiers_0_0= rulevariable_identifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruletype ) ) ) )
-            // InternalDemoFkd.g:4842:2: ( ( (lv_identifiers_0_0= rulevariable_identifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruletype ) ) )
+            // InternalDemoFkd.g:4927:2: ( ( ( (lv_identifiers_0_0= rulevariable_identifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruletype ) ) ) )
+            // InternalDemoFkd.g:4928:2: ( ( (lv_identifiers_0_0= rulevariable_identifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruletype ) ) )
             {
-            // InternalDemoFkd.g:4842:2: ( ( (lv_identifiers_0_0= rulevariable_identifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruletype ) ) )
-            // InternalDemoFkd.g:4843:3: ( (lv_identifiers_0_0= rulevariable_identifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruletype ) )
+            // InternalDemoFkd.g:4928:2: ( ( (lv_identifiers_0_0= rulevariable_identifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruletype ) ) )
+            // InternalDemoFkd.g:4929:3: ( (lv_identifiers_0_0= rulevariable_identifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruletype ) )
             {
-            // InternalDemoFkd.g:4843:3: ( (lv_identifiers_0_0= rulevariable_identifier_list ) )
-            // InternalDemoFkd.g:4844:4: (lv_identifiers_0_0= rulevariable_identifier_list )
+            // InternalDemoFkd.g:4929:3: ( (lv_identifiers_0_0= rulevariable_identifier_list ) )
+            // InternalDemoFkd.g:4930:4: (lv_identifiers_0_0= rulevariable_identifier_list )
             {
-            // InternalDemoFkd.g:4844:4: (lv_identifiers_0_0= rulevariable_identifier_list )
-            // InternalDemoFkd.g:4845:5: lv_identifiers_0_0= rulevariable_identifier_list
+            // InternalDemoFkd.g:4930:4: (lv_identifiers_0_0= rulevariable_identifier_list )
+            // InternalDemoFkd.g:4931:5: lv_identifiers_0_0= rulevariable_identifier_list
             {
 
             					newCompositeNode(grammarAccess.getVariable_sectionAccess().getIdentifiersVariable_identifier_listParserRuleCall_0_0());
@@ -12309,11 +12519,11 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getVariable_sectionAccess().getColonKeyword_1());
             		
-            // InternalDemoFkd.g:4866:3: ( (lv_type_2_0= ruletype ) )
-            // InternalDemoFkd.g:4867:4: (lv_type_2_0= ruletype )
+            // InternalDemoFkd.g:4952:3: ( (lv_type_2_0= ruletype ) )
+            // InternalDemoFkd.g:4953:4: (lv_type_2_0= ruletype )
             {
-            // InternalDemoFkd.g:4867:4: (lv_type_2_0= ruletype )
-            // InternalDemoFkd.g:4868:5: lv_type_2_0= ruletype
+            // InternalDemoFkd.g:4953:4: (lv_type_2_0= ruletype )
+            // InternalDemoFkd.g:4954:5: lv_type_2_0= ruletype
             {
 
             					newCompositeNode(grammarAccess.getVariable_sectionAccess().getTypeTypeParserRuleCall_2_0());
@@ -12363,7 +12573,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulerecord_section"
-    // InternalDemoFkd.g:4889:1: entryRulerecord_section returns [EObject current=null] : iv_rulerecord_section= rulerecord_section EOF ;
+    // InternalDemoFkd.g:4975:1: entryRulerecord_section returns [EObject current=null] : iv_rulerecord_section= rulerecord_section EOF ;
     public final EObject entryRulerecord_section() throws RecognitionException {
         EObject current = null;
 
@@ -12371,8 +12581,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:4889:55: (iv_rulerecord_section= rulerecord_section EOF )
-            // InternalDemoFkd.g:4890:2: iv_rulerecord_section= rulerecord_section EOF
+            // InternalDemoFkd.g:4975:55: (iv_rulerecord_section= rulerecord_section EOF )
+            // InternalDemoFkd.g:4976:2: iv_rulerecord_section= rulerecord_section EOF
             {
              newCompositeNode(grammarAccess.getRecord_sectionRule()); 
             pushFollow(FOLLOW_1);
@@ -12399,7 +12609,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulerecord_section"
-    // InternalDemoFkd.g:4896:1: rulerecord_section returns [EObject current=null] : ( ( (lv_identifiers_0_0= ruleidentifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruletype ) ) ) ;
+    // InternalDemoFkd.g:4982:1: rulerecord_section returns [EObject current=null] : ( ( (lv_identifiers_0_0= ruleidentifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruletype ) ) ) ;
     public final EObject rulerecord_section() throws RecognitionException {
         EObject current = null;
 
@@ -12413,17 +12623,17 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:4902:2: ( ( ( (lv_identifiers_0_0= ruleidentifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruletype ) ) ) )
-            // InternalDemoFkd.g:4903:2: ( ( (lv_identifiers_0_0= ruleidentifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruletype ) ) )
+            // InternalDemoFkd.g:4988:2: ( ( ( (lv_identifiers_0_0= ruleidentifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruletype ) ) ) )
+            // InternalDemoFkd.g:4989:2: ( ( (lv_identifiers_0_0= ruleidentifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruletype ) ) )
             {
-            // InternalDemoFkd.g:4903:2: ( ( (lv_identifiers_0_0= ruleidentifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruletype ) ) )
-            // InternalDemoFkd.g:4904:3: ( (lv_identifiers_0_0= ruleidentifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruletype ) )
+            // InternalDemoFkd.g:4989:2: ( ( (lv_identifiers_0_0= ruleidentifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruletype ) ) )
+            // InternalDemoFkd.g:4990:3: ( (lv_identifiers_0_0= ruleidentifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruletype ) )
             {
-            // InternalDemoFkd.g:4904:3: ( (lv_identifiers_0_0= ruleidentifier_list ) )
-            // InternalDemoFkd.g:4905:4: (lv_identifiers_0_0= ruleidentifier_list )
+            // InternalDemoFkd.g:4990:3: ( (lv_identifiers_0_0= ruleidentifier_list ) )
+            // InternalDemoFkd.g:4991:4: (lv_identifiers_0_0= ruleidentifier_list )
             {
-            // InternalDemoFkd.g:4905:4: (lv_identifiers_0_0= ruleidentifier_list )
-            // InternalDemoFkd.g:4906:5: lv_identifiers_0_0= ruleidentifier_list
+            // InternalDemoFkd.g:4991:4: (lv_identifiers_0_0= ruleidentifier_list )
+            // InternalDemoFkd.g:4992:5: lv_identifiers_0_0= ruleidentifier_list
             {
 
             					newCompositeNode(grammarAccess.getRecord_sectionAccess().getIdentifiersIdentifier_listParserRuleCall_0_0());
@@ -12454,11 +12664,11 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getRecord_sectionAccess().getColonKeyword_1());
             		
-            // InternalDemoFkd.g:4927:3: ( (lv_type_2_0= ruletype ) )
-            // InternalDemoFkd.g:4928:4: (lv_type_2_0= ruletype )
+            // InternalDemoFkd.g:5013:3: ( (lv_type_2_0= ruletype ) )
+            // InternalDemoFkd.g:5014:4: (lv_type_2_0= ruletype )
             {
-            // InternalDemoFkd.g:4928:4: (lv_type_2_0= ruletype )
-            // InternalDemoFkd.g:4929:5: lv_type_2_0= ruletype
+            // InternalDemoFkd.g:5014:4: (lv_type_2_0= ruletype )
+            // InternalDemoFkd.g:5015:5: lv_type_2_0= ruletype
             {
 
             					newCompositeNode(grammarAccess.getRecord_sectionAccess().getTypeTypeParserRuleCall_2_0());
@@ -12508,7 +12718,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulevariant_part"
-    // InternalDemoFkd.g:4950:1: entryRulevariant_part returns [EObject current=null] : iv_rulevariant_part= rulevariant_part EOF ;
+    // InternalDemoFkd.g:5036:1: entryRulevariant_part returns [EObject current=null] : iv_rulevariant_part= rulevariant_part EOF ;
     public final EObject entryRulevariant_part() throws RecognitionException {
         EObject current = null;
 
@@ -12516,8 +12726,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:4950:53: (iv_rulevariant_part= rulevariant_part EOF )
-            // InternalDemoFkd.g:4951:2: iv_rulevariant_part= rulevariant_part EOF
+            // InternalDemoFkd.g:5036:53: (iv_rulevariant_part= rulevariant_part EOF )
+            // InternalDemoFkd.g:5037:2: iv_rulevariant_part= rulevariant_part EOF
             {
              newCompositeNode(grammarAccess.getVariant_partRule()); 
             pushFollow(FOLLOW_1);
@@ -12544,7 +12754,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulevariant_part"
-    // InternalDemoFkd.g:4957:1: rulevariant_part returns [EObject current=null] : (otherlv_0= 'case' ( (lv_tag_1_0= ruletag_field ) )? ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'of' ( (lv_variants_4_0= rulevariant ) ) (otherlv_5= ';' ( (lv_variants_6_0= rulevariant ) ) )* ) ;
+    // InternalDemoFkd.g:5043:1: rulevariant_part returns [EObject current=null] : (otherlv_0= 'case' ( (lv_tag_1_0= ruletag_field ) )? ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'of' ( (lv_variants_4_0= rulevariant ) ) (otherlv_5= ';' ( (lv_variants_6_0= rulevariant ) ) )* ) ;
     public final EObject rulevariant_part() throws RecognitionException {
         EObject current = null;
 
@@ -12563,33 +12773,33 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:4963:2: ( (otherlv_0= 'case' ( (lv_tag_1_0= ruletag_field ) )? ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'of' ( (lv_variants_4_0= rulevariant ) ) (otherlv_5= ';' ( (lv_variants_6_0= rulevariant ) ) )* ) )
-            // InternalDemoFkd.g:4964:2: (otherlv_0= 'case' ( (lv_tag_1_0= ruletag_field ) )? ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'of' ( (lv_variants_4_0= rulevariant ) ) (otherlv_5= ';' ( (lv_variants_6_0= rulevariant ) ) )* )
+            // InternalDemoFkd.g:5049:2: ( (otherlv_0= 'case' ( (lv_tag_1_0= ruletag_field ) )? ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'of' ( (lv_variants_4_0= rulevariant ) ) (otherlv_5= ';' ( (lv_variants_6_0= rulevariant ) ) )* ) )
+            // InternalDemoFkd.g:5050:2: (otherlv_0= 'case' ( (lv_tag_1_0= ruletag_field ) )? ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'of' ( (lv_variants_4_0= rulevariant ) ) (otherlv_5= ';' ( (lv_variants_6_0= rulevariant ) ) )* )
             {
-            // InternalDemoFkd.g:4964:2: (otherlv_0= 'case' ( (lv_tag_1_0= ruletag_field ) )? ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'of' ( (lv_variants_4_0= rulevariant ) ) (otherlv_5= ';' ( (lv_variants_6_0= rulevariant ) ) )* )
-            // InternalDemoFkd.g:4965:3: otherlv_0= 'case' ( (lv_tag_1_0= ruletag_field ) )? ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'of' ( (lv_variants_4_0= rulevariant ) ) (otherlv_5= ';' ( (lv_variants_6_0= rulevariant ) ) )*
+            // InternalDemoFkd.g:5050:2: (otherlv_0= 'case' ( (lv_tag_1_0= ruletag_field ) )? ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'of' ( (lv_variants_4_0= rulevariant ) ) (otherlv_5= ';' ( (lv_variants_6_0= rulevariant ) ) )* )
+            // InternalDemoFkd.g:5051:3: otherlv_0= 'case' ( (lv_tag_1_0= ruletag_field ) )? ( (lv_name_2_0= RULE_ID ) ) otherlv_3= 'of' ( (lv_variants_4_0= rulevariant ) ) (otherlv_5= ';' ( (lv_variants_6_0= rulevariant ) ) )*
             {
             otherlv_0=(Token)match(input,57,FOLLOW_5); 
 
             			newLeafNode(otherlv_0, grammarAccess.getVariant_partAccess().getCaseKeyword_0());
             		
-            // InternalDemoFkd.g:4969:3: ( (lv_tag_1_0= ruletag_field ) )?
-            int alt63=2;
-            int LA63_0 = input.LA(1);
+            // InternalDemoFkd.g:5055:3: ( (lv_tag_1_0= ruletag_field ) )?
+            int alt64=2;
+            int LA64_0 = input.LA(1);
 
-            if ( (LA63_0==RULE_ID) ) {
-                int LA63_1 = input.LA(2);
+            if ( (LA64_0==RULE_ID) ) {
+                int LA64_1 = input.LA(2);
 
-                if ( (LA63_1==32) ) {
-                    alt63=1;
+                if ( (LA64_1==32) ) {
+                    alt64=1;
                 }
             }
-            switch (alt63) {
+            switch (alt64) {
                 case 1 :
-                    // InternalDemoFkd.g:4970:4: (lv_tag_1_0= ruletag_field )
+                    // InternalDemoFkd.g:5056:4: (lv_tag_1_0= ruletag_field )
                     {
-                    // InternalDemoFkd.g:4970:4: (lv_tag_1_0= ruletag_field )
-                    // InternalDemoFkd.g:4971:5: lv_tag_1_0= ruletag_field
+                    // InternalDemoFkd.g:5056:4: (lv_tag_1_0= ruletag_field )
+                    // InternalDemoFkd.g:5057:5: lv_tag_1_0= ruletag_field
                     {
 
                     					newCompositeNode(grammarAccess.getVariant_partAccess().getTagTag_fieldParserRuleCall_1_0());
@@ -12619,11 +12829,11 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalDemoFkd.g:4988:3: ( (lv_name_2_0= RULE_ID ) )
-            // InternalDemoFkd.g:4989:4: (lv_name_2_0= RULE_ID )
+            // InternalDemoFkd.g:5074:3: ( (lv_name_2_0= RULE_ID ) )
+            // InternalDemoFkd.g:5075:4: (lv_name_2_0= RULE_ID )
             {
-            // InternalDemoFkd.g:4989:4: (lv_name_2_0= RULE_ID )
-            // InternalDemoFkd.g:4990:5: lv_name_2_0= RULE_ID
+            // InternalDemoFkd.g:5075:4: (lv_name_2_0= RULE_ID )
+            // InternalDemoFkd.g:5076:5: lv_name_2_0= RULE_ID
             {
             lv_name_2_0=(Token)match(input,RULE_ID,FOLLOW_30); 
 
@@ -12649,11 +12859,11 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_3, grammarAccess.getVariant_partAccess().getOfKeyword_3());
             		
-            // InternalDemoFkd.g:5010:3: ( (lv_variants_4_0= rulevariant ) )
-            // InternalDemoFkd.g:5011:4: (lv_variants_4_0= rulevariant )
+            // InternalDemoFkd.g:5096:3: ( (lv_variants_4_0= rulevariant ) )
+            // InternalDemoFkd.g:5097:4: (lv_variants_4_0= rulevariant )
             {
-            // InternalDemoFkd.g:5011:4: (lv_variants_4_0= rulevariant )
-            // InternalDemoFkd.g:5012:5: lv_variants_4_0= rulevariant
+            // InternalDemoFkd.g:5097:4: (lv_variants_4_0= rulevariant )
+            // InternalDemoFkd.g:5098:5: lv_variants_4_0= rulevariant
             {
 
             					newCompositeNode(grammarAccess.getVariant_partAccess().getVariantsVariantParserRuleCall_4_0());
@@ -12680,36 +12890,36 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalDemoFkd.g:5029:3: (otherlv_5= ';' ( (lv_variants_6_0= rulevariant ) ) )*
-            loop64:
+            // InternalDemoFkd.g:5115:3: (otherlv_5= ';' ( (lv_variants_6_0= rulevariant ) ) )*
+            loop65:
             do {
-                int alt64=2;
-                int LA64_0 = input.LA(1);
+                int alt65=2;
+                int LA65_0 = input.LA(1);
 
-                if ( (LA64_0==27) ) {
-                    int LA64_1 = input.LA(2);
+                if ( (LA65_0==27) ) {
+                    int LA65_1 = input.LA(2);
 
-                    if ( ((LA64_1>=RULE_ID && LA64_1<=RULE_INTEGER_NUMBER)||LA64_1==RULE_ADDITION_OPERATOR||(LA64_1>=RULE_STRING && LA64_1<=RULE_SIGNED_REAL_NUMBER)||(LA64_1>=43 && LA64_1<=45)) ) {
-                        alt64=1;
+                    if ( ((LA65_1>=RULE_ID && LA65_1<=RULE_INTEGER_NUMBER)||LA65_1==RULE_ADDITION_OPERATOR||(LA65_1>=RULE_STRING && LA65_1<=RULE_SIGNED_REAL_NUMBER)||(LA65_1>=43 && LA65_1<=45)) ) {
+                        alt65=1;
                     }
 
 
                 }
 
 
-                switch (alt64) {
+                switch (alt65) {
             	case 1 :
-            	    // InternalDemoFkd.g:5030:4: otherlv_5= ';' ( (lv_variants_6_0= rulevariant ) )
+            	    // InternalDemoFkd.g:5116:4: otherlv_5= ';' ( (lv_variants_6_0= rulevariant ) )
             	    {
             	    otherlv_5=(Token)match(input,27,FOLLOW_31); 
 
             	    				newLeafNode(otherlv_5, grammarAccess.getVariant_partAccess().getSemicolonKeyword_5_0());
             	    			
-            	    // InternalDemoFkd.g:5034:4: ( (lv_variants_6_0= rulevariant ) )
-            	    // InternalDemoFkd.g:5035:5: (lv_variants_6_0= rulevariant )
+            	    // InternalDemoFkd.g:5120:4: ( (lv_variants_6_0= rulevariant ) )
+            	    // InternalDemoFkd.g:5121:5: (lv_variants_6_0= rulevariant )
             	    {
-            	    // InternalDemoFkd.g:5035:5: (lv_variants_6_0= rulevariant )
-            	    // InternalDemoFkd.g:5036:6: lv_variants_6_0= rulevariant
+            	    // InternalDemoFkd.g:5121:5: (lv_variants_6_0= rulevariant )
+            	    // InternalDemoFkd.g:5122:6: lv_variants_6_0= rulevariant
             	    {
 
             	    						newCompositeNode(grammarAccess.getVariant_partAccess().getVariantsVariantParserRuleCall_5_1_0());
@@ -12741,7 +12951,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop64;
+            	    break loop65;
                 }
             } while (true);
 
@@ -12768,7 +12978,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuletag_field"
-    // InternalDemoFkd.g:5058:1: entryRuletag_field returns [EObject current=null] : iv_ruletag_field= ruletag_field EOF ;
+    // InternalDemoFkd.g:5144:1: entryRuletag_field returns [EObject current=null] : iv_ruletag_field= ruletag_field EOF ;
     public final EObject entryRuletag_field() throws RecognitionException {
         EObject current = null;
 
@@ -12776,8 +12986,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:5058:50: (iv_ruletag_field= ruletag_field EOF )
-            // InternalDemoFkd.g:5059:2: iv_ruletag_field= ruletag_field EOF
+            // InternalDemoFkd.g:5144:50: (iv_ruletag_field= ruletag_field EOF )
+            // InternalDemoFkd.g:5145:2: iv_ruletag_field= ruletag_field EOF
             {
              newCompositeNode(grammarAccess.getTag_fieldRule()); 
             pushFollow(FOLLOW_1);
@@ -12804,7 +13014,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruletag_field"
-    // InternalDemoFkd.g:5065:1: ruletag_field returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ) ;
+    // InternalDemoFkd.g:5151:1: ruletag_field returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ) ;
     public final EObject ruletag_field() throws RecognitionException {
         EObject current = null;
 
@@ -12815,17 +13025,17 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:5071:2: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ) )
-            // InternalDemoFkd.g:5072:2: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' )
+            // InternalDemoFkd.g:5157:2: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ) )
+            // InternalDemoFkd.g:5158:2: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' )
             {
-            // InternalDemoFkd.g:5072:2: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' )
-            // InternalDemoFkd.g:5073:3: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':'
+            // InternalDemoFkd.g:5158:2: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' )
+            // InternalDemoFkd.g:5159:3: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':'
             {
-            // InternalDemoFkd.g:5073:3: ( (lv_name_0_0= RULE_ID ) )
-            // InternalDemoFkd.g:5074:4: (lv_name_0_0= RULE_ID )
+            // InternalDemoFkd.g:5159:3: ( (lv_name_0_0= RULE_ID ) )
+            // InternalDemoFkd.g:5160:4: (lv_name_0_0= RULE_ID )
             {
-            // InternalDemoFkd.g:5074:4: (lv_name_0_0= RULE_ID )
-            // InternalDemoFkd.g:5075:5: lv_name_0_0= RULE_ID
+            // InternalDemoFkd.g:5160:4: (lv_name_0_0= RULE_ID )
+            // InternalDemoFkd.g:5161:5: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_14); 
 
@@ -12874,7 +13084,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulevariant"
-    // InternalDemoFkd.g:5099:1: entryRulevariant returns [EObject current=null] : iv_rulevariant= rulevariant EOF ;
+    // InternalDemoFkd.g:5185:1: entryRulevariant returns [EObject current=null] : iv_rulevariant= rulevariant EOF ;
     public final EObject entryRulevariant() throws RecognitionException {
         EObject current = null;
 
@@ -12882,8 +13092,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:5099:48: (iv_rulevariant= rulevariant EOF )
-            // InternalDemoFkd.g:5100:2: iv_rulevariant= rulevariant EOF
+            // InternalDemoFkd.g:5185:48: (iv_rulevariant= rulevariant EOF )
+            // InternalDemoFkd.g:5186:2: iv_rulevariant= rulevariant EOF
             {
              newCompositeNode(grammarAccess.getVariantRule()); 
             pushFollow(FOLLOW_1);
@@ -12910,7 +13120,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulevariant"
-    // InternalDemoFkd.g:5106:1: rulevariant returns [EObject current=null] : ( ( (lv_labels_0_0= rulecase_label_list ) ) otherlv_1= ':' otherlv_2= '(' ( (lv_fields_3_0= rulefield_list ) )? otherlv_4= ')' ) ;
+    // InternalDemoFkd.g:5192:1: rulevariant returns [EObject current=null] : ( ( (lv_labels_0_0= rulecase_label_list ) ) otherlv_1= ':' otherlv_2= '(' ( (lv_fields_3_0= rulefield_list ) )? otherlv_4= ')' ) ;
     public final EObject rulevariant() throws RecognitionException {
         EObject current = null;
 
@@ -12926,17 +13136,17 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:5112:2: ( ( ( (lv_labels_0_0= rulecase_label_list ) ) otherlv_1= ':' otherlv_2= '(' ( (lv_fields_3_0= rulefield_list ) )? otherlv_4= ')' ) )
-            // InternalDemoFkd.g:5113:2: ( ( (lv_labels_0_0= rulecase_label_list ) ) otherlv_1= ':' otherlv_2= '(' ( (lv_fields_3_0= rulefield_list ) )? otherlv_4= ')' )
+            // InternalDemoFkd.g:5198:2: ( ( ( (lv_labels_0_0= rulecase_label_list ) ) otherlv_1= ':' otherlv_2= '(' ( (lv_fields_3_0= rulefield_list ) )? otherlv_4= ')' ) )
+            // InternalDemoFkd.g:5199:2: ( ( (lv_labels_0_0= rulecase_label_list ) ) otherlv_1= ':' otherlv_2= '(' ( (lv_fields_3_0= rulefield_list ) )? otherlv_4= ')' )
             {
-            // InternalDemoFkd.g:5113:2: ( ( (lv_labels_0_0= rulecase_label_list ) ) otherlv_1= ':' otherlv_2= '(' ( (lv_fields_3_0= rulefield_list ) )? otherlv_4= ')' )
-            // InternalDemoFkd.g:5114:3: ( (lv_labels_0_0= rulecase_label_list ) ) otherlv_1= ':' otherlv_2= '(' ( (lv_fields_3_0= rulefield_list ) )? otherlv_4= ')'
+            // InternalDemoFkd.g:5199:2: ( ( (lv_labels_0_0= rulecase_label_list ) ) otherlv_1= ':' otherlv_2= '(' ( (lv_fields_3_0= rulefield_list ) )? otherlv_4= ')' )
+            // InternalDemoFkd.g:5200:3: ( (lv_labels_0_0= rulecase_label_list ) ) otherlv_1= ':' otherlv_2= '(' ( (lv_fields_3_0= rulefield_list ) )? otherlv_4= ')'
             {
-            // InternalDemoFkd.g:5114:3: ( (lv_labels_0_0= rulecase_label_list ) )
-            // InternalDemoFkd.g:5115:4: (lv_labels_0_0= rulecase_label_list )
+            // InternalDemoFkd.g:5200:3: ( (lv_labels_0_0= rulecase_label_list ) )
+            // InternalDemoFkd.g:5201:4: (lv_labels_0_0= rulecase_label_list )
             {
-            // InternalDemoFkd.g:5115:4: (lv_labels_0_0= rulecase_label_list )
-            // InternalDemoFkd.g:5116:5: lv_labels_0_0= rulecase_label_list
+            // InternalDemoFkd.g:5201:4: (lv_labels_0_0= rulecase_label_list )
+            // InternalDemoFkd.g:5202:5: lv_labels_0_0= rulecase_label_list
             {
 
             					newCompositeNode(grammarAccess.getVariantAccess().getLabelsCase_label_listParserRuleCall_0_0());
@@ -12971,19 +13181,19 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getVariantAccess().getLeftParenthesisKeyword_2());
             		
-            // InternalDemoFkd.g:5141:3: ( (lv_fields_3_0= rulefield_list ) )?
-            int alt65=2;
-            int LA65_0 = input.LA(1);
+            // InternalDemoFkd.g:5227:3: ( (lv_fields_3_0= rulefield_list ) )?
+            int alt66=2;
+            int LA66_0 = input.LA(1);
 
-            if ( (LA65_0==RULE_ID||LA65_0==57) ) {
-                alt65=1;
+            if ( (LA66_0==RULE_ID||LA66_0==57) ) {
+                alt66=1;
             }
-            switch (alt65) {
+            switch (alt66) {
                 case 1 :
-                    // InternalDemoFkd.g:5142:4: (lv_fields_3_0= rulefield_list )
+                    // InternalDemoFkd.g:5228:4: (lv_fields_3_0= rulefield_list )
                     {
-                    // InternalDemoFkd.g:5142:4: (lv_fields_3_0= rulefield_list )
-                    // InternalDemoFkd.g:5143:5: lv_fields_3_0= rulefield_list
+                    // InternalDemoFkd.g:5228:4: (lv_fields_3_0= rulefield_list )
+                    // InternalDemoFkd.g:5229:5: lv_fields_3_0= rulefield_list
                     {
 
                     					newCompositeNode(grammarAccess.getVariantAccess().getFieldsField_listParserRuleCall_3_0());
@@ -13040,7 +13250,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleset_type"
-    // InternalDemoFkd.g:5168:1: entryRuleset_type returns [EObject current=null] : iv_ruleset_type= ruleset_type EOF ;
+    // InternalDemoFkd.g:5254:1: entryRuleset_type returns [EObject current=null] : iv_ruleset_type= ruleset_type EOF ;
     public final EObject entryRuleset_type() throws RecognitionException {
         EObject current = null;
 
@@ -13048,8 +13258,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:5168:49: (iv_ruleset_type= ruleset_type EOF )
-            // InternalDemoFkd.g:5169:2: iv_ruleset_type= ruleset_type EOF
+            // InternalDemoFkd.g:5254:49: (iv_ruleset_type= ruleset_type EOF )
+            // InternalDemoFkd.g:5255:2: iv_ruleset_type= ruleset_type EOF
             {
              newCompositeNode(grammarAccess.getSet_typeRule()); 
             pushFollow(FOLLOW_1);
@@ -13076,7 +13286,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleset_type"
-    // InternalDemoFkd.g:5175:1: ruleset_type returns [EObject current=null] : (otherlv_0= 'set' otherlv_1= 'of' ( (lv_type_2_0= ruletype ) ) ) ;
+    // InternalDemoFkd.g:5261:1: ruleset_type returns [EObject current=null] : (otherlv_0= 'set' otherlv_1= 'of' ( (lv_type_2_0= ruletype ) ) ) ;
     public final EObject ruleset_type() throws RecognitionException {
         EObject current = null;
 
@@ -13089,11 +13299,11 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:5181:2: ( (otherlv_0= 'set' otherlv_1= 'of' ( (lv_type_2_0= ruletype ) ) ) )
-            // InternalDemoFkd.g:5182:2: (otherlv_0= 'set' otherlv_1= 'of' ( (lv_type_2_0= ruletype ) ) )
+            // InternalDemoFkd.g:5267:2: ( (otherlv_0= 'set' otherlv_1= 'of' ( (lv_type_2_0= ruletype ) ) ) )
+            // InternalDemoFkd.g:5268:2: (otherlv_0= 'set' otherlv_1= 'of' ( (lv_type_2_0= ruletype ) ) )
             {
-            // InternalDemoFkd.g:5182:2: (otherlv_0= 'set' otherlv_1= 'of' ( (lv_type_2_0= ruletype ) ) )
-            // InternalDemoFkd.g:5183:3: otherlv_0= 'set' otherlv_1= 'of' ( (lv_type_2_0= ruletype ) )
+            // InternalDemoFkd.g:5268:2: (otherlv_0= 'set' otherlv_1= 'of' ( (lv_type_2_0= ruletype ) ) )
+            // InternalDemoFkd.g:5269:3: otherlv_0= 'set' otherlv_1= 'of' ( (lv_type_2_0= ruletype ) )
             {
             otherlv_0=(Token)match(input,69,FOLLOW_30); 
 
@@ -13103,11 +13313,11 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getSet_typeAccess().getOfKeyword_1());
             		
-            // InternalDemoFkd.g:5191:3: ( (lv_type_2_0= ruletype ) )
-            // InternalDemoFkd.g:5192:4: (lv_type_2_0= ruletype )
+            // InternalDemoFkd.g:5277:3: ( (lv_type_2_0= ruletype ) )
+            // InternalDemoFkd.g:5278:4: (lv_type_2_0= ruletype )
             {
-            // InternalDemoFkd.g:5192:4: (lv_type_2_0= ruletype )
-            // InternalDemoFkd.g:5193:5: lv_type_2_0= ruletype
+            // InternalDemoFkd.g:5278:4: (lv_type_2_0= ruletype )
+            // InternalDemoFkd.g:5279:5: lv_type_2_0= ruletype
             {
 
             					newCompositeNode(grammarAccess.getSet_typeAccess().getTypeTypeParserRuleCall_2_0());
@@ -13157,7 +13367,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulefile_type"
-    // InternalDemoFkd.g:5214:1: entryRulefile_type returns [EObject current=null] : iv_rulefile_type= rulefile_type EOF ;
+    // InternalDemoFkd.g:5300:1: entryRulefile_type returns [EObject current=null] : iv_rulefile_type= rulefile_type EOF ;
     public final EObject entryRulefile_type() throws RecognitionException {
         EObject current = null;
 
@@ -13165,8 +13375,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:5214:50: (iv_rulefile_type= rulefile_type EOF )
-            // InternalDemoFkd.g:5215:2: iv_rulefile_type= rulefile_type EOF
+            // InternalDemoFkd.g:5300:50: (iv_rulefile_type= rulefile_type EOF )
+            // InternalDemoFkd.g:5301:2: iv_rulefile_type= rulefile_type EOF
             {
              newCompositeNode(grammarAccess.getFile_typeRule()); 
             pushFollow(FOLLOW_1);
@@ -13193,7 +13403,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulefile_type"
-    // InternalDemoFkd.g:5221:1: rulefile_type returns [EObject current=null] : (otherlv_0= 'file' otherlv_1= 'of' ( (lv_type_2_0= ruletype ) ) ) ;
+    // InternalDemoFkd.g:5307:1: rulefile_type returns [EObject current=null] : (otherlv_0= 'file' otherlv_1= 'of' ( (lv_type_2_0= ruletype ) ) ) ;
     public final EObject rulefile_type() throws RecognitionException {
         EObject current = null;
 
@@ -13206,11 +13416,11 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:5227:2: ( (otherlv_0= 'file' otherlv_1= 'of' ( (lv_type_2_0= ruletype ) ) ) )
-            // InternalDemoFkd.g:5228:2: (otherlv_0= 'file' otherlv_1= 'of' ( (lv_type_2_0= ruletype ) ) )
+            // InternalDemoFkd.g:5313:2: ( (otherlv_0= 'file' otherlv_1= 'of' ( (lv_type_2_0= ruletype ) ) ) )
+            // InternalDemoFkd.g:5314:2: (otherlv_0= 'file' otherlv_1= 'of' ( (lv_type_2_0= ruletype ) ) )
             {
-            // InternalDemoFkd.g:5228:2: (otherlv_0= 'file' otherlv_1= 'of' ( (lv_type_2_0= ruletype ) ) )
-            // InternalDemoFkd.g:5229:3: otherlv_0= 'file' otherlv_1= 'of' ( (lv_type_2_0= ruletype ) )
+            // InternalDemoFkd.g:5314:2: (otherlv_0= 'file' otherlv_1= 'of' ( (lv_type_2_0= ruletype ) ) )
+            // InternalDemoFkd.g:5315:3: otherlv_0= 'file' otherlv_1= 'of' ( (lv_type_2_0= ruletype ) )
             {
             otherlv_0=(Token)match(input,70,FOLLOW_30); 
 
@@ -13220,11 +13430,11 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getFile_typeAccess().getOfKeyword_1());
             		
-            // InternalDemoFkd.g:5237:3: ( (lv_type_2_0= ruletype ) )
-            // InternalDemoFkd.g:5238:4: (lv_type_2_0= ruletype )
+            // InternalDemoFkd.g:5323:3: ( (lv_type_2_0= ruletype ) )
+            // InternalDemoFkd.g:5324:4: (lv_type_2_0= ruletype )
             {
-            // InternalDemoFkd.g:5238:4: (lv_type_2_0= ruletype )
-            // InternalDemoFkd.g:5239:5: lv_type_2_0= ruletype
+            // InternalDemoFkd.g:5324:4: (lv_type_2_0= ruletype )
+            // InternalDemoFkd.g:5325:5: lv_type_2_0= ruletype
             {
 
             					newCompositeNode(grammarAccess.getFile_typeAccess().getTypeTypeParserRuleCall_2_0());
@@ -13274,7 +13484,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulepointer_type"
-    // InternalDemoFkd.g:5260:1: entryRulepointer_type returns [EObject current=null] : iv_rulepointer_type= rulepointer_type EOF ;
+    // InternalDemoFkd.g:5346:1: entryRulepointer_type returns [EObject current=null] : iv_rulepointer_type= rulepointer_type EOF ;
     public final EObject entryRulepointer_type() throws RecognitionException {
         EObject current = null;
 
@@ -13282,8 +13492,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:5260:53: (iv_rulepointer_type= rulepointer_type EOF )
-            // InternalDemoFkd.g:5261:2: iv_rulepointer_type= rulepointer_type EOF
+            // InternalDemoFkd.g:5346:53: (iv_rulepointer_type= rulepointer_type EOF )
+            // InternalDemoFkd.g:5347:2: iv_rulepointer_type= rulepointer_type EOF
             {
              newCompositeNode(grammarAccess.getPointer_typeRule()); 
             pushFollow(FOLLOW_1);
@@ -13310,7 +13520,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulepointer_type"
-    // InternalDemoFkd.g:5267:1: rulepointer_type returns [EObject current=null] : (otherlv_0= '^' ( (lv_type_1_0= ruletype ) ) ) ;
+    // InternalDemoFkd.g:5353:1: rulepointer_type returns [EObject current=null] : (otherlv_0= '^' ( (lv_type_1_0= ruletype ) ) ) ;
     public final EObject rulepointer_type() throws RecognitionException {
         EObject current = null;
 
@@ -13322,21 +13532,21 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:5273:2: ( (otherlv_0= '^' ( (lv_type_1_0= ruletype ) ) ) )
-            // InternalDemoFkd.g:5274:2: (otherlv_0= '^' ( (lv_type_1_0= ruletype ) ) )
+            // InternalDemoFkd.g:5359:2: ( (otherlv_0= '^' ( (lv_type_1_0= ruletype ) ) ) )
+            // InternalDemoFkd.g:5360:2: (otherlv_0= '^' ( (lv_type_1_0= ruletype ) ) )
             {
-            // InternalDemoFkd.g:5274:2: (otherlv_0= '^' ( (lv_type_1_0= ruletype ) ) )
-            // InternalDemoFkd.g:5275:3: otherlv_0= '^' ( (lv_type_1_0= ruletype ) )
+            // InternalDemoFkd.g:5360:2: (otherlv_0= '^' ( (lv_type_1_0= ruletype ) ) )
+            // InternalDemoFkd.g:5361:3: otherlv_0= '^' ( (lv_type_1_0= ruletype ) )
             {
             otherlv_0=(Token)match(input,36,FOLLOW_38); 
 
             			newLeafNode(otherlv_0, grammarAccess.getPointer_typeAccess().getCircumflexAccentKeyword_0());
             		
-            // InternalDemoFkd.g:5279:3: ( (lv_type_1_0= ruletype ) )
-            // InternalDemoFkd.g:5280:4: (lv_type_1_0= ruletype )
+            // InternalDemoFkd.g:5365:3: ( (lv_type_1_0= ruletype ) )
+            // InternalDemoFkd.g:5366:4: (lv_type_1_0= ruletype )
             {
-            // InternalDemoFkd.g:5280:4: (lv_type_1_0= ruletype )
-            // InternalDemoFkd.g:5281:5: lv_type_1_0= ruletype
+            // InternalDemoFkd.g:5366:4: (lv_type_1_0= ruletype )
+            // InternalDemoFkd.g:5367:5: lv_type_1_0= ruletype
             {
 
             					newCompositeNode(grammarAccess.getPointer_typeAccess().getTypeTypeParserRuleCall_1_0());
@@ -13386,7 +13596,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulevariable_declaration_part"
-    // InternalDemoFkd.g:5302:1: entryRulevariable_declaration_part returns [EObject current=null] : iv_rulevariable_declaration_part= rulevariable_declaration_part EOF ;
+    // InternalDemoFkd.g:5388:1: entryRulevariable_declaration_part returns [EObject current=null] : iv_rulevariable_declaration_part= rulevariable_declaration_part EOF ;
     public final EObject entryRulevariable_declaration_part() throws RecognitionException {
         EObject current = null;
 
@@ -13394,8 +13604,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:5302:66: (iv_rulevariable_declaration_part= rulevariable_declaration_part EOF )
-            // InternalDemoFkd.g:5303:2: iv_rulevariable_declaration_part= rulevariable_declaration_part EOF
+            // InternalDemoFkd.g:5388:66: (iv_rulevariable_declaration_part= rulevariable_declaration_part EOF )
+            // InternalDemoFkd.g:5389:2: iv_rulevariable_declaration_part= rulevariable_declaration_part EOF
             {
              newCompositeNode(grammarAccess.getVariable_declaration_partRule()); 
             pushFollow(FOLLOW_1);
@@ -13422,7 +13632,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulevariable_declaration_part"
-    // InternalDemoFkd.g:5309:1: rulevariable_declaration_part returns [EObject current=null] : (otherlv_0= 'var' ( (lv_sections_1_0= rulevariable_section ) ) otherlv_2= ';' ( ( (lv_sections_3_0= rulevariable_section ) ) otherlv_4= ';' )* ) ;
+    // InternalDemoFkd.g:5395:1: rulevariable_declaration_part returns [EObject current=null] : (otherlv_0= 'var' ( (lv_sections_1_0= rulevariable_section ) ) otherlv_2= ';' ( ( (lv_sections_3_0= rulevariable_section ) ) otherlv_4= ';' )* ) ;
     public final EObject rulevariable_declaration_part() throws RecognitionException {
         EObject current = null;
 
@@ -13438,21 +13648,21 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:5315:2: ( (otherlv_0= 'var' ( (lv_sections_1_0= rulevariable_section ) ) otherlv_2= ';' ( ( (lv_sections_3_0= rulevariable_section ) ) otherlv_4= ';' )* ) )
-            // InternalDemoFkd.g:5316:2: (otherlv_0= 'var' ( (lv_sections_1_0= rulevariable_section ) ) otherlv_2= ';' ( ( (lv_sections_3_0= rulevariable_section ) ) otherlv_4= ';' )* )
+            // InternalDemoFkd.g:5401:2: ( (otherlv_0= 'var' ( (lv_sections_1_0= rulevariable_section ) ) otherlv_2= ';' ( ( (lv_sections_3_0= rulevariable_section ) ) otherlv_4= ';' )* ) )
+            // InternalDemoFkd.g:5402:2: (otherlv_0= 'var' ( (lv_sections_1_0= rulevariable_section ) ) otherlv_2= ';' ( ( (lv_sections_3_0= rulevariable_section ) ) otherlv_4= ';' )* )
             {
-            // InternalDemoFkd.g:5316:2: (otherlv_0= 'var' ( (lv_sections_1_0= rulevariable_section ) ) otherlv_2= ';' ( ( (lv_sections_3_0= rulevariable_section ) ) otherlv_4= ';' )* )
-            // InternalDemoFkd.g:5317:3: otherlv_0= 'var' ( (lv_sections_1_0= rulevariable_section ) ) otherlv_2= ';' ( ( (lv_sections_3_0= rulevariable_section ) ) otherlv_4= ';' )*
+            // InternalDemoFkd.g:5402:2: (otherlv_0= 'var' ( (lv_sections_1_0= rulevariable_section ) ) otherlv_2= ';' ( ( (lv_sections_3_0= rulevariable_section ) ) otherlv_4= ';' )* )
+            // InternalDemoFkd.g:5403:3: otherlv_0= 'var' ( (lv_sections_1_0= rulevariable_section ) ) otherlv_2= ';' ( ( (lv_sections_3_0= rulevariable_section ) ) otherlv_4= ';' )*
             {
             otherlv_0=(Token)match(input,71,FOLLOW_5); 
 
             			newLeafNode(otherlv_0, grammarAccess.getVariable_declaration_partAccess().getVarKeyword_0());
             		
-            // InternalDemoFkd.g:5321:3: ( (lv_sections_1_0= rulevariable_section ) )
-            // InternalDemoFkd.g:5322:4: (lv_sections_1_0= rulevariable_section )
+            // InternalDemoFkd.g:5407:3: ( (lv_sections_1_0= rulevariable_section ) )
+            // InternalDemoFkd.g:5408:4: (lv_sections_1_0= rulevariable_section )
             {
-            // InternalDemoFkd.g:5322:4: (lv_sections_1_0= rulevariable_section )
-            // InternalDemoFkd.g:5323:5: lv_sections_1_0= rulevariable_section
+            // InternalDemoFkd.g:5408:4: (lv_sections_1_0= rulevariable_section )
+            // InternalDemoFkd.g:5409:5: lv_sections_1_0= rulevariable_section
             {
 
             					newCompositeNode(grammarAccess.getVariable_declaration_partAccess().getSectionsVariable_sectionParserRuleCall_1_0());
@@ -13483,26 +13693,26 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getVariable_declaration_partAccess().getSemicolonKeyword_2());
             		
-            // InternalDemoFkd.g:5344:3: ( ( (lv_sections_3_0= rulevariable_section ) ) otherlv_4= ';' )*
-            loop66:
+            // InternalDemoFkd.g:5430:3: ( ( (lv_sections_3_0= rulevariable_section ) ) otherlv_4= ';' )*
+            loop67:
             do {
-                int alt66=2;
-                int LA66_0 = input.LA(1);
+                int alt67=2;
+                int LA67_0 = input.LA(1);
 
-                if ( (LA66_0==RULE_ID) ) {
-                    alt66=1;
+                if ( (LA67_0==RULE_ID) ) {
+                    alt67=1;
                 }
 
 
-                switch (alt66) {
+                switch (alt67) {
             	case 1 :
-            	    // InternalDemoFkd.g:5345:4: ( (lv_sections_3_0= rulevariable_section ) ) otherlv_4= ';'
+            	    // InternalDemoFkd.g:5431:4: ( (lv_sections_3_0= rulevariable_section ) ) otherlv_4= ';'
             	    {
-            	    // InternalDemoFkd.g:5345:4: ( (lv_sections_3_0= rulevariable_section ) )
-            	    // InternalDemoFkd.g:5346:5: (lv_sections_3_0= rulevariable_section )
+            	    // InternalDemoFkd.g:5431:4: ( (lv_sections_3_0= rulevariable_section ) )
+            	    // InternalDemoFkd.g:5432:5: (lv_sections_3_0= rulevariable_section )
             	    {
-            	    // InternalDemoFkd.g:5346:5: (lv_sections_3_0= rulevariable_section )
-            	    // InternalDemoFkd.g:5347:6: lv_sections_3_0= rulevariable_section
+            	    // InternalDemoFkd.g:5432:5: (lv_sections_3_0= rulevariable_section )
+            	    // InternalDemoFkd.g:5433:6: lv_sections_3_0= rulevariable_section
             	    {
 
             	    						newCompositeNode(grammarAccess.getVariable_declaration_partAccess().getSectionsVariable_sectionParserRuleCall_3_0_0());
@@ -13538,7 +13748,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop66;
+            	    break loop67;
                 }
             } while (true);
 
@@ -13565,7 +13775,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleprocedure_and_function_declaration_part"
-    // InternalDemoFkd.g:5373:1: entryRuleprocedure_and_function_declaration_part returns [EObject current=null] : iv_ruleprocedure_and_function_declaration_part= ruleprocedure_and_function_declaration_part EOF ;
+    // InternalDemoFkd.g:5459:1: entryRuleprocedure_and_function_declaration_part returns [EObject current=null] : iv_ruleprocedure_and_function_declaration_part= ruleprocedure_and_function_declaration_part EOF ;
     public final EObject entryRuleprocedure_and_function_declaration_part() throws RecognitionException {
         EObject current = null;
 
@@ -13573,8 +13783,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:5373:80: (iv_ruleprocedure_and_function_declaration_part= ruleprocedure_and_function_declaration_part EOF )
-            // InternalDemoFkd.g:5374:2: iv_ruleprocedure_and_function_declaration_part= ruleprocedure_and_function_declaration_part EOF
+            // InternalDemoFkd.g:5459:80: (iv_ruleprocedure_and_function_declaration_part= ruleprocedure_and_function_declaration_part EOF )
+            // InternalDemoFkd.g:5460:2: iv_ruleprocedure_and_function_declaration_part= ruleprocedure_and_function_declaration_part EOF
             {
              newCompositeNode(grammarAccess.getProcedure_and_function_declaration_partRule()); 
             pushFollow(FOLLOW_1);
@@ -13601,7 +13811,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleprocedure_and_function_declaration_part"
-    // InternalDemoFkd.g:5380:1: ruleprocedure_and_function_declaration_part returns [EObject current=null] : ( ( ( (lv_procedures_0_0= ruleprocedure_declaration ) ) | ( (lv_functions_1_0= rulefunction_declaration ) ) ) otherlv_2= ';' )+ ;
+    // InternalDemoFkd.g:5466:1: ruleprocedure_and_function_declaration_part returns [EObject current=null] : ( ( ( (lv_procedures_0_0= ruleprocedure_declaration ) ) | ( (lv_functions_1_0= rulefunction_declaration ) ) ) otherlv_2= ';' )+ ;
     public final EObject ruleprocedure_and_function_declaration_part() throws RecognitionException {
         EObject current = null;
 
@@ -13615,50 +13825,50 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:5386:2: ( ( ( ( (lv_procedures_0_0= ruleprocedure_declaration ) ) | ( (lv_functions_1_0= rulefunction_declaration ) ) ) otherlv_2= ';' )+ )
-            // InternalDemoFkd.g:5387:2: ( ( ( (lv_procedures_0_0= ruleprocedure_declaration ) ) | ( (lv_functions_1_0= rulefunction_declaration ) ) ) otherlv_2= ';' )+
+            // InternalDemoFkd.g:5472:2: ( ( ( ( (lv_procedures_0_0= ruleprocedure_declaration ) ) | ( (lv_functions_1_0= rulefunction_declaration ) ) ) otherlv_2= ';' )+ )
+            // InternalDemoFkd.g:5473:2: ( ( ( (lv_procedures_0_0= ruleprocedure_declaration ) ) | ( (lv_functions_1_0= rulefunction_declaration ) ) ) otherlv_2= ';' )+
             {
-            // InternalDemoFkd.g:5387:2: ( ( ( (lv_procedures_0_0= ruleprocedure_declaration ) ) | ( (lv_functions_1_0= rulefunction_declaration ) ) ) otherlv_2= ';' )+
-            int cnt68=0;
-            loop68:
+            // InternalDemoFkd.g:5473:2: ( ( ( (lv_procedures_0_0= ruleprocedure_declaration ) ) | ( (lv_functions_1_0= rulefunction_declaration ) ) ) otherlv_2= ';' )+
+            int cnt69=0;
+            loop69:
             do {
-                int alt68=2;
-                int LA68_0 = input.LA(1);
+                int alt69=2;
+                int LA69_0 = input.LA(1);
 
-                if ( ((LA68_0>=73 && LA68_0<=74)) ) {
-                    alt68=1;
+                if ( ((LA69_0>=73 && LA69_0<=74)) ) {
+                    alt69=1;
                 }
 
 
-                switch (alt68) {
+                switch (alt69) {
             	case 1 :
-            	    // InternalDemoFkd.g:5388:3: ( ( (lv_procedures_0_0= ruleprocedure_declaration ) ) | ( (lv_functions_1_0= rulefunction_declaration ) ) ) otherlv_2= ';'
+            	    // InternalDemoFkd.g:5474:3: ( ( (lv_procedures_0_0= ruleprocedure_declaration ) ) | ( (lv_functions_1_0= rulefunction_declaration ) ) ) otherlv_2= ';'
             	    {
-            	    // InternalDemoFkd.g:5388:3: ( ( (lv_procedures_0_0= ruleprocedure_declaration ) ) | ( (lv_functions_1_0= rulefunction_declaration ) ) )
-            	    int alt67=2;
-            	    int LA67_0 = input.LA(1);
+            	    // InternalDemoFkd.g:5474:3: ( ( (lv_procedures_0_0= ruleprocedure_declaration ) ) | ( (lv_functions_1_0= rulefunction_declaration ) ) )
+            	    int alt68=2;
+            	    int LA68_0 = input.LA(1);
 
-            	    if ( (LA67_0==73) ) {
-            	        alt67=1;
+            	    if ( (LA68_0==73) ) {
+            	        alt68=1;
             	    }
-            	    else if ( (LA67_0==74) ) {
-            	        alt67=2;
+            	    else if ( (LA68_0==74) ) {
+            	        alt68=2;
             	    }
             	    else {
             	        NoViableAltException nvae =
-            	            new NoViableAltException("", 67, 0, input);
+            	            new NoViableAltException("", 68, 0, input);
 
             	        throw nvae;
             	    }
-            	    switch (alt67) {
+            	    switch (alt68) {
             	        case 1 :
-            	            // InternalDemoFkd.g:5389:4: ( (lv_procedures_0_0= ruleprocedure_declaration ) )
+            	            // InternalDemoFkd.g:5475:4: ( (lv_procedures_0_0= ruleprocedure_declaration ) )
             	            {
-            	            // InternalDemoFkd.g:5389:4: ( (lv_procedures_0_0= ruleprocedure_declaration ) )
-            	            // InternalDemoFkd.g:5390:5: (lv_procedures_0_0= ruleprocedure_declaration )
+            	            // InternalDemoFkd.g:5475:4: ( (lv_procedures_0_0= ruleprocedure_declaration ) )
+            	            // InternalDemoFkd.g:5476:5: (lv_procedures_0_0= ruleprocedure_declaration )
             	            {
-            	            // InternalDemoFkd.g:5390:5: (lv_procedures_0_0= ruleprocedure_declaration )
-            	            // InternalDemoFkd.g:5391:6: lv_procedures_0_0= ruleprocedure_declaration
+            	            // InternalDemoFkd.g:5476:5: (lv_procedures_0_0= ruleprocedure_declaration )
+            	            // InternalDemoFkd.g:5477:6: lv_procedures_0_0= ruleprocedure_declaration
             	            {
 
             	            						newCompositeNode(grammarAccess.getProcedure_and_function_declaration_partAccess().getProceduresProcedure_declarationParserRuleCall_0_0_0());
@@ -13689,13 +13899,13 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // InternalDemoFkd.g:5409:4: ( (lv_functions_1_0= rulefunction_declaration ) )
+            	            // InternalDemoFkd.g:5495:4: ( (lv_functions_1_0= rulefunction_declaration ) )
             	            {
-            	            // InternalDemoFkd.g:5409:4: ( (lv_functions_1_0= rulefunction_declaration ) )
-            	            // InternalDemoFkd.g:5410:5: (lv_functions_1_0= rulefunction_declaration )
+            	            // InternalDemoFkd.g:5495:4: ( (lv_functions_1_0= rulefunction_declaration ) )
+            	            // InternalDemoFkd.g:5496:5: (lv_functions_1_0= rulefunction_declaration )
             	            {
-            	            // InternalDemoFkd.g:5410:5: (lv_functions_1_0= rulefunction_declaration )
-            	            // InternalDemoFkd.g:5411:6: lv_functions_1_0= rulefunction_declaration
+            	            // InternalDemoFkd.g:5496:5: (lv_functions_1_0= rulefunction_declaration )
+            	            // InternalDemoFkd.g:5497:6: lv_functions_1_0= rulefunction_declaration
             	            {
 
             	            						newCompositeNode(grammarAccess.getProcedure_and_function_declaration_partAccess().getFunctionsFunction_declarationParserRuleCall_0_1_0());
@@ -13737,12 +13947,12 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt68 >= 1 ) break loop68;
+            	    if ( cnt69 >= 1 ) break loop69;
                         EarlyExitException eee =
-                            new EarlyExitException(68, input);
+                            new EarlyExitException(69, input);
                         throw eee;
                 }
-                cnt68++;
+                cnt69++;
             } while (true);
 
 
@@ -13764,8 +13974,136 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleprocedure_and_function_declaration_part"
 
 
+    // $ANTLR start "entryRuleabstraction_heading"
+    // InternalDemoFkd.g:5523:1: entryRuleabstraction_heading returns [EObject current=null] : iv_ruleabstraction_heading= ruleabstraction_heading EOF ;
+    public final EObject entryRuleabstraction_heading() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleabstraction_heading = null;
+
+
+        try {
+            // InternalDemoFkd.g:5523:60: (iv_ruleabstraction_heading= ruleabstraction_heading EOF )
+            // InternalDemoFkd.g:5524:2: iv_ruleabstraction_heading= ruleabstraction_heading EOF
+            {
+             newCompositeNode(grammarAccess.getAbstraction_headingRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleabstraction_heading=ruleabstraction_heading();
+
+            state._fsp--;
+
+             current =iv_ruleabstraction_heading; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleabstraction_heading"
+
+
+    // $ANTLR start "ruleabstraction_heading"
+    // InternalDemoFkd.g:5530:1: ruleabstraction_heading returns [EObject current=null] : (this_procedure_heading_0= ruleprocedure_heading | this_function_heading_1= rulefunction_heading ) ;
+    public final EObject ruleabstraction_heading() throws RecognitionException {
+        EObject current = null;
+
+        EObject this_procedure_heading_0 = null;
+
+        EObject this_function_heading_1 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalDemoFkd.g:5536:2: ( (this_procedure_heading_0= ruleprocedure_heading | this_function_heading_1= rulefunction_heading ) )
+            // InternalDemoFkd.g:5537:2: (this_procedure_heading_0= ruleprocedure_heading | this_function_heading_1= rulefunction_heading )
+            {
+            // InternalDemoFkd.g:5537:2: (this_procedure_heading_0= ruleprocedure_heading | this_function_heading_1= rulefunction_heading )
+            int alt70=2;
+            int LA70_0 = input.LA(1);
+
+            if ( (LA70_0==73) ) {
+                alt70=1;
+            }
+            else if ( (LA70_0==74) ) {
+                alt70=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 70, 0, input);
+
+                throw nvae;
+            }
+            switch (alt70) {
+                case 1 :
+                    // InternalDemoFkd.g:5538:3: this_procedure_heading_0= ruleprocedure_heading
+                    {
+
+                    			newCompositeNode(grammarAccess.getAbstraction_headingAccess().getProcedure_headingParserRuleCall_0());
+                    		
+                    pushFollow(FOLLOW_2);
+                    this_procedure_heading_0=ruleprocedure_heading();
+
+                    state._fsp--;
+
+
+                    			current = this_procedure_heading_0;
+                    			afterParserOrEnumRuleCall();
+                    		
+
+                    }
+                    break;
+                case 2 :
+                    // InternalDemoFkd.g:5547:3: this_function_heading_1= rulefunction_heading
+                    {
+
+                    			newCompositeNode(grammarAccess.getAbstraction_headingAccess().getFunction_headingParserRuleCall_1());
+                    		
+                    pushFollow(FOLLOW_2);
+                    this_function_heading_1=rulefunction_heading();
+
+                    state._fsp--;
+
+
+                    			current = this_function_heading_1;
+                    			afterParserOrEnumRuleCall();
+                    		
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleabstraction_heading"
+
+
     // $ANTLR start "entryRuleprocedure_declaration"
-    // InternalDemoFkd.g:5437:1: entryRuleprocedure_declaration returns [EObject current=null] : iv_ruleprocedure_declaration= ruleprocedure_declaration EOF ;
+    // InternalDemoFkd.g:5559:1: entryRuleprocedure_declaration returns [EObject current=null] : iv_ruleprocedure_declaration= ruleprocedure_declaration EOF ;
     public final EObject entryRuleprocedure_declaration() throws RecognitionException {
         EObject current = null;
 
@@ -13773,8 +14111,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:5437:62: (iv_ruleprocedure_declaration= ruleprocedure_declaration EOF )
-            // InternalDemoFkd.g:5438:2: iv_ruleprocedure_declaration= ruleprocedure_declaration EOF
+            // InternalDemoFkd.g:5559:62: (iv_ruleprocedure_declaration= ruleprocedure_declaration EOF )
+            // InternalDemoFkd.g:5560:2: iv_ruleprocedure_declaration= ruleprocedure_declaration EOF
             {
              newCompositeNode(grammarAccess.getProcedure_declarationRule()); 
             pushFollow(FOLLOW_1);
@@ -13801,7 +14139,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleprocedure_declaration"
-    // InternalDemoFkd.g:5444:1: ruleprocedure_declaration returns [EObject current=null] : ( ( (lv_heading_0_0= ruleprocedure_heading ) ) otherlv_1= ';' ( ( (lv_block_2_0= ruleblock ) ) | ( (lv_forward_3_0= 'forward' ) ) ) ) ;
+    // InternalDemoFkd.g:5566:1: ruleprocedure_declaration returns [EObject current=null] : ( ( (lv_heading_0_0= ruleprocedure_heading ) ) otherlv_1= ';' ( ( (lv_block_2_0= ruleblock ) ) | ( (lv_forward_3_0= 'forward' ) ) ) ) ;
     public final EObject ruleprocedure_declaration() throws RecognitionException {
         EObject current = null;
 
@@ -13816,17 +14154,17 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:5450:2: ( ( ( (lv_heading_0_0= ruleprocedure_heading ) ) otherlv_1= ';' ( ( (lv_block_2_0= ruleblock ) ) | ( (lv_forward_3_0= 'forward' ) ) ) ) )
-            // InternalDemoFkd.g:5451:2: ( ( (lv_heading_0_0= ruleprocedure_heading ) ) otherlv_1= ';' ( ( (lv_block_2_0= ruleblock ) ) | ( (lv_forward_3_0= 'forward' ) ) ) )
+            // InternalDemoFkd.g:5572:2: ( ( ( (lv_heading_0_0= ruleprocedure_heading ) ) otherlv_1= ';' ( ( (lv_block_2_0= ruleblock ) ) | ( (lv_forward_3_0= 'forward' ) ) ) ) )
+            // InternalDemoFkd.g:5573:2: ( ( (lv_heading_0_0= ruleprocedure_heading ) ) otherlv_1= ';' ( ( (lv_block_2_0= ruleblock ) ) | ( (lv_forward_3_0= 'forward' ) ) ) )
             {
-            // InternalDemoFkd.g:5451:2: ( ( (lv_heading_0_0= ruleprocedure_heading ) ) otherlv_1= ';' ( ( (lv_block_2_0= ruleblock ) ) | ( (lv_forward_3_0= 'forward' ) ) ) )
-            // InternalDemoFkd.g:5452:3: ( (lv_heading_0_0= ruleprocedure_heading ) ) otherlv_1= ';' ( ( (lv_block_2_0= ruleblock ) ) | ( (lv_forward_3_0= 'forward' ) ) )
+            // InternalDemoFkd.g:5573:2: ( ( (lv_heading_0_0= ruleprocedure_heading ) ) otherlv_1= ';' ( ( (lv_block_2_0= ruleblock ) ) | ( (lv_forward_3_0= 'forward' ) ) ) )
+            // InternalDemoFkd.g:5574:3: ( (lv_heading_0_0= ruleprocedure_heading ) ) otherlv_1= ';' ( ( (lv_block_2_0= ruleblock ) ) | ( (lv_forward_3_0= 'forward' ) ) )
             {
-            // InternalDemoFkd.g:5452:3: ( (lv_heading_0_0= ruleprocedure_heading ) )
-            // InternalDemoFkd.g:5453:4: (lv_heading_0_0= ruleprocedure_heading )
+            // InternalDemoFkd.g:5574:3: ( (lv_heading_0_0= ruleprocedure_heading ) )
+            // InternalDemoFkd.g:5575:4: (lv_heading_0_0= ruleprocedure_heading )
             {
-            // InternalDemoFkd.g:5453:4: (lv_heading_0_0= ruleprocedure_heading )
-            // InternalDemoFkd.g:5454:5: lv_heading_0_0= ruleprocedure_heading
+            // InternalDemoFkd.g:5575:4: (lv_heading_0_0= ruleprocedure_heading )
+            // InternalDemoFkd.g:5576:5: lv_heading_0_0= ruleprocedure_heading
             {
 
             					newCompositeNode(grammarAccess.getProcedure_declarationAccess().getHeadingProcedure_headingParserRuleCall_0_0());
@@ -13857,31 +14195,31 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getProcedure_declarationAccess().getSemicolonKeyword_1());
             		
-            // InternalDemoFkd.g:5475:3: ( ( (lv_block_2_0= ruleblock ) ) | ( (lv_forward_3_0= 'forward' ) ) )
-            int alt69=2;
-            int LA69_0 = input.LA(1);
+            // InternalDemoFkd.g:5597:3: ( ( (lv_block_2_0= ruleblock ) ) | ( (lv_forward_3_0= 'forward' ) ) )
+            int alt71=2;
+            int LA71_0 = input.LA(1);
 
-            if ( ((LA69_0>=29 && LA69_0<=30)||(LA69_0>=61 && LA69_0<=63)||LA69_0==71||(LA69_0>=73 && LA69_0<=74)) ) {
-                alt69=1;
+            if ( ((LA71_0>=29 && LA71_0<=30)||(LA71_0>=61 && LA71_0<=63)||LA71_0==71||(LA71_0>=73 && LA71_0<=74)) ) {
+                alt71=1;
             }
-            else if ( (LA69_0==72) ) {
-                alt69=2;
+            else if ( (LA71_0==72) ) {
+                alt71=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 69, 0, input);
+                    new NoViableAltException("", 71, 0, input);
 
                 throw nvae;
             }
-            switch (alt69) {
+            switch (alt71) {
                 case 1 :
-                    // InternalDemoFkd.g:5476:4: ( (lv_block_2_0= ruleblock ) )
+                    // InternalDemoFkd.g:5598:4: ( (lv_block_2_0= ruleblock ) )
                     {
-                    // InternalDemoFkd.g:5476:4: ( (lv_block_2_0= ruleblock ) )
-                    // InternalDemoFkd.g:5477:5: (lv_block_2_0= ruleblock )
+                    // InternalDemoFkd.g:5598:4: ( (lv_block_2_0= ruleblock ) )
+                    // InternalDemoFkd.g:5599:5: (lv_block_2_0= ruleblock )
                     {
-                    // InternalDemoFkd.g:5477:5: (lv_block_2_0= ruleblock )
-                    // InternalDemoFkd.g:5478:6: lv_block_2_0= ruleblock
+                    // InternalDemoFkd.g:5599:5: (lv_block_2_0= ruleblock )
+                    // InternalDemoFkd.g:5600:6: lv_block_2_0= ruleblock
                     {
 
                     						newCompositeNode(grammarAccess.getProcedure_declarationAccess().getBlockBlockParserRuleCall_2_0_0());
@@ -13912,13 +14250,13 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalDemoFkd.g:5496:4: ( (lv_forward_3_0= 'forward' ) )
+                    // InternalDemoFkd.g:5618:4: ( (lv_forward_3_0= 'forward' ) )
                     {
-                    // InternalDemoFkd.g:5496:4: ( (lv_forward_3_0= 'forward' ) )
-                    // InternalDemoFkd.g:5497:5: (lv_forward_3_0= 'forward' )
+                    // InternalDemoFkd.g:5618:4: ( (lv_forward_3_0= 'forward' ) )
+                    // InternalDemoFkd.g:5619:5: (lv_forward_3_0= 'forward' )
                     {
-                    // InternalDemoFkd.g:5497:5: (lv_forward_3_0= 'forward' )
-                    // InternalDemoFkd.g:5498:6: lv_forward_3_0= 'forward'
+                    // InternalDemoFkd.g:5619:5: (lv_forward_3_0= 'forward' )
+                    // InternalDemoFkd.g:5620:6: lv_forward_3_0= 'forward'
                     {
                     lv_forward_3_0=(Token)match(input,72,FOLLOW_2); 
 
@@ -13965,7 +14303,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleprocedure_heading"
-    // InternalDemoFkd.g:5515:1: entryRuleprocedure_heading returns [EObject current=null] : iv_ruleprocedure_heading= ruleprocedure_heading EOF ;
+    // InternalDemoFkd.g:5637:1: entryRuleprocedure_heading returns [EObject current=null] : iv_ruleprocedure_heading= ruleprocedure_heading EOF ;
     public final EObject entryRuleprocedure_heading() throws RecognitionException {
         EObject current = null;
 
@@ -13973,8 +14311,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:5515:58: (iv_ruleprocedure_heading= ruleprocedure_heading EOF )
-            // InternalDemoFkd.g:5516:2: iv_ruleprocedure_heading= ruleprocedure_heading EOF
+            // InternalDemoFkd.g:5637:58: (iv_ruleprocedure_heading= ruleprocedure_heading EOF )
+            // InternalDemoFkd.g:5638:2: iv_ruleprocedure_heading= ruleprocedure_heading EOF
             {
              newCompositeNode(grammarAccess.getProcedure_headingRule()); 
             pushFollow(FOLLOW_1);
@@ -14001,7 +14339,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleprocedure_heading"
-    // InternalDemoFkd.g:5522:1: ruleprocedure_heading returns [EObject current=null] : (otherlv_0= 'procedure' ( (lv_name_1_0= RULE_ID ) ) ( (lv_parameters_2_0= ruleformal_parameter_list ) )? ) ;
+    // InternalDemoFkd.g:5644:1: ruleprocedure_heading returns [EObject current=null] : (otherlv_0= 'procedure' ( (lv_name_1_0= RULE_ID ) ) ( (lv_parameters_2_0= ruleformal_parameter_list ) )? ) ;
     public final EObject ruleprocedure_heading() throws RecognitionException {
         EObject current = null;
 
@@ -14014,21 +14352,21 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:5528:2: ( (otherlv_0= 'procedure' ( (lv_name_1_0= RULE_ID ) ) ( (lv_parameters_2_0= ruleformal_parameter_list ) )? ) )
-            // InternalDemoFkd.g:5529:2: (otherlv_0= 'procedure' ( (lv_name_1_0= RULE_ID ) ) ( (lv_parameters_2_0= ruleformal_parameter_list ) )? )
+            // InternalDemoFkd.g:5650:2: ( (otherlv_0= 'procedure' ( (lv_name_1_0= RULE_ID ) ) ( (lv_parameters_2_0= ruleformal_parameter_list ) )? ) )
+            // InternalDemoFkd.g:5651:2: (otherlv_0= 'procedure' ( (lv_name_1_0= RULE_ID ) ) ( (lv_parameters_2_0= ruleformal_parameter_list ) )? )
             {
-            // InternalDemoFkd.g:5529:2: (otherlv_0= 'procedure' ( (lv_name_1_0= RULE_ID ) ) ( (lv_parameters_2_0= ruleformal_parameter_list ) )? )
-            // InternalDemoFkd.g:5530:3: otherlv_0= 'procedure' ( (lv_name_1_0= RULE_ID ) ) ( (lv_parameters_2_0= ruleformal_parameter_list ) )?
+            // InternalDemoFkd.g:5651:2: (otherlv_0= 'procedure' ( (lv_name_1_0= RULE_ID ) ) ( (lv_parameters_2_0= ruleformal_parameter_list ) )? )
+            // InternalDemoFkd.g:5652:3: otherlv_0= 'procedure' ( (lv_name_1_0= RULE_ID ) ) ( (lv_parameters_2_0= ruleformal_parameter_list ) )?
             {
             otherlv_0=(Token)match(input,73,FOLLOW_5); 
 
             			newLeafNode(otherlv_0, grammarAccess.getProcedure_headingAccess().getProcedureKeyword_0());
             		
-            // InternalDemoFkd.g:5534:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalDemoFkd.g:5535:4: (lv_name_1_0= RULE_ID )
+            // InternalDemoFkd.g:5656:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalDemoFkd.g:5657:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalDemoFkd.g:5535:4: (lv_name_1_0= RULE_ID )
-            // InternalDemoFkd.g:5536:5: lv_name_1_0= RULE_ID
+            // InternalDemoFkd.g:5657:4: (lv_name_1_0= RULE_ID )
+            // InternalDemoFkd.g:5658:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_52); 
 
@@ -14050,19 +14388,19 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalDemoFkd.g:5552:3: ( (lv_parameters_2_0= ruleformal_parameter_list ) )?
-            int alt70=2;
-            int LA70_0 = input.LA(1);
+            // InternalDemoFkd.g:5674:3: ( (lv_parameters_2_0= ruleformal_parameter_list ) )?
+            int alt72=2;
+            int LA72_0 = input.LA(1);
 
-            if ( (LA70_0==25) ) {
-                alt70=1;
+            if ( (LA72_0==25) ) {
+                alt72=1;
             }
-            switch (alt70) {
+            switch (alt72) {
                 case 1 :
-                    // InternalDemoFkd.g:5553:4: (lv_parameters_2_0= ruleformal_parameter_list )
+                    // InternalDemoFkd.g:5675:4: (lv_parameters_2_0= ruleformal_parameter_list )
                     {
-                    // InternalDemoFkd.g:5553:4: (lv_parameters_2_0= ruleformal_parameter_list )
-                    // InternalDemoFkd.g:5554:5: lv_parameters_2_0= ruleformal_parameter_list
+                    // InternalDemoFkd.g:5675:4: (lv_parameters_2_0= ruleformal_parameter_list )
+                    // InternalDemoFkd.g:5676:5: lv_parameters_2_0= ruleformal_parameter_list
                     {
 
                     					newCompositeNode(grammarAccess.getProcedure_headingAccess().getParametersFormal_parameter_listParserRuleCall_2_0());
@@ -14115,7 +14453,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleformal_parameter_list"
-    // InternalDemoFkd.g:5575:1: entryRuleformal_parameter_list returns [EObject current=null] : iv_ruleformal_parameter_list= ruleformal_parameter_list EOF ;
+    // InternalDemoFkd.g:5697:1: entryRuleformal_parameter_list returns [EObject current=null] : iv_ruleformal_parameter_list= ruleformal_parameter_list EOF ;
     public final EObject entryRuleformal_parameter_list() throws RecognitionException {
         EObject current = null;
 
@@ -14123,8 +14461,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:5575:62: (iv_ruleformal_parameter_list= ruleformal_parameter_list EOF )
-            // InternalDemoFkd.g:5576:2: iv_ruleformal_parameter_list= ruleformal_parameter_list EOF
+            // InternalDemoFkd.g:5697:62: (iv_ruleformal_parameter_list= ruleformal_parameter_list EOF )
+            // InternalDemoFkd.g:5698:2: iv_ruleformal_parameter_list= ruleformal_parameter_list EOF
             {
              newCompositeNode(grammarAccess.getFormal_parameter_listRule()); 
             pushFollow(FOLLOW_1);
@@ -14151,7 +14489,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleformal_parameter_list"
-    // InternalDemoFkd.g:5582:1: ruleformal_parameter_list returns [EObject current=null] : (otherlv_0= '(' ( (lv_parameters_1_0= ruleformal_parameter_section ) ) (otherlv_2= ';' ( (lv_parameters_3_0= ruleformal_parameter_section ) ) )* otherlv_4= ')' ) ;
+    // InternalDemoFkd.g:5704:1: ruleformal_parameter_list returns [EObject current=null] : (otherlv_0= '(' ( (lv_parameters_1_0= ruleformal_parameter_section ) ) (otherlv_2= ';' ( (lv_parameters_3_0= ruleformal_parameter_section ) ) )* otherlv_4= ')' ) ;
     public final EObject ruleformal_parameter_list() throws RecognitionException {
         EObject current = null;
 
@@ -14167,21 +14505,21 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:5588:2: ( (otherlv_0= '(' ( (lv_parameters_1_0= ruleformal_parameter_section ) ) (otherlv_2= ';' ( (lv_parameters_3_0= ruleformal_parameter_section ) ) )* otherlv_4= ')' ) )
-            // InternalDemoFkd.g:5589:2: (otherlv_0= '(' ( (lv_parameters_1_0= ruleformal_parameter_section ) ) (otherlv_2= ';' ( (lv_parameters_3_0= ruleformal_parameter_section ) ) )* otherlv_4= ')' )
+            // InternalDemoFkd.g:5710:2: ( (otherlv_0= '(' ( (lv_parameters_1_0= ruleformal_parameter_section ) ) (otherlv_2= ';' ( (lv_parameters_3_0= ruleformal_parameter_section ) ) )* otherlv_4= ')' ) )
+            // InternalDemoFkd.g:5711:2: (otherlv_0= '(' ( (lv_parameters_1_0= ruleformal_parameter_section ) ) (otherlv_2= ';' ( (lv_parameters_3_0= ruleformal_parameter_section ) ) )* otherlv_4= ')' )
             {
-            // InternalDemoFkd.g:5589:2: (otherlv_0= '(' ( (lv_parameters_1_0= ruleformal_parameter_section ) ) (otherlv_2= ';' ( (lv_parameters_3_0= ruleformal_parameter_section ) ) )* otherlv_4= ')' )
-            // InternalDemoFkd.g:5590:3: otherlv_0= '(' ( (lv_parameters_1_0= ruleformal_parameter_section ) ) (otherlv_2= ';' ( (lv_parameters_3_0= ruleformal_parameter_section ) ) )* otherlv_4= ')'
+            // InternalDemoFkd.g:5711:2: (otherlv_0= '(' ( (lv_parameters_1_0= ruleformal_parameter_section ) ) (otherlv_2= ';' ( (lv_parameters_3_0= ruleformal_parameter_section ) ) )* otherlv_4= ')' )
+            // InternalDemoFkd.g:5712:3: otherlv_0= '(' ( (lv_parameters_1_0= ruleformal_parameter_section ) ) (otherlv_2= ';' ( (lv_parameters_3_0= ruleformal_parameter_section ) ) )* otherlv_4= ')'
             {
             otherlv_0=(Token)match(input,25,FOLLOW_53); 
 
             			newLeafNode(otherlv_0, grammarAccess.getFormal_parameter_listAccess().getLeftParenthesisKeyword_0());
             		
-            // InternalDemoFkd.g:5594:3: ( (lv_parameters_1_0= ruleformal_parameter_section ) )
-            // InternalDemoFkd.g:5595:4: (lv_parameters_1_0= ruleformal_parameter_section )
+            // InternalDemoFkd.g:5716:3: ( (lv_parameters_1_0= ruleformal_parameter_section ) )
+            // InternalDemoFkd.g:5717:4: (lv_parameters_1_0= ruleformal_parameter_section )
             {
-            // InternalDemoFkd.g:5595:4: (lv_parameters_1_0= ruleformal_parameter_section )
-            // InternalDemoFkd.g:5596:5: lv_parameters_1_0= ruleformal_parameter_section
+            // InternalDemoFkd.g:5717:4: (lv_parameters_1_0= ruleformal_parameter_section )
+            // InternalDemoFkd.g:5718:5: lv_parameters_1_0= ruleformal_parameter_section
             {
 
             					newCompositeNode(grammarAccess.getFormal_parameter_listAccess().getParametersFormal_parameter_sectionParserRuleCall_1_0());
@@ -14208,30 +14546,30 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalDemoFkd.g:5613:3: (otherlv_2= ';' ( (lv_parameters_3_0= ruleformal_parameter_section ) ) )*
-            loop71:
+            // InternalDemoFkd.g:5735:3: (otherlv_2= ';' ( (lv_parameters_3_0= ruleformal_parameter_section ) ) )*
+            loop73:
             do {
-                int alt71=2;
-                int LA71_0 = input.LA(1);
+                int alt73=2;
+                int LA73_0 = input.LA(1);
 
-                if ( (LA71_0==27) ) {
-                    alt71=1;
+                if ( (LA73_0==27) ) {
+                    alt73=1;
                 }
 
 
-                switch (alt71) {
+                switch (alt73) {
             	case 1 :
-            	    // InternalDemoFkd.g:5614:4: otherlv_2= ';' ( (lv_parameters_3_0= ruleformal_parameter_section ) )
+            	    // InternalDemoFkd.g:5736:4: otherlv_2= ';' ( (lv_parameters_3_0= ruleformal_parameter_section ) )
             	    {
             	    otherlv_2=(Token)match(input,27,FOLLOW_53); 
 
             	    				newLeafNode(otherlv_2, grammarAccess.getFormal_parameter_listAccess().getSemicolonKeyword_2_0());
             	    			
-            	    // InternalDemoFkd.g:5618:4: ( (lv_parameters_3_0= ruleformal_parameter_section ) )
-            	    // InternalDemoFkd.g:5619:5: (lv_parameters_3_0= ruleformal_parameter_section )
+            	    // InternalDemoFkd.g:5740:4: ( (lv_parameters_3_0= ruleformal_parameter_section ) )
+            	    // InternalDemoFkd.g:5741:5: (lv_parameters_3_0= ruleformal_parameter_section )
             	    {
-            	    // InternalDemoFkd.g:5619:5: (lv_parameters_3_0= ruleformal_parameter_section )
-            	    // InternalDemoFkd.g:5620:6: lv_parameters_3_0= ruleformal_parameter_section
+            	    // InternalDemoFkd.g:5741:5: (lv_parameters_3_0= ruleformal_parameter_section )
+            	    // InternalDemoFkd.g:5742:6: lv_parameters_3_0= ruleformal_parameter_section
             	    {
 
             	    						newCompositeNode(grammarAccess.getFormal_parameter_listAccess().getParametersFormal_parameter_sectionParserRuleCall_2_1_0());
@@ -14263,7 +14601,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop71;
+            	    break loop73;
                 }
             } while (true);
 
@@ -14294,7 +14632,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleformal_parameter_section"
-    // InternalDemoFkd.g:5646:1: entryRuleformal_parameter_section returns [EObject current=null] : iv_ruleformal_parameter_section= ruleformal_parameter_section EOF ;
+    // InternalDemoFkd.g:5768:1: entryRuleformal_parameter_section returns [EObject current=null] : iv_ruleformal_parameter_section= ruleformal_parameter_section EOF ;
     public final EObject entryRuleformal_parameter_section() throws RecognitionException {
         EObject current = null;
 
@@ -14302,8 +14640,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:5646:65: (iv_ruleformal_parameter_section= ruleformal_parameter_section EOF )
-            // InternalDemoFkd.g:5647:2: iv_ruleformal_parameter_section= ruleformal_parameter_section EOF
+            // InternalDemoFkd.g:5768:65: (iv_ruleformal_parameter_section= ruleformal_parameter_section EOF )
+            // InternalDemoFkd.g:5769:2: iv_ruleformal_parameter_section= ruleformal_parameter_section EOF
             {
              newCompositeNode(grammarAccess.getFormal_parameter_sectionRule()); 
             pushFollow(FOLLOW_1);
@@ -14330,7 +14668,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleformal_parameter_section"
-    // InternalDemoFkd.g:5653:1: ruleformal_parameter_section returns [EObject current=null] : ( ( (lv_value_0_0= rulevalue_parameter_section ) ) | ( (lv_variable_1_0= rulevariable_parameter_section ) ) | ( (lv_procedure_2_0= ruleprocedure_heading ) ) | ( (lv_function_3_0= rulefunction_heading ) ) ) ;
+    // InternalDemoFkd.g:5775:1: ruleformal_parameter_section returns [EObject current=null] : ( ( (lv_value_0_0= rulevalue_parameter_section ) ) | ( (lv_variable_1_0= rulevariable_parameter_section ) ) | ( (lv_procedure_2_0= ruleprocedure_heading ) ) | ( (lv_function_3_0= rulefunction_heading ) ) ) ;
     public final EObject ruleformal_parameter_section() throws RecognitionException {
         EObject current = null;
 
@@ -14347,48 +14685,48 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:5659:2: ( ( ( (lv_value_0_0= rulevalue_parameter_section ) ) | ( (lv_variable_1_0= rulevariable_parameter_section ) ) | ( (lv_procedure_2_0= ruleprocedure_heading ) ) | ( (lv_function_3_0= rulefunction_heading ) ) ) )
-            // InternalDemoFkd.g:5660:2: ( ( (lv_value_0_0= rulevalue_parameter_section ) ) | ( (lv_variable_1_0= rulevariable_parameter_section ) ) | ( (lv_procedure_2_0= ruleprocedure_heading ) ) | ( (lv_function_3_0= rulefunction_heading ) ) )
+            // InternalDemoFkd.g:5781:2: ( ( ( (lv_value_0_0= rulevalue_parameter_section ) ) | ( (lv_variable_1_0= rulevariable_parameter_section ) ) | ( (lv_procedure_2_0= ruleprocedure_heading ) ) | ( (lv_function_3_0= rulefunction_heading ) ) ) )
+            // InternalDemoFkd.g:5782:2: ( ( (lv_value_0_0= rulevalue_parameter_section ) ) | ( (lv_variable_1_0= rulevariable_parameter_section ) ) | ( (lv_procedure_2_0= ruleprocedure_heading ) ) | ( (lv_function_3_0= rulefunction_heading ) ) )
             {
-            // InternalDemoFkd.g:5660:2: ( ( (lv_value_0_0= rulevalue_parameter_section ) ) | ( (lv_variable_1_0= rulevariable_parameter_section ) ) | ( (lv_procedure_2_0= ruleprocedure_heading ) ) | ( (lv_function_3_0= rulefunction_heading ) ) )
-            int alt72=4;
+            // InternalDemoFkd.g:5782:2: ( ( (lv_value_0_0= rulevalue_parameter_section ) ) | ( (lv_variable_1_0= rulevariable_parameter_section ) ) | ( (lv_procedure_2_0= ruleprocedure_heading ) ) | ( (lv_function_3_0= rulefunction_heading ) ) )
+            int alt74=4;
             switch ( input.LA(1) ) {
             case RULE_ID:
                 {
-                alt72=1;
+                alt74=1;
                 }
                 break;
             case 71:
                 {
-                alt72=2;
+                alt74=2;
                 }
                 break;
             case 73:
                 {
-                alt72=3;
+                alt74=3;
                 }
                 break;
             case 74:
                 {
-                alt72=4;
+                alt74=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 72, 0, input);
+                    new NoViableAltException("", 74, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt72) {
+            switch (alt74) {
                 case 1 :
-                    // InternalDemoFkd.g:5661:3: ( (lv_value_0_0= rulevalue_parameter_section ) )
+                    // InternalDemoFkd.g:5783:3: ( (lv_value_0_0= rulevalue_parameter_section ) )
                     {
-                    // InternalDemoFkd.g:5661:3: ( (lv_value_0_0= rulevalue_parameter_section ) )
-                    // InternalDemoFkd.g:5662:4: (lv_value_0_0= rulevalue_parameter_section )
+                    // InternalDemoFkd.g:5783:3: ( (lv_value_0_0= rulevalue_parameter_section ) )
+                    // InternalDemoFkd.g:5784:4: (lv_value_0_0= rulevalue_parameter_section )
                     {
-                    // InternalDemoFkd.g:5662:4: (lv_value_0_0= rulevalue_parameter_section )
-                    // InternalDemoFkd.g:5663:5: lv_value_0_0= rulevalue_parameter_section
+                    // InternalDemoFkd.g:5784:4: (lv_value_0_0= rulevalue_parameter_section )
+                    // InternalDemoFkd.g:5785:5: lv_value_0_0= rulevalue_parameter_section
                     {
 
                     					newCompositeNode(grammarAccess.getFormal_parameter_sectionAccess().getValueValue_parameter_sectionParserRuleCall_0_0());
@@ -14419,13 +14757,13 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalDemoFkd.g:5681:3: ( (lv_variable_1_0= rulevariable_parameter_section ) )
+                    // InternalDemoFkd.g:5803:3: ( (lv_variable_1_0= rulevariable_parameter_section ) )
                     {
-                    // InternalDemoFkd.g:5681:3: ( (lv_variable_1_0= rulevariable_parameter_section ) )
-                    // InternalDemoFkd.g:5682:4: (lv_variable_1_0= rulevariable_parameter_section )
+                    // InternalDemoFkd.g:5803:3: ( (lv_variable_1_0= rulevariable_parameter_section ) )
+                    // InternalDemoFkd.g:5804:4: (lv_variable_1_0= rulevariable_parameter_section )
                     {
-                    // InternalDemoFkd.g:5682:4: (lv_variable_1_0= rulevariable_parameter_section )
-                    // InternalDemoFkd.g:5683:5: lv_variable_1_0= rulevariable_parameter_section
+                    // InternalDemoFkd.g:5804:4: (lv_variable_1_0= rulevariable_parameter_section )
+                    // InternalDemoFkd.g:5805:5: lv_variable_1_0= rulevariable_parameter_section
                     {
 
                     					newCompositeNode(grammarAccess.getFormal_parameter_sectionAccess().getVariableVariable_parameter_sectionParserRuleCall_1_0());
@@ -14456,13 +14794,13 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalDemoFkd.g:5701:3: ( (lv_procedure_2_0= ruleprocedure_heading ) )
+                    // InternalDemoFkd.g:5823:3: ( (lv_procedure_2_0= ruleprocedure_heading ) )
                     {
-                    // InternalDemoFkd.g:5701:3: ( (lv_procedure_2_0= ruleprocedure_heading ) )
-                    // InternalDemoFkd.g:5702:4: (lv_procedure_2_0= ruleprocedure_heading )
+                    // InternalDemoFkd.g:5823:3: ( (lv_procedure_2_0= ruleprocedure_heading ) )
+                    // InternalDemoFkd.g:5824:4: (lv_procedure_2_0= ruleprocedure_heading )
                     {
-                    // InternalDemoFkd.g:5702:4: (lv_procedure_2_0= ruleprocedure_heading )
-                    // InternalDemoFkd.g:5703:5: lv_procedure_2_0= ruleprocedure_heading
+                    // InternalDemoFkd.g:5824:4: (lv_procedure_2_0= ruleprocedure_heading )
+                    // InternalDemoFkd.g:5825:5: lv_procedure_2_0= ruleprocedure_heading
                     {
 
                     					newCompositeNode(grammarAccess.getFormal_parameter_sectionAccess().getProcedureProcedure_headingParserRuleCall_2_0());
@@ -14493,13 +14831,13 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalDemoFkd.g:5721:3: ( (lv_function_3_0= rulefunction_heading ) )
+                    // InternalDemoFkd.g:5843:3: ( (lv_function_3_0= rulefunction_heading ) )
                     {
-                    // InternalDemoFkd.g:5721:3: ( (lv_function_3_0= rulefunction_heading ) )
-                    // InternalDemoFkd.g:5722:4: (lv_function_3_0= rulefunction_heading )
+                    // InternalDemoFkd.g:5843:3: ( (lv_function_3_0= rulefunction_heading ) )
+                    // InternalDemoFkd.g:5844:4: (lv_function_3_0= rulefunction_heading )
                     {
-                    // InternalDemoFkd.g:5722:4: (lv_function_3_0= rulefunction_heading )
-                    // InternalDemoFkd.g:5723:5: lv_function_3_0= rulefunction_heading
+                    // InternalDemoFkd.g:5844:4: (lv_function_3_0= rulefunction_heading )
+                    // InternalDemoFkd.g:5845:5: lv_function_3_0= rulefunction_heading
                     {
 
                     					newCompositeNode(grammarAccess.getFormal_parameter_sectionAccess().getFunctionFunction_headingParserRuleCall_3_0());
@@ -14552,7 +14890,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulevalue_parameter_section"
-    // InternalDemoFkd.g:5744:1: entryRulevalue_parameter_section returns [EObject current=null] : iv_rulevalue_parameter_section= rulevalue_parameter_section EOF ;
+    // InternalDemoFkd.g:5866:1: entryRulevalue_parameter_section returns [EObject current=null] : iv_rulevalue_parameter_section= rulevalue_parameter_section EOF ;
     public final EObject entryRulevalue_parameter_section() throws RecognitionException {
         EObject current = null;
 
@@ -14560,8 +14898,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:5744:64: (iv_rulevalue_parameter_section= rulevalue_parameter_section EOF )
-            // InternalDemoFkd.g:5745:2: iv_rulevalue_parameter_section= rulevalue_parameter_section EOF
+            // InternalDemoFkd.g:5866:64: (iv_rulevalue_parameter_section= rulevalue_parameter_section EOF )
+            // InternalDemoFkd.g:5867:2: iv_rulevalue_parameter_section= rulevalue_parameter_section EOF
             {
              newCompositeNode(grammarAccess.getValue_parameter_sectionRule()); 
             pushFollow(FOLLOW_1);
@@ -14588,7 +14926,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulevalue_parameter_section"
-    // InternalDemoFkd.g:5751:1: rulevalue_parameter_section returns [EObject current=null] : ( ( (lv_identifiers_0_0= ruleidentifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruleparameter_type ) ) ) ;
+    // InternalDemoFkd.g:5873:1: rulevalue_parameter_section returns [EObject current=null] : ( ( (lv_identifiers_0_0= ruleidentifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruleparameter_type ) ) ) ;
     public final EObject rulevalue_parameter_section() throws RecognitionException {
         EObject current = null;
 
@@ -14602,17 +14940,17 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:5757:2: ( ( ( (lv_identifiers_0_0= ruleidentifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruleparameter_type ) ) ) )
-            // InternalDemoFkd.g:5758:2: ( ( (lv_identifiers_0_0= ruleidentifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruleparameter_type ) ) )
+            // InternalDemoFkd.g:5879:2: ( ( ( (lv_identifiers_0_0= ruleidentifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruleparameter_type ) ) ) )
+            // InternalDemoFkd.g:5880:2: ( ( (lv_identifiers_0_0= ruleidentifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruleparameter_type ) ) )
             {
-            // InternalDemoFkd.g:5758:2: ( ( (lv_identifiers_0_0= ruleidentifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruleparameter_type ) ) )
-            // InternalDemoFkd.g:5759:3: ( (lv_identifiers_0_0= ruleidentifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruleparameter_type ) )
+            // InternalDemoFkd.g:5880:2: ( ( (lv_identifiers_0_0= ruleidentifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruleparameter_type ) ) )
+            // InternalDemoFkd.g:5881:3: ( (lv_identifiers_0_0= ruleidentifier_list ) ) otherlv_1= ':' ( (lv_type_2_0= ruleparameter_type ) )
             {
-            // InternalDemoFkd.g:5759:3: ( (lv_identifiers_0_0= ruleidentifier_list ) )
-            // InternalDemoFkd.g:5760:4: (lv_identifiers_0_0= ruleidentifier_list )
+            // InternalDemoFkd.g:5881:3: ( (lv_identifiers_0_0= ruleidentifier_list ) )
+            // InternalDemoFkd.g:5882:4: (lv_identifiers_0_0= ruleidentifier_list )
             {
-            // InternalDemoFkd.g:5760:4: (lv_identifiers_0_0= ruleidentifier_list )
-            // InternalDemoFkd.g:5761:5: lv_identifiers_0_0= ruleidentifier_list
+            // InternalDemoFkd.g:5882:4: (lv_identifiers_0_0= ruleidentifier_list )
+            // InternalDemoFkd.g:5883:5: lv_identifiers_0_0= ruleidentifier_list
             {
 
             					newCompositeNode(grammarAccess.getValue_parameter_sectionAccess().getIdentifiersIdentifier_listParserRuleCall_0_0());
@@ -14643,11 +14981,11 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getValue_parameter_sectionAccess().getColonKeyword_1());
             		
-            // InternalDemoFkd.g:5782:3: ( (lv_type_2_0= ruleparameter_type ) )
-            // InternalDemoFkd.g:5783:4: (lv_type_2_0= ruleparameter_type )
+            // InternalDemoFkd.g:5904:3: ( (lv_type_2_0= ruleparameter_type ) )
+            // InternalDemoFkd.g:5905:4: (lv_type_2_0= ruleparameter_type )
             {
-            // InternalDemoFkd.g:5783:4: (lv_type_2_0= ruleparameter_type )
-            // InternalDemoFkd.g:5784:5: lv_type_2_0= ruleparameter_type
+            // InternalDemoFkd.g:5905:4: (lv_type_2_0= ruleparameter_type )
+            // InternalDemoFkd.g:5906:5: lv_type_2_0= ruleparameter_type
             {
 
             					newCompositeNode(grammarAccess.getValue_parameter_sectionAccess().getTypeParameter_typeParserRuleCall_2_0());
@@ -14697,7 +15035,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleparameter_type"
-    // InternalDemoFkd.g:5805:1: entryRuleparameter_type returns [EObject current=null] : iv_ruleparameter_type= ruleparameter_type EOF ;
+    // InternalDemoFkd.g:5927:1: entryRuleparameter_type returns [EObject current=null] : iv_ruleparameter_type= ruleparameter_type EOF ;
     public final EObject entryRuleparameter_type() throws RecognitionException {
         EObject current = null;
 
@@ -14705,8 +15043,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:5805:55: (iv_ruleparameter_type= ruleparameter_type EOF )
-            // InternalDemoFkd.g:5806:2: iv_ruleparameter_type= ruleparameter_type EOF
+            // InternalDemoFkd.g:5927:55: (iv_ruleparameter_type= ruleparameter_type EOF )
+            // InternalDemoFkd.g:5928:2: iv_ruleparameter_type= ruleparameter_type EOF
             {
              newCompositeNode(grammarAccess.getParameter_typeRule()); 
             pushFollow(FOLLOW_1);
@@ -14733,7 +15071,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleparameter_type"
-    // InternalDemoFkd.g:5812:1: ruleparameter_type returns [EObject current=null] : ( ( (lv_array_0_0= ruleconformant_array_schema ) ) | ( (lv_name_1_0= RULE_ID ) ) ) ;
+    // InternalDemoFkd.g:5934:1: ruleparameter_type returns [EObject current=null] : ( ( (lv_array_0_0= ruleconformant_array_schema ) ) | ( (lv_name_1_0= RULE_ID ) ) ) ;
     public final EObject ruleparameter_type() throws RecognitionException {
         EObject current = null;
 
@@ -14745,34 +15083,34 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:5818:2: ( ( ( (lv_array_0_0= ruleconformant_array_schema ) ) | ( (lv_name_1_0= RULE_ID ) ) ) )
-            // InternalDemoFkd.g:5819:2: ( ( (lv_array_0_0= ruleconformant_array_schema ) ) | ( (lv_name_1_0= RULE_ID ) ) )
+            // InternalDemoFkd.g:5940:2: ( ( ( (lv_array_0_0= ruleconformant_array_schema ) ) | ( (lv_name_1_0= RULE_ID ) ) ) )
+            // InternalDemoFkd.g:5941:2: ( ( (lv_array_0_0= ruleconformant_array_schema ) ) | ( (lv_name_1_0= RULE_ID ) ) )
             {
-            // InternalDemoFkd.g:5819:2: ( ( (lv_array_0_0= ruleconformant_array_schema ) ) | ( (lv_name_1_0= RULE_ID ) ) )
-            int alt73=2;
-            int LA73_0 = input.LA(1);
+            // InternalDemoFkd.g:5941:2: ( ( (lv_array_0_0= ruleconformant_array_schema ) ) | ( (lv_name_1_0= RULE_ID ) ) )
+            int alt75=2;
+            int LA75_0 = input.LA(1);
 
-            if ( ((LA73_0>=65 && LA73_0<=66)) ) {
-                alt73=1;
+            if ( ((LA75_0>=65 && LA75_0<=66)) ) {
+                alt75=1;
             }
-            else if ( (LA73_0==RULE_ID) ) {
-                alt73=2;
+            else if ( (LA75_0==RULE_ID) ) {
+                alt75=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 73, 0, input);
+                    new NoViableAltException("", 75, 0, input);
 
                 throw nvae;
             }
-            switch (alt73) {
+            switch (alt75) {
                 case 1 :
-                    // InternalDemoFkd.g:5820:3: ( (lv_array_0_0= ruleconformant_array_schema ) )
+                    // InternalDemoFkd.g:5942:3: ( (lv_array_0_0= ruleconformant_array_schema ) )
                     {
-                    // InternalDemoFkd.g:5820:3: ( (lv_array_0_0= ruleconformant_array_schema ) )
-                    // InternalDemoFkd.g:5821:4: (lv_array_0_0= ruleconformant_array_schema )
+                    // InternalDemoFkd.g:5942:3: ( (lv_array_0_0= ruleconformant_array_schema ) )
+                    // InternalDemoFkd.g:5943:4: (lv_array_0_0= ruleconformant_array_schema )
                     {
-                    // InternalDemoFkd.g:5821:4: (lv_array_0_0= ruleconformant_array_schema )
-                    // InternalDemoFkd.g:5822:5: lv_array_0_0= ruleconformant_array_schema
+                    // InternalDemoFkd.g:5943:4: (lv_array_0_0= ruleconformant_array_schema )
+                    // InternalDemoFkd.g:5944:5: lv_array_0_0= ruleconformant_array_schema
                     {
 
                     					newCompositeNode(grammarAccess.getParameter_typeAccess().getArrayConformant_array_schemaParserRuleCall_0_0());
@@ -14803,13 +15141,13 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalDemoFkd.g:5840:3: ( (lv_name_1_0= RULE_ID ) )
+                    // InternalDemoFkd.g:5962:3: ( (lv_name_1_0= RULE_ID ) )
                     {
-                    // InternalDemoFkd.g:5840:3: ( (lv_name_1_0= RULE_ID ) )
-                    // InternalDemoFkd.g:5841:4: (lv_name_1_0= RULE_ID )
+                    // InternalDemoFkd.g:5962:3: ( (lv_name_1_0= RULE_ID ) )
+                    // InternalDemoFkd.g:5963:4: (lv_name_1_0= RULE_ID )
                     {
-                    // InternalDemoFkd.g:5841:4: (lv_name_1_0= RULE_ID )
-                    // InternalDemoFkd.g:5842:5: lv_name_1_0= RULE_ID
+                    // InternalDemoFkd.g:5963:4: (lv_name_1_0= RULE_ID )
+                    // InternalDemoFkd.g:5964:5: lv_name_1_0= RULE_ID
                     {
                     lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -14857,7 +15195,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleconformant_array_schema"
-    // InternalDemoFkd.g:5862:1: entryRuleconformant_array_schema returns [EObject current=null] : iv_ruleconformant_array_schema= ruleconformant_array_schema EOF ;
+    // InternalDemoFkd.g:5984:1: entryRuleconformant_array_schema returns [EObject current=null] : iv_ruleconformant_array_schema= ruleconformant_array_schema EOF ;
     public final EObject entryRuleconformant_array_schema() throws RecognitionException {
         EObject current = null;
 
@@ -14865,8 +15203,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:5862:64: (iv_ruleconformant_array_schema= ruleconformant_array_schema EOF )
-            // InternalDemoFkd.g:5863:2: iv_ruleconformant_array_schema= ruleconformant_array_schema EOF
+            // InternalDemoFkd.g:5984:64: (iv_ruleconformant_array_schema= ruleconformant_array_schema EOF )
+            // InternalDemoFkd.g:5985:2: iv_ruleconformant_array_schema= ruleconformant_array_schema EOF
             {
              newCompositeNode(grammarAccess.getConformant_array_schemaRule()); 
             pushFollow(FOLLOW_1);
@@ -14893,7 +15231,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleconformant_array_schema"
-    // InternalDemoFkd.g:5869:1: ruleconformant_array_schema returns [EObject current=null] : ( ( (lv_packed_0_0= rulepacked_conformant_array_schema ) ) | ( (lv_unpacked_1_0= ruleunpacked_conformant_array_schema ) ) ) ;
+    // InternalDemoFkd.g:5991:1: ruleconformant_array_schema returns [EObject current=null] : ( ( (lv_packed_0_0= rulepacked_conformant_array_schema ) ) | ( (lv_unpacked_1_0= ruleunpacked_conformant_array_schema ) ) ) ;
     public final EObject ruleconformant_array_schema() throws RecognitionException {
         EObject current = null;
 
@@ -14906,34 +15244,34 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:5875:2: ( ( ( (lv_packed_0_0= rulepacked_conformant_array_schema ) ) | ( (lv_unpacked_1_0= ruleunpacked_conformant_array_schema ) ) ) )
-            // InternalDemoFkd.g:5876:2: ( ( (lv_packed_0_0= rulepacked_conformant_array_schema ) ) | ( (lv_unpacked_1_0= ruleunpacked_conformant_array_schema ) ) )
+            // InternalDemoFkd.g:5997:2: ( ( ( (lv_packed_0_0= rulepacked_conformant_array_schema ) ) | ( (lv_unpacked_1_0= ruleunpacked_conformant_array_schema ) ) ) )
+            // InternalDemoFkd.g:5998:2: ( ( (lv_packed_0_0= rulepacked_conformant_array_schema ) ) | ( (lv_unpacked_1_0= ruleunpacked_conformant_array_schema ) ) )
             {
-            // InternalDemoFkd.g:5876:2: ( ( (lv_packed_0_0= rulepacked_conformant_array_schema ) ) | ( (lv_unpacked_1_0= ruleunpacked_conformant_array_schema ) ) )
-            int alt74=2;
-            int LA74_0 = input.LA(1);
+            // InternalDemoFkd.g:5998:2: ( ( (lv_packed_0_0= rulepacked_conformant_array_schema ) ) | ( (lv_unpacked_1_0= ruleunpacked_conformant_array_schema ) ) )
+            int alt76=2;
+            int LA76_0 = input.LA(1);
 
-            if ( (LA74_0==65) ) {
-                alt74=1;
+            if ( (LA76_0==65) ) {
+                alt76=1;
             }
-            else if ( (LA74_0==66) ) {
-                alt74=2;
+            else if ( (LA76_0==66) ) {
+                alt76=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 74, 0, input);
+                    new NoViableAltException("", 76, 0, input);
 
                 throw nvae;
             }
-            switch (alt74) {
+            switch (alt76) {
                 case 1 :
-                    // InternalDemoFkd.g:5877:3: ( (lv_packed_0_0= rulepacked_conformant_array_schema ) )
+                    // InternalDemoFkd.g:5999:3: ( (lv_packed_0_0= rulepacked_conformant_array_schema ) )
                     {
-                    // InternalDemoFkd.g:5877:3: ( (lv_packed_0_0= rulepacked_conformant_array_schema ) )
-                    // InternalDemoFkd.g:5878:4: (lv_packed_0_0= rulepacked_conformant_array_schema )
+                    // InternalDemoFkd.g:5999:3: ( (lv_packed_0_0= rulepacked_conformant_array_schema ) )
+                    // InternalDemoFkd.g:6000:4: (lv_packed_0_0= rulepacked_conformant_array_schema )
                     {
-                    // InternalDemoFkd.g:5878:4: (lv_packed_0_0= rulepacked_conformant_array_schema )
-                    // InternalDemoFkd.g:5879:5: lv_packed_0_0= rulepacked_conformant_array_schema
+                    // InternalDemoFkd.g:6000:4: (lv_packed_0_0= rulepacked_conformant_array_schema )
+                    // InternalDemoFkd.g:6001:5: lv_packed_0_0= rulepacked_conformant_array_schema
                     {
 
                     					newCompositeNode(grammarAccess.getConformant_array_schemaAccess().getPackedPacked_conformant_array_schemaParserRuleCall_0_0());
@@ -14964,13 +15302,13 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalDemoFkd.g:5897:3: ( (lv_unpacked_1_0= ruleunpacked_conformant_array_schema ) )
+                    // InternalDemoFkd.g:6019:3: ( (lv_unpacked_1_0= ruleunpacked_conformant_array_schema ) )
                     {
-                    // InternalDemoFkd.g:5897:3: ( (lv_unpacked_1_0= ruleunpacked_conformant_array_schema ) )
-                    // InternalDemoFkd.g:5898:4: (lv_unpacked_1_0= ruleunpacked_conformant_array_schema )
+                    // InternalDemoFkd.g:6019:3: ( (lv_unpacked_1_0= ruleunpacked_conformant_array_schema ) )
+                    // InternalDemoFkd.g:6020:4: (lv_unpacked_1_0= ruleunpacked_conformant_array_schema )
                     {
-                    // InternalDemoFkd.g:5898:4: (lv_unpacked_1_0= ruleunpacked_conformant_array_schema )
-                    // InternalDemoFkd.g:5899:5: lv_unpacked_1_0= ruleunpacked_conformant_array_schema
+                    // InternalDemoFkd.g:6020:4: (lv_unpacked_1_0= ruleunpacked_conformant_array_schema )
+                    // InternalDemoFkd.g:6021:5: lv_unpacked_1_0= ruleunpacked_conformant_array_schema
                     {
 
                     					newCompositeNode(grammarAccess.getConformant_array_schemaAccess().getUnpackedUnpacked_conformant_array_schemaParserRuleCall_1_0());
@@ -15023,7 +15361,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulepacked_conformant_array_schema"
-    // InternalDemoFkd.g:5920:1: entryRulepacked_conformant_array_schema returns [EObject current=null] : iv_rulepacked_conformant_array_schema= rulepacked_conformant_array_schema EOF ;
+    // InternalDemoFkd.g:6042:1: entryRulepacked_conformant_array_schema returns [EObject current=null] : iv_rulepacked_conformant_array_schema= rulepacked_conformant_array_schema EOF ;
     public final EObject entryRulepacked_conformant_array_schema() throws RecognitionException {
         EObject current = null;
 
@@ -15031,8 +15369,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:5920:71: (iv_rulepacked_conformant_array_schema= rulepacked_conformant_array_schema EOF )
-            // InternalDemoFkd.g:5921:2: iv_rulepacked_conformant_array_schema= rulepacked_conformant_array_schema EOF
+            // InternalDemoFkd.g:6042:71: (iv_rulepacked_conformant_array_schema= rulepacked_conformant_array_schema EOF )
+            // InternalDemoFkd.g:6043:2: iv_rulepacked_conformant_array_schema= rulepacked_conformant_array_schema EOF
             {
              newCompositeNode(grammarAccess.getPacked_conformant_array_schemaRule()); 
             pushFollow(FOLLOW_1);
@@ -15059,7 +15397,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulepacked_conformant_array_schema"
-    // InternalDemoFkd.g:5927:1: rulepacked_conformant_array_schema returns [EObject current=null] : (otherlv_0= 'packed' otherlv_1= 'array' otherlv_2= '[' ( (lv_bound_3_0= rulebound_specification ) ) otherlv_4= ']' otherlv_5= 'of' ( (lv_name_6_0= RULE_ID ) ) ) ;
+    // InternalDemoFkd.g:6049:1: rulepacked_conformant_array_schema returns [EObject current=null] : (otherlv_0= 'packed' otherlv_1= 'array' otherlv_2= '[' ( (lv_bound_3_0= rulebound_specification ) ) otherlv_4= ']' otherlv_5= 'of' ( (lv_name_6_0= RULE_ID ) ) ) ;
     public final EObject rulepacked_conformant_array_schema() throws RecognitionException {
         EObject current = null;
 
@@ -15076,11 +15414,11 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:5933:2: ( (otherlv_0= 'packed' otherlv_1= 'array' otherlv_2= '[' ( (lv_bound_3_0= rulebound_specification ) ) otherlv_4= ']' otherlv_5= 'of' ( (lv_name_6_0= RULE_ID ) ) ) )
-            // InternalDemoFkd.g:5934:2: (otherlv_0= 'packed' otherlv_1= 'array' otherlv_2= '[' ( (lv_bound_3_0= rulebound_specification ) ) otherlv_4= ']' otherlv_5= 'of' ( (lv_name_6_0= RULE_ID ) ) )
+            // InternalDemoFkd.g:6055:2: ( (otherlv_0= 'packed' otherlv_1= 'array' otherlv_2= '[' ( (lv_bound_3_0= rulebound_specification ) ) otherlv_4= ']' otherlv_5= 'of' ( (lv_name_6_0= RULE_ID ) ) ) )
+            // InternalDemoFkd.g:6056:2: (otherlv_0= 'packed' otherlv_1= 'array' otherlv_2= '[' ( (lv_bound_3_0= rulebound_specification ) ) otherlv_4= ']' otherlv_5= 'of' ( (lv_name_6_0= RULE_ID ) ) )
             {
-            // InternalDemoFkd.g:5934:2: (otherlv_0= 'packed' otherlv_1= 'array' otherlv_2= '[' ( (lv_bound_3_0= rulebound_specification ) ) otherlv_4= ']' otherlv_5= 'of' ( (lv_name_6_0= RULE_ID ) ) )
-            // InternalDemoFkd.g:5935:3: otherlv_0= 'packed' otherlv_1= 'array' otherlv_2= '[' ( (lv_bound_3_0= rulebound_specification ) ) otherlv_4= ']' otherlv_5= 'of' ( (lv_name_6_0= RULE_ID ) )
+            // InternalDemoFkd.g:6056:2: (otherlv_0= 'packed' otherlv_1= 'array' otherlv_2= '[' ( (lv_bound_3_0= rulebound_specification ) ) otherlv_4= ']' otherlv_5= 'of' ( (lv_name_6_0= RULE_ID ) ) )
+            // InternalDemoFkd.g:6057:3: otherlv_0= 'packed' otherlv_1= 'array' otherlv_2= '[' ( (lv_bound_3_0= rulebound_specification ) ) otherlv_4= ']' otherlv_5= 'of' ( (lv_name_6_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,65,FOLLOW_56); 
 
@@ -15094,11 +15432,11 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getPacked_conformant_array_schemaAccess().getLeftSquareBracketKeyword_2());
             		
-            // InternalDemoFkd.g:5947:3: ( (lv_bound_3_0= rulebound_specification ) )
-            // InternalDemoFkd.g:5948:4: (lv_bound_3_0= rulebound_specification )
+            // InternalDemoFkd.g:6069:3: ( (lv_bound_3_0= rulebound_specification ) )
+            // InternalDemoFkd.g:6070:4: (lv_bound_3_0= rulebound_specification )
             {
-            // InternalDemoFkd.g:5948:4: (lv_bound_3_0= rulebound_specification )
-            // InternalDemoFkd.g:5949:5: lv_bound_3_0= rulebound_specification
+            // InternalDemoFkd.g:6070:4: (lv_bound_3_0= rulebound_specification )
+            // InternalDemoFkd.g:6071:5: lv_bound_3_0= rulebound_specification
             {
 
             					newCompositeNode(grammarAccess.getPacked_conformant_array_schemaAccess().getBoundBound_specificationParserRuleCall_3_0());
@@ -15133,11 +15471,11 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_5, grammarAccess.getPacked_conformant_array_schemaAccess().getOfKeyword_5());
             		
-            // InternalDemoFkd.g:5974:3: ( (lv_name_6_0= RULE_ID ) )
-            // InternalDemoFkd.g:5975:4: (lv_name_6_0= RULE_ID )
+            // InternalDemoFkd.g:6096:3: ( (lv_name_6_0= RULE_ID ) )
+            // InternalDemoFkd.g:6097:4: (lv_name_6_0= RULE_ID )
             {
-            // InternalDemoFkd.g:5975:4: (lv_name_6_0= RULE_ID )
-            // InternalDemoFkd.g:5976:5: lv_name_6_0= RULE_ID
+            // InternalDemoFkd.g:6097:4: (lv_name_6_0= RULE_ID )
+            // InternalDemoFkd.g:6098:5: lv_name_6_0= RULE_ID
             {
             lv_name_6_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -15182,7 +15520,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulebound_specification"
-    // InternalDemoFkd.g:5996:1: entryRulebound_specification returns [EObject current=null] : iv_rulebound_specification= rulebound_specification EOF ;
+    // InternalDemoFkd.g:6118:1: entryRulebound_specification returns [EObject current=null] : iv_rulebound_specification= rulebound_specification EOF ;
     public final EObject entryRulebound_specification() throws RecognitionException {
         EObject current = null;
 
@@ -15190,8 +15528,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:5996:60: (iv_rulebound_specification= rulebound_specification EOF )
-            // InternalDemoFkd.g:5997:2: iv_rulebound_specification= rulebound_specification EOF
+            // InternalDemoFkd.g:6118:60: (iv_rulebound_specification= rulebound_specification EOF )
+            // InternalDemoFkd.g:6119:2: iv_rulebound_specification= rulebound_specification EOF
             {
              newCompositeNode(grammarAccess.getBound_specificationRule()); 
             pushFollow(FOLLOW_1);
@@ -15218,7 +15556,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulebound_specification"
-    // InternalDemoFkd.g:6003:1: rulebound_specification returns [EObject current=null] : ( ( (lv_initial_0_0= RULE_ID ) ) otherlv_1= '..' ( (lv_final_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_name_4_0= RULE_ID ) ) ) ;
+    // InternalDemoFkd.g:6125:1: rulebound_specification returns [EObject current=null] : ( ( (lv_initial_0_0= RULE_ID ) ) otherlv_1= '..' ( (lv_final_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_name_4_0= RULE_ID ) ) ) ;
     public final EObject rulebound_specification() throws RecognitionException {
         EObject current = null;
 
@@ -15232,17 +15570,17 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:6009:2: ( ( ( (lv_initial_0_0= RULE_ID ) ) otherlv_1= '..' ( (lv_final_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_name_4_0= RULE_ID ) ) ) )
-            // InternalDemoFkd.g:6010:2: ( ( (lv_initial_0_0= RULE_ID ) ) otherlv_1= '..' ( (lv_final_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_name_4_0= RULE_ID ) ) )
+            // InternalDemoFkd.g:6131:2: ( ( ( (lv_initial_0_0= RULE_ID ) ) otherlv_1= '..' ( (lv_final_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_name_4_0= RULE_ID ) ) ) )
+            // InternalDemoFkd.g:6132:2: ( ( (lv_initial_0_0= RULE_ID ) ) otherlv_1= '..' ( (lv_final_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_name_4_0= RULE_ID ) ) )
             {
-            // InternalDemoFkd.g:6010:2: ( ( (lv_initial_0_0= RULE_ID ) ) otherlv_1= '..' ( (lv_final_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_name_4_0= RULE_ID ) ) )
-            // InternalDemoFkd.g:6011:3: ( (lv_initial_0_0= RULE_ID ) ) otherlv_1= '..' ( (lv_final_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_name_4_0= RULE_ID ) )
+            // InternalDemoFkd.g:6132:2: ( ( (lv_initial_0_0= RULE_ID ) ) otherlv_1= '..' ( (lv_final_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_name_4_0= RULE_ID ) ) )
+            // InternalDemoFkd.g:6133:3: ( (lv_initial_0_0= RULE_ID ) ) otherlv_1= '..' ( (lv_final_2_0= RULE_ID ) ) otherlv_3= ':' ( (lv_name_4_0= RULE_ID ) )
             {
-            // InternalDemoFkd.g:6011:3: ( (lv_initial_0_0= RULE_ID ) )
-            // InternalDemoFkd.g:6012:4: (lv_initial_0_0= RULE_ID )
+            // InternalDemoFkd.g:6133:3: ( (lv_initial_0_0= RULE_ID ) )
+            // InternalDemoFkd.g:6134:4: (lv_initial_0_0= RULE_ID )
             {
-            // InternalDemoFkd.g:6012:4: (lv_initial_0_0= RULE_ID )
-            // InternalDemoFkd.g:6013:5: lv_initial_0_0= RULE_ID
+            // InternalDemoFkd.g:6134:4: (lv_initial_0_0= RULE_ID )
+            // InternalDemoFkd.g:6135:5: lv_initial_0_0= RULE_ID
             {
             lv_initial_0_0=(Token)match(input,RULE_ID,FOLLOW_39); 
 
@@ -15268,11 +15606,11 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getBound_specificationAccess().getFullStopFullStopKeyword_1());
             		
-            // InternalDemoFkd.g:6033:3: ( (lv_final_2_0= RULE_ID ) )
-            // InternalDemoFkd.g:6034:4: (lv_final_2_0= RULE_ID )
+            // InternalDemoFkd.g:6155:3: ( (lv_final_2_0= RULE_ID ) )
+            // InternalDemoFkd.g:6156:4: (lv_final_2_0= RULE_ID )
             {
-            // InternalDemoFkd.g:6034:4: (lv_final_2_0= RULE_ID )
-            // InternalDemoFkd.g:6035:5: lv_final_2_0= RULE_ID
+            // InternalDemoFkd.g:6156:4: (lv_final_2_0= RULE_ID )
+            // InternalDemoFkd.g:6157:5: lv_final_2_0= RULE_ID
             {
             lv_final_2_0=(Token)match(input,RULE_ID,FOLLOW_14); 
 
@@ -15298,11 +15636,11 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_3, grammarAccess.getBound_specificationAccess().getColonKeyword_3());
             		
-            // InternalDemoFkd.g:6055:3: ( (lv_name_4_0= RULE_ID ) )
-            // InternalDemoFkd.g:6056:4: (lv_name_4_0= RULE_ID )
+            // InternalDemoFkd.g:6177:3: ( (lv_name_4_0= RULE_ID ) )
+            // InternalDemoFkd.g:6178:4: (lv_name_4_0= RULE_ID )
             {
-            // InternalDemoFkd.g:6056:4: (lv_name_4_0= RULE_ID )
-            // InternalDemoFkd.g:6057:5: lv_name_4_0= RULE_ID
+            // InternalDemoFkd.g:6178:4: (lv_name_4_0= RULE_ID )
+            // InternalDemoFkd.g:6179:5: lv_name_4_0= RULE_ID
             {
             lv_name_4_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -15347,7 +15685,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleunpacked_conformant_array_schema"
-    // InternalDemoFkd.g:6077:1: entryRuleunpacked_conformant_array_schema returns [EObject current=null] : iv_ruleunpacked_conformant_array_schema= ruleunpacked_conformant_array_schema EOF ;
+    // InternalDemoFkd.g:6199:1: entryRuleunpacked_conformant_array_schema returns [EObject current=null] : iv_ruleunpacked_conformant_array_schema= ruleunpacked_conformant_array_schema EOF ;
     public final EObject entryRuleunpacked_conformant_array_schema() throws RecognitionException {
         EObject current = null;
 
@@ -15355,8 +15693,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:6077:73: (iv_ruleunpacked_conformant_array_schema= ruleunpacked_conformant_array_schema EOF )
-            // InternalDemoFkd.g:6078:2: iv_ruleunpacked_conformant_array_schema= ruleunpacked_conformant_array_schema EOF
+            // InternalDemoFkd.g:6199:73: (iv_ruleunpacked_conformant_array_schema= ruleunpacked_conformant_array_schema EOF )
+            // InternalDemoFkd.g:6200:2: iv_ruleunpacked_conformant_array_schema= ruleunpacked_conformant_array_schema EOF
             {
              newCompositeNode(grammarAccess.getUnpacked_conformant_array_schemaRule()); 
             pushFollow(FOLLOW_1);
@@ -15383,7 +15721,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleunpacked_conformant_array_schema"
-    // InternalDemoFkd.g:6084:1: ruleunpacked_conformant_array_schema returns [EObject current=null] : (otherlv_0= 'array' otherlv_1= '[' ( (lv_bounds_2_0= rulebound_specification ) ) (otherlv_3= ';' ( (lv_bounds_4_0= rulebound_specification ) ) )* otherlv_5= ']' otherlv_6= 'of' ( (lv_type_7_0= ruleparameter_type ) ) ) ;
+    // InternalDemoFkd.g:6206:1: ruleunpacked_conformant_array_schema returns [EObject current=null] : (otherlv_0= 'array' otherlv_1= '[' ( (lv_bounds_2_0= rulebound_specification ) ) (otherlv_3= ';' ( (lv_bounds_4_0= rulebound_specification ) ) )* otherlv_5= ']' otherlv_6= 'of' ( (lv_type_7_0= ruleparameter_type ) ) ) ;
     public final EObject ruleunpacked_conformant_array_schema() throws RecognitionException {
         EObject current = null;
 
@@ -15403,11 +15741,11 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:6090:2: ( (otherlv_0= 'array' otherlv_1= '[' ( (lv_bounds_2_0= rulebound_specification ) ) (otherlv_3= ';' ( (lv_bounds_4_0= rulebound_specification ) ) )* otherlv_5= ']' otherlv_6= 'of' ( (lv_type_7_0= ruleparameter_type ) ) ) )
-            // InternalDemoFkd.g:6091:2: (otherlv_0= 'array' otherlv_1= '[' ( (lv_bounds_2_0= rulebound_specification ) ) (otherlv_3= ';' ( (lv_bounds_4_0= rulebound_specification ) ) )* otherlv_5= ']' otherlv_6= 'of' ( (lv_type_7_0= ruleparameter_type ) ) )
+            // InternalDemoFkd.g:6212:2: ( (otherlv_0= 'array' otherlv_1= '[' ( (lv_bounds_2_0= rulebound_specification ) ) (otherlv_3= ';' ( (lv_bounds_4_0= rulebound_specification ) ) )* otherlv_5= ']' otherlv_6= 'of' ( (lv_type_7_0= ruleparameter_type ) ) ) )
+            // InternalDemoFkd.g:6213:2: (otherlv_0= 'array' otherlv_1= '[' ( (lv_bounds_2_0= rulebound_specification ) ) (otherlv_3= ';' ( (lv_bounds_4_0= rulebound_specification ) ) )* otherlv_5= ']' otherlv_6= 'of' ( (lv_type_7_0= ruleparameter_type ) ) )
             {
-            // InternalDemoFkd.g:6091:2: (otherlv_0= 'array' otherlv_1= '[' ( (lv_bounds_2_0= rulebound_specification ) ) (otherlv_3= ';' ( (lv_bounds_4_0= rulebound_specification ) ) )* otherlv_5= ']' otherlv_6= 'of' ( (lv_type_7_0= ruleparameter_type ) ) )
-            // InternalDemoFkd.g:6092:3: otherlv_0= 'array' otherlv_1= '[' ( (lv_bounds_2_0= rulebound_specification ) ) (otherlv_3= ';' ( (lv_bounds_4_0= rulebound_specification ) ) )* otherlv_5= ']' otherlv_6= 'of' ( (lv_type_7_0= ruleparameter_type ) )
+            // InternalDemoFkd.g:6213:2: (otherlv_0= 'array' otherlv_1= '[' ( (lv_bounds_2_0= rulebound_specification ) ) (otherlv_3= ';' ( (lv_bounds_4_0= rulebound_specification ) ) )* otherlv_5= ']' otherlv_6= 'of' ( (lv_type_7_0= ruleparameter_type ) ) )
+            // InternalDemoFkd.g:6214:3: otherlv_0= 'array' otherlv_1= '[' ( (lv_bounds_2_0= rulebound_specification ) ) (otherlv_3= ';' ( (lv_bounds_4_0= rulebound_specification ) ) )* otherlv_5= ']' otherlv_6= 'of' ( (lv_type_7_0= ruleparameter_type ) )
             {
             otherlv_0=(Token)match(input,66,FOLLOW_41); 
 
@@ -15417,11 +15755,11 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getUnpacked_conformant_array_schemaAccess().getLeftSquareBracketKeyword_1());
             		
-            // InternalDemoFkd.g:6100:3: ( (lv_bounds_2_0= rulebound_specification ) )
-            // InternalDemoFkd.g:6101:4: (lv_bounds_2_0= rulebound_specification )
+            // InternalDemoFkd.g:6222:3: ( (lv_bounds_2_0= rulebound_specification ) )
+            // InternalDemoFkd.g:6223:4: (lv_bounds_2_0= rulebound_specification )
             {
-            // InternalDemoFkd.g:6101:4: (lv_bounds_2_0= rulebound_specification )
-            // InternalDemoFkd.g:6102:5: lv_bounds_2_0= rulebound_specification
+            // InternalDemoFkd.g:6223:4: (lv_bounds_2_0= rulebound_specification )
+            // InternalDemoFkd.g:6224:5: lv_bounds_2_0= rulebound_specification
             {
 
             					newCompositeNode(grammarAccess.getUnpacked_conformant_array_schemaAccess().getBoundsBound_specificationParserRuleCall_2_0());
@@ -15448,30 +15786,30 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalDemoFkd.g:6119:3: (otherlv_3= ';' ( (lv_bounds_4_0= rulebound_specification ) ) )*
-            loop75:
+            // InternalDemoFkd.g:6241:3: (otherlv_3= ';' ( (lv_bounds_4_0= rulebound_specification ) ) )*
+            loop77:
             do {
-                int alt75=2;
-                int LA75_0 = input.LA(1);
+                int alt77=2;
+                int LA77_0 = input.LA(1);
 
-                if ( (LA75_0==27) ) {
-                    alt75=1;
+                if ( (LA77_0==27) ) {
+                    alt77=1;
                 }
 
 
-                switch (alt75) {
+                switch (alt77) {
             	case 1 :
-            	    // InternalDemoFkd.g:6120:4: otherlv_3= ';' ( (lv_bounds_4_0= rulebound_specification ) )
+            	    // InternalDemoFkd.g:6242:4: otherlv_3= ';' ( (lv_bounds_4_0= rulebound_specification ) )
             	    {
             	    otherlv_3=(Token)match(input,27,FOLLOW_5); 
 
             	    				newLeafNode(otherlv_3, grammarAccess.getUnpacked_conformant_array_schemaAccess().getSemicolonKeyword_3_0());
             	    			
-            	    // InternalDemoFkd.g:6124:4: ( (lv_bounds_4_0= rulebound_specification ) )
-            	    // InternalDemoFkd.g:6125:5: (lv_bounds_4_0= rulebound_specification )
+            	    // InternalDemoFkd.g:6246:4: ( (lv_bounds_4_0= rulebound_specification ) )
+            	    // InternalDemoFkd.g:6247:5: (lv_bounds_4_0= rulebound_specification )
             	    {
-            	    // InternalDemoFkd.g:6125:5: (lv_bounds_4_0= rulebound_specification )
-            	    // InternalDemoFkd.g:6126:6: lv_bounds_4_0= rulebound_specification
+            	    // InternalDemoFkd.g:6247:5: (lv_bounds_4_0= rulebound_specification )
+            	    // InternalDemoFkd.g:6248:6: lv_bounds_4_0= rulebound_specification
             	    {
 
             	    						newCompositeNode(grammarAccess.getUnpacked_conformant_array_schemaAccess().getBoundsBound_specificationParserRuleCall_3_1_0());
@@ -15503,7 +15841,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop75;
+            	    break loop77;
                 }
             } while (true);
 
@@ -15515,11 +15853,11 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_6, grammarAccess.getUnpacked_conformant_array_schemaAccess().getOfKeyword_5());
             		
-            // InternalDemoFkd.g:6152:3: ( (lv_type_7_0= ruleparameter_type ) )
-            // InternalDemoFkd.g:6153:4: (lv_type_7_0= ruleparameter_type )
+            // InternalDemoFkd.g:6274:3: ( (lv_type_7_0= ruleparameter_type ) )
+            // InternalDemoFkd.g:6275:4: (lv_type_7_0= ruleparameter_type )
             {
-            // InternalDemoFkd.g:6153:4: (lv_type_7_0= ruleparameter_type )
-            // InternalDemoFkd.g:6154:5: lv_type_7_0= ruleparameter_type
+            // InternalDemoFkd.g:6275:4: (lv_type_7_0= ruleparameter_type )
+            // InternalDemoFkd.g:6276:5: lv_type_7_0= ruleparameter_type
             {
 
             					newCompositeNode(grammarAccess.getUnpacked_conformant_array_schemaAccess().getTypeParameter_typeParserRuleCall_6_0());
@@ -15569,7 +15907,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulevariable_parameter_section"
-    // InternalDemoFkd.g:6175:1: entryRulevariable_parameter_section returns [EObject current=null] : iv_rulevariable_parameter_section= rulevariable_parameter_section EOF ;
+    // InternalDemoFkd.g:6297:1: entryRulevariable_parameter_section returns [EObject current=null] : iv_rulevariable_parameter_section= rulevariable_parameter_section EOF ;
     public final EObject entryRulevariable_parameter_section() throws RecognitionException {
         EObject current = null;
 
@@ -15577,8 +15915,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:6175:67: (iv_rulevariable_parameter_section= rulevariable_parameter_section EOF )
-            // InternalDemoFkd.g:6176:2: iv_rulevariable_parameter_section= rulevariable_parameter_section EOF
+            // InternalDemoFkd.g:6297:67: (iv_rulevariable_parameter_section= rulevariable_parameter_section EOF )
+            // InternalDemoFkd.g:6298:2: iv_rulevariable_parameter_section= rulevariable_parameter_section EOF
             {
              newCompositeNode(grammarAccess.getVariable_parameter_sectionRule()); 
             pushFollow(FOLLOW_1);
@@ -15605,7 +15943,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulevariable_parameter_section"
-    // InternalDemoFkd.g:6182:1: rulevariable_parameter_section returns [EObject current=null] : (otherlv_0= 'var' ( (lv_identifiers_1_0= ruleidentifier_list ) ) otherlv_2= ':' ( (lv_type_3_0= ruleparameter_type ) ) ) ;
+    // InternalDemoFkd.g:6304:1: rulevariable_parameter_section returns [EObject current=null] : (otherlv_0= 'var' ( (lv_identifiers_1_0= ruleidentifier_list ) ) otherlv_2= ':' ( (lv_type_3_0= ruleparameter_type ) ) ) ;
     public final EObject rulevariable_parameter_section() throws RecognitionException {
         EObject current = null;
 
@@ -15620,21 +15958,21 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:6188:2: ( (otherlv_0= 'var' ( (lv_identifiers_1_0= ruleidentifier_list ) ) otherlv_2= ':' ( (lv_type_3_0= ruleparameter_type ) ) ) )
-            // InternalDemoFkd.g:6189:2: (otherlv_0= 'var' ( (lv_identifiers_1_0= ruleidentifier_list ) ) otherlv_2= ':' ( (lv_type_3_0= ruleparameter_type ) ) )
+            // InternalDemoFkd.g:6310:2: ( (otherlv_0= 'var' ( (lv_identifiers_1_0= ruleidentifier_list ) ) otherlv_2= ':' ( (lv_type_3_0= ruleparameter_type ) ) ) )
+            // InternalDemoFkd.g:6311:2: (otherlv_0= 'var' ( (lv_identifiers_1_0= ruleidentifier_list ) ) otherlv_2= ':' ( (lv_type_3_0= ruleparameter_type ) ) )
             {
-            // InternalDemoFkd.g:6189:2: (otherlv_0= 'var' ( (lv_identifiers_1_0= ruleidentifier_list ) ) otherlv_2= ':' ( (lv_type_3_0= ruleparameter_type ) ) )
-            // InternalDemoFkd.g:6190:3: otherlv_0= 'var' ( (lv_identifiers_1_0= ruleidentifier_list ) ) otherlv_2= ':' ( (lv_type_3_0= ruleparameter_type ) )
+            // InternalDemoFkd.g:6311:2: (otherlv_0= 'var' ( (lv_identifiers_1_0= ruleidentifier_list ) ) otherlv_2= ':' ( (lv_type_3_0= ruleparameter_type ) ) )
+            // InternalDemoFkd.g:6312:3: otherlv_0= 'var' ( (lv_identifiers_1_0= ruleidentifier_list ) ) otherlv_2= ':' ( (lv_type_3_0= ruleparameter_type ) )
             {
             otherlv_0=(Token)match(input,71,FOLLOW_5); 
 
             			newLeafNode(otherlv_0, grammarAccess.getVariable_parameter_sectionAccess().getVarKeyword_0());
             		
-            // InternalDemoFkd.g:6194:3: ( (lv_identifiers_1_0= ruleidentifier_list ) )
-            // InternalDemoFkd.g:6195:4: (lv_identifiers_1_0= ruleidentifier_list )
+            // InternalDemoFkd.g:6316:3: ( (lv_identifiers_1_0= ruleidentifier_list ) )
+            // InternalDemoFkd.g:6317:4: (lv_identifiers_1_0= ruleidentifier_list )
             {
-            // InternalDemoFkd.g:6195:4: (lv_identifiers_1_0= ruleidentifier_list )
-            // InternalDemoFkd.g:6196:5: lv_identifiers_1_0= ruleidentifier_list
+            // InternalDemoFkd.g:6317:4: (lv_identifiers_1_0= ruleidentifier_list )
+            // InternalDemoFkd.g:6318:5: lv_identifiers_1_0= ruleidentifier_list
             {
 
             					newCompositeNode(grammarAccess.getVariable_parameter_sectionAccess().getIdentifiersIdentifier_listParserRuleCall_1_0());
@@ -15665,11 +16003,11 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getVariable_parameter_sectionAccess().getColonKeyword_2());
             		
-            // InternalDemoFkd.g:6217:3: ( (lv_type_3_0= ruleparameter_type ) )
-            // InternalDemoFkd.g:6218:4: (lv_type_3_0= ruleparameter_type )
+            // InternalDemoFkd.g:6339:3: ( (lv_type_3_0= ruleparameter_type ) )
+            // InternalDemoFkd.g:6340:4: (lv_type_3_0= ruleparameter_type )
             {
-            // InternalDemoFkd.g:6218:4: (lv_type_3_0= ruleparameter_type )
-            // InternalDemoFkd.g:6219:5: lv_type_3_0= ruleparameter_type
+            // InternalDemoFkd.g:6340:4: (lv_type_3_0= ruleparameter_type )
+            // InternalDemoFkd.g:6341:5: lv_type_3_0= ruleparameter_type
             {
 
             					newCompositeNode(grammarAccess.getVariable_parameter_sectionAccess().getTypeParameter_typeParserRuleCall_3_0());
@@ -15719,7 +16057,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulefunction_heading"
-    // InternalDemoFkd.g:6240:1: entryRulefunction_heading returns [EObject current=null] : iv_rulefunction_heading= rulefunction_heading EOF ;
+    // InternalDemoFkd.g:6362:1: entryRulefunction_heading returns [EObject current=null] : iv_rulefunction_heading= rulefunction_heading EOF ;
     public final EObject entryRulefunction_heading() throws RecognitionException {
         EObject current = null;
 
@@ -15727,8 +16065,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:6240:57: (iv_rulefunction_heading= rulefunction_heading EOF )
-            // InternalDemoFkd.g:6241:2: iv_rulefunction_heading= rulefunction_heading EOF
+            // InternalDemoFkd.g:6362:57: (iv_rulefunction_heading= rulefunction_heading EOF )
+            // InternalDemoFkd.g:6363:2: iv_rulefunction_heading= rulefunction_heading EOF
             {
              newCompositeNode(grammarAccess.getFunction_headingRule()); 
             pushFollow(FOLLOW_1);
@@ -15755,7 +16093,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulefunction_heading"
-    // InternalDemoFkd.g:6247:1: rulefunction_heading returns [EObject current=null] : (otherlv_0= 'function' ( (lv_name_1_0= RULE_ID ) ) ( (lv_parameters_2_0= ruleformal_parameter_list ) )? otherlv_3= ':' ( (lv_returnType_4_0= RULE_ID ) ) ) ;
+    // InternalDemoFkd.g:6369:1: rulefunction_heading returns [EObject current=null] : (otherlv_0= 'function' ( (lv_name_1_0= RULE_ID ) ) ( (lv_parameters_2_0= ruleformal_parameter_list ) )? otherlv_3= ':' ( (lv_returnType_4_0= RULE_ID ) ) ) ;
     public final EObject rulefunction_heading() throws RecognitionException {
         EObject current = null;
 
@@ -15770,21 +16108,21 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:6253:2: ( (otherlv_0= 'function' ( (lv_name_1_0= RULE_ID ) ) ( (lv_parameters_2_0= ruleformal_parameter_list ) )? otherlv_3= ':' ( (lv_returnType_4_0= RULE_ID ) ) ) )
-            // InternalDemoFkd.g:6254:2: (otherlv_0= 'function' ( (lv_name_1_0= RULE_ID ) ) ( (lv_parameters_2_0= ruleformal_parameter_list ) )? otherlv_3= ':' ( (lv_returnType_4_0= RULE_ID ) ) )
+            // InternalDemoFkd.g:6375:2: ( (otherlv_0= 'function' ( (lv_name_1_0= RULE_ID ) ) ( (lv_parameters_2_0= ruleformal_parameter_list ) )? otherlv_3= ':' ( (lv_returnType_4_0= RULE_ID ) ) ) )
+            // InternalDemoFkd.g:6376:2: (otherlv_0= 'function' ( (lv_name_1_0= RULE_ID ) ) ( (lv_parameters_2_0= ruleformal_parameter_list ) )? otherlv_3= ':' ( (lv_returnType_4_0= RULE_ID ) ) )
             {
-            // InternalDemoFkd.g:6254:2: (otherlv_0= 'function' ( (lv_name_1_0= RULE_ID ) ) ( (lv_parameters_2_0= ruleformal_parameter_list ) )? otherlv_3= ':' ( (lv_returnType_4_0= RULE_ID ) ) )
-            // InternalDemoFkd.g:6255:3: otherlv_0= 'function' ( (lv_name_1_0= RULE_ID ) ) ( (lv_parameters_2_0= ruleformal_parameter_list ) )? otherlv_3= ':' ( (lv_returnType_4_0= RULE_ID ) )
+            // InternalDemoFkd.g:6376:2: (otherlv_0= 'function' ( (lv_name_1_0= RULE_ID ) ) ( (lv_parameters_2_0= ruleformal_parameter_list ) )? otherlv_3= ':' ( (lv_returnType_4_0= RULE_ID ) ) )
+            // InternalDemoFkd.g:6377:3: otherlv_0= 'function' ( (lv_name_1_0= RULE_ID ) ) ( (lv_parameters_2_0= ruleformal_parameter_list ) )? otherlv_3= ':' ( (lv_returnType_4_0= RULE_ID ) )
             {
             otherlv_0=(Token)match(input,74,FOLLOW_5); 
 
             			newLeafNode(otherlv_0, grammarAccess.getFunction_headingAccess().getFunctionKeyword_0());
             		
-            // InternalDemoFkd.g:6259:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalDemoFkd.g:6260:4: (lv_name_1_0= RULE_ID )
+            // InternalDemoFkd.g:6381:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalDemoFkd.g:6382:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalDemoFkd.g:6260:4: (lv_name_1_0= RULE_ID )
-            // InternalDemoFkd.g:6261:5: lv_name_1_0= RULE_ID
+            // InternalDemoFkd.g:6382:4: (lv_name_1_0= RULE_ID )
+            // InternalDemoFkd.g:6383:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_58); 
 
@@ -15806,19 +16144,19 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalDemoFkd.g:6277:3: ( (lv_parameters_2_0= ruleformal_parameter_list ) )?
-            int alt76=2;
-            int LA76_0 = input.LA(1);
+            // InternalDemoFkd.g:6399:3: ( (lv_parameters_2_0= ruleformal_parameter_list ) )?
+            int alt78=2;
+            int LA78_0 = input.LA(1);
 
-            if ( (LA76_0==25) ) {
-                alt76=1;
+            if ( (LA78_0==25) ) {
+                alt78=1;
             }
-            switch (alt76) {
+            switch (alt78) {
                 case 1 :
-                    // InternalDemoFkd.g:6278:4: (lv_parameters_2_0= ruleformal_parameter_list )
+                    // InternalDemoFkd.g:6400:4: (lv_parameters_2_0= ruleformal_parameter_list )
                     {
-                    // InternalDemoFkd.g:6278:4: (lv_parameters_2_0= ruleformal_parameter_list )
-                    // InternalDemoFkd.g:6279:5: lv_parameters_2_0= ruleformal_parameter_list
+                    // InternalDemoFkd.g:6400:4: (lv_parameters_2_0= ruleformal_parameter_list )
+                    // InternalDemoFkd.g:6401:5: lv_parameters_2_0= ruleformal_parameter_list
                     {
 
                     					newCompositeNode(grammarAccess.getFunction_headingAccess().getParametersFormal_parameter_listParserRuleCall_2_0());
@@ -15852,11 +16190,11 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_3, grammarAccess.getFunction_headingAccess().getColonKeyword_3());
             		
-            // InternalDemoFkd.g:6300:3: ( (lv_returnType_4_0= RULE_ID ) )
-            // InternalDemoFkd.g:6301:4: (lv_returnType_4_0= RULE_ID )
+            // InternalDemoFkd.g:6422:3: ( (lv_returnType_4_0= RULE_ID ) )
+            // InternalDemoFkd.g:6423:4: (lv_returnType_4_0= RULE_ID )
             {
-            // InternalDemoFkd.g:6301:4: (lv_returnType_4_0= RULE_ID )
-            // InternalDemoFkd.g:6302:5: lv_returnType_4_0= RULE_ID
+            // InternalDemoFkd.g:6423:4: (lv_returnType_4_0= RULE_ID )
+            // InternalDemoFkd.g:6424:5: lv_returnType_4_0= RULE_ID
             {
             lv_returnType_4_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -15901,7 +16239,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulefunction_declaration"
-    // InternalDemoFkd.g:6322:1: entryRulefunction_declaration returns [EObject current=null] : iv_rulefunction_declaration= rulefunction_declaration EOF ;
+    // InternalDemoFkd.g:6444:1: entryRulefunction_declaration returns [EObject current=null] : iv_rulefunction_declaration= rulefunction_declaration EOF ;
     public final EObject entryRulefunction_declaration() throws RecognitionException {
         EObject current = null;
 
@@ -15909,8 +16247,8 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalDemoFkd.g:6322:61: (iv_rulefunction_declaration= rulefunction_declaration EOF )
-            // InternalDemoFkd.g:6323:2: iv_rulefunction_declaration= rulefunction_declaration EOF
+            // InternalDemoFkd.g:6444:61: (iv_rulefunction_declaration= rulefunction_declaration EOF )
+            // InternalDemoFkd.g:6445:2: iv_rulefunction_declaration= rulefunction_declaration EOF
             {
              newCompositeNode(grammarAccess.getFunction_declarationRule()); 
             pushFollow(FOLLOW_1);
@@ -15937,7 +16275,7 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulefunction_declaration"
-    // InternalDemoFkd.g:6329:1: rulefunction_declaration returns [EObject current=null] : ( ( (lv_heading_0_0= rulefunction_heading ) ) otherlv_1= ';' ( ( (lv_block_2_0= ruleblock ) ) | ( (lv_forward_3_0= 'forward' ) ) ) ) ;
+    // InternalDemoFkd.g:6451:1: rulefunction_declaration returns [EObject current=null] : ( ( (lv_heading_0_0= rulefunction_heading ) ) otherlv_1= ';' ( ( (lv_block_2_0= ruleblock ) ) | ( (lv_forward_3_0= 'forward' ) ) ) ) ;
     public final EObject rulefunction_declaration() throws RecognitionException {
         EObject current = null;
 
@@ -15952,17 +16290,17 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalDemoFkd.g:6335:2: ( ( ( (lv_heading_0_0= rulefunction_heading ) ) otherlv_1= ';' ( ( (lv_block_2_0= ruleblock ) ) | ( (lv_forward_3_0= 'forward' ) ) ) ) )
-            // InternalDemoFkd.g:6336:2: ( ( (lv_heading_0_0= rulefunction_heading ) ) otherlv_1= ';' ( ( (lv_block_2_0= ruleblock ) ) | ( (lv_forward_3_0= 'forward' ) ) ) )
+            // InternalDemoFkd.g:6457:2: ( ( ( (lv_heading_0_0= rulefunction_heading ) ) otherlv_1= ';' ( ( (lv_block_2_0= ruleblock ) ) | ( (lv_forward_3_0= 'forward' ) ) ) ) )
+            // InternalDemoFkd.g:6458:2: ( ( (lv_heading_0_0= rulefunction_heading ) ) otherlv_1= ';' ( ( (lv_block_2_0= ruleblock ) ) | ( (lv_forward_3_0= 'forward' ) ) ) )
             {
-            // InternalDemoFkd.g:6336:2: ( ( (lv_heading_0_0= rulefunction_heading ) ) otherlv_1= ';' ( ( (lv_block_2_0= ruleblock ) ) | ( (lv_forward_3_0= 'forward' ) ) ) )
-            // InternalDemoFkd.g:6337:3: ( (lv_heading_0_0= rulefunction_heading ) ) otherlv_1= ';' ( ( (lv_block_2_0= ruleblock ) ) | ( (lv_forward_3_0= 'forward' ) ) )
+            // InternalDemoFkd.g:6458:2: ( ( (lv_heading_0_0= rulefunction_heading ) ) otherlv_1= ';' ( ( (lv_block_2_0= ruleblock ) ) | ( (lv_forward_3_0= 'forward' ) ) ) )
+            // InternalDemoFkd.g:6459:3: ( (lv_heading_0_0= rulefunction_heading ) ) otherlv_1= ';' ( ( (lv_block_2_0= ruleblock ) ) | ( (lv_forward_3_0= 'forward' ) ) )
             {
-            // InternalDemoFkd.g:6337:3: ( (lv_heading_0_0= rulefunction_heading ) )
-            // InternalDemoFkd.g:6338:4: (lv_heading_0_0= rulefunction_heading )
+            // InternalDemoFkd.g:6459:3: ( (lv_heading_0_0= rulefunction_heading ) )
+            // InternalDemoFkd.g:6460:4: (lv_heading_0_0= rulefunction_heading )
             {
-            // InternalDemoFkd.g:6338:4: (lv_heading_0_0= rulefunction_heading )
-            // InternalDemoFkd.g:6339:5: lv_heading_0_0= rulefunction_heading
+            // InternalDemoFkd.g:6460:4: (lv_heading_0_0= rulefunction_heading )
+            // InternalDemoFkd.g:6461:5: lv_heading_0_0= rulefunction_heading
             {
 
             					newCompositeNode(grammarAccess.getFunction_declarationAccess().getHeadingFunction_headingParserRuleCall_0_0());
@@ -15993,31 +16331,31 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getFunction_declarationAccess().getSemicolonKeyword_1());
             		
-            // InternalDemoFkd.g:6360:3: ( ( (lv_block_2_0= ruleblock ) ) | ( (lv_forward_3_0= 'forward' ) ) )
-            int alt77=2;
-            int LA77_0 = input.LA(1);
+            // InternalDemoFkd.g:6482:3: ( ( (lv_block_2_0= ruleblock ) ) | ( (lv_forward_3_0= 'forward' ) ) )
+            int alt79=2;
+            int LA79_0 = input.LA(1);
 
-            if ( ((LA77_0>=29 && LA77_0<=30)||(LA77_0>=61 && LA77_0<=63)||LA77_0==71||(LA77_0>=73 && LA77_0<=74)) ) {
-                alt77=1;
+            if ( ((LA79_0>=29 && LA79_0<=30)||(LA79_0>=61 && LA79_0<=63)||LA79_0==71||(LA79_0>=73 && LA79_0<=74)) ) {
+                alt79=1;
             }
-            else if ( (LA77_0==72) ) {
-                alt77=2;
+            else if ( (LA79_0==72) ) {
+                alt79=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 77, 0, input);
+                    new NoViableAltException("", 79, 0, input);
 
                 throw nvae;
             }
-            switch (alt77) {
+            switch (alt79) {
                 case 1 :
-                    // InternalDemoFkd.g:6361:4: ( (lv_block_2_0= ruleblock ) )
+                    // InternalDemoFkd.g:6483:4: ( (lv_block_2_0= ruleblock ) )
                     {
-                    // InternalDemoFkd.g:6361:4: ( (lv_block_2_0= ruleblock ) )
-                    // InternalDemoFkd.g:6362:5: (lv_block_2_0= ruleblock )
+                    // InternalDemoFkd.g:6483:4: ( (lv_block_2_0= ruleblock ) )
+                    // InternalDemoFkd.g:6484:5: (lv_block_2_0= ruleblock )
                     {
-                    // InternalDemoFkd.g:6362:5: (lv_block_2_0= ruleblock )
-                    // InternalDemoFkd.g:6363:6: lv_block_2_0= ruleblock
+                    // InternalDemoFkd.g:6484:5: (lv_block_2_0= ruleblock )
+                    // InternalDemoFkd.g:6485:6: lv_block_2_0= ruleblock
                     {
 
                     						newCompositeNode(grammarAccess.getFunction_declarationAccess().getBlockBlockParserRuleCall_2_0_0());
@@ -16048,13 +16386,13 @@ public class InternalDemoFkdParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalDemoFkd.g:6381:4: ( (lv_forward_3_0= 'forward' ) )
+                    // InternalDemoFkd.g:6503:4: ( (lv_forward_3_0= 'forward' ) )
                     {
-                    // InternalDemoFkd.g:6381:4: ( (lv_forward_3_0= 'forward' ) )
-                    // InternalDemoFkd.g:6382:5: (lv_forward_3_0= 'forward' )
+                    // InternalDemoFkd.g:6503:4: ( (lv_forward_3_0= 'forward' ) )
+                    // InternalDemoFkd.g:6504:5: (lv_forward_3_0= 'forward' )
                     {
-                    // InternalDemoFkd.g:6382:5: (lv_forward_3_0= 'forward' )
-                    // InternalDemoFkd.g:6383:6: lv_forward_3_0= 'forward'
+                    // InternalDemoFkd.g:6504:5: (lv_forward_3_0= 'forward' )
+                    // InternalDemoFkd.g:6505:6: lv_forward_3_0= 'forward'
                     {
                     lv_forward_3_0=(Token)match(input,72,FOLLOW_2); 
 

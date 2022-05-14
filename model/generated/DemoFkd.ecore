@@ -351,7 +351,15 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="names" unique="false" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="method_part"/>
+  <eClassifiers xsi:type="ecore:EClass" name="method_part">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="visibility" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sections" upperBound="-1"
+        eType="#//method_section" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="method_section">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="methods" upperBound="-1"
+        eType="#//abstraction_heading" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="field_list">
     <eStructuralFeatures xsi:type="ecore:EReference" name="fixed" eType="#//fixed_part"
         containment="true"/>
@@ -405,8 +413,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="sections" upperBound="-1"
         eType="#//variable_section" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="procedure_and_function_declaration_part"
-      eSuperTypes="#//method_part">
+  <eClassifiers xsi:type="ecore:EClass" name="procedure_and_function_declaration_part">
     <eStructuralFeatures xsi:type="ecore:EReference" name="procedures" upperBound="-1"
         eType="#//abstraction_heading" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="functions" upperBound="-1"

@@ -551,13 +551,12 @@ public class DemoFkdGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final Assignment cPointerAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
 		private final RuleCall cPointerVar_ParserRuleCall_2_1_0 = (RuleCall)cPointerAssignment_2_1.eContents().get(0);
 		
-		//var_: //TODO: REMOVED LEFT RECURSION (ERA COMPONENT_VARIABLE)
+		//var_:
 		//    ( "[" expressions=expression_list "]" array=var_ | accessor?="." name=ID variable=var_ | "^" pointer=var_ ) ?
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		////TODO: REMOVED LEFT RECURSION (ERA COMPONENT_VARIABLE)
-		//   ( "[" expressions=expression_list "]" array=var_ | accessor?="." name=ID variable=var_ | "^" pointer=var_ ) ?
+		//( "[" expressions=expression_list "]" array=var_ | accessor?="." name=ID variable=var_ | "^" pointer=var_ ) ?
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//"[" expressions=expression_list "]" array=var_
@@ -666,17 +665,15 @@ public class DemoFkdGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final Assignment cExpressionsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cExpressionsSimple_expressionParserRuleCall_1_1_0 = (RuleCall)cExpressionsAssignment_1_1.eContents().get(0);
 		
-		//expression: //TODO: ADDED "=" PQ WAS NOT ACKNOWLEDGING IN RELATIONAL_OPERATOR
+		//expression:
 		//    expressions+=simple_expression ( ( operators+=RELATIONAL_OPERATOR | operators+="in" | operators+="=" ) expressions+=simple_expression ) ?
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		////TODO: ADDED "=" PQ WAS NOT ACKNOWLEDGING IN RELATIONAL_OPERATOR
-		//   expressions+=simple_expression ( ( operators+=RELATIONAL_OPERATOR | operators+="in" | operators+="=" ) expressions+=simple_expression ) ?
+		//expressions+=simple_expression ( ( operators+=RELATIONAL_OPERATOR | operators+="in" | operators+="=" ) expressions+=simple_expression ) ?
 		public Group getGroup() { return cGroup; }
 		
-		////TODO: ADDED "=" PQ WAS NOT ACKNOWLEDGING IN RELATIONAL_OPERATOR
-		//   expressions+=simple_expression
+		//expressions+=simple_expression
 		public Assignment getExpressionsAssignment_0() { return cExpressionsAssignment_0; }
 		
 		//simple_expression
@@ -2492,22 +2489,62 @@ public class DemoFkdGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	public class Method_partElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.pascal.program.DemoFkd.method_part");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cVISIBILITY_SUPPORTEDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final RuleCall cProcedure_and_function_declaration_partParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cVisibilityAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cVisibilityVISIBILITY_SUPPORTEDTerminalRuleCall_0_0 = (RuleCall)cVisibilityAssignment_0.eContents().get(0);
+		private final Assignment cSectionsAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cSectionsMethod_sectionParserRuleCall_1_0 = (RuleCall)cSectionsAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cSemicolonKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cSectionsAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cSectionsMethod_sectionParserRuleCall_2_1_0 = (RuleCall)cSectionsAssignment_2_1.eContents().get(0);
 		
 		//method_part:
-		//    VISIBILITY_SUPPORTED procedure_and_function_declaration_part
+		//    visibility=VISIBILITY_SUPPORTED sections+=method_section ( ";" sections+=method_section ) *
 		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//VISIBILITY_SUPPORTED procedure_and_function_declaration_part
+		//visibility=VISIBILITY_SUPPORTED sections+=method_section ( ";" sections+=method_section ) *
 		public Group getGroup() { return cGroup; }
 		
-		//VISIBILITY_SUPPORTED
-		public RuleCall getVISIBILITY_SUPPORTEDTerminalRuleCall_0() { return cVISIBILITY_SUPPORTEDTerminalRuleCall_0; }
+		//visibility=VISIBILITY_SUPPORTED
+		public Assignment getVisibilityAssignment_0() { return cVisibilityAssignment_0; }
 		
-		//procedure_and_function_declaration_part
-		public RuleCall getProcedure_and_function_declaration_partParserRuleCall_1() { return cProcedure_and_function_declaration_partParserRuleCall_1; }
+		//VISIBILITY_SUPPORTED
+		public RuleCall getVisibilityVISIBILITY_SUPPORTEDTerminalRuleCall_0_0() { return cVisibilityVISIBILITY_SUPPORTEDTerminalRuleCall_0_0; }
+		
+		//sections+=method_section
+		public Assignment getSectionsAssignment_1() { return cSectionsAssignment_1; }
+		
+		//method_section
+		public RuleCall getSectionsMethod_sectionParserRuleCall_1_0() { return cSectionsMethod_sectionParserRuleCall_1_0; }
+		
+		//( ";" sections+=method_section ) *
+		public Group getGroup_2() { return cGroup_2; }
+		
+		//";"
+		public Keyword getSemicolonKeyword_2_0() { return cSemicolonKeyword_2_0; }
+		
+		//sections+=method_section
+		public Assignment getSectionsAssignment_2_1() { return cSectionsAssignment_2_1; }
+		
+		//method_section
+		public RuleCall getSectionsMethod_sectionParserRuleCall_2_1_0() { return cSectionsMethod_sectionParserRuleCall_2_1_0; }
+	}
+	public class Method_sectionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.pascal.program.DemoFkd.method_section");
+		private final Assignment cMethodsAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cMethodsAbstraction_headingParserRuleCall_0 = (RuleCall)cMethodsAssignment.eContents().get(0);
+		
+		//method_section:
+		//    methods+=abstraction_heading
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//methods+=abstraction_heading
+		public Assignment getMethodsAssignment() { return cMethodsAssignment; }
+		
+		//abstraction_heading
+		public RuleCall getMethodsAbstraction_headingParserRuleCall_0() { return cMethodsAbstraction_headingParserRuleCall_0; }
 	}
 	public class Field_listElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.pascal.program.DemoFkd.field_list");
@@ -3618,6 +3655,7 @@ public class DemoFkdGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	private final Property_listElements pProperty_list;
 	private final TerminalRule tVISIBILITY_SUPPORTED;
 	private final Method_partElements pMethod_part;
+	private final Method_sectionElements pMethod_section;
 	private final Field_listElements pField_list;
 	private final Fixed_partElements pFixed_part;
 	private final Variable_identifier_listElements pVariable_identifier_list;
@@ -3729,6 +3767,7 @@ public class DemoFkdGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		this.pProperty_list = new Property_listElements();
 		this.tVISIBILITY_SUPPORTED = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.pascal.program.DemoFkd.VISIBILITY_SUPPORTED");
 		this.pMethod_part = new Method_partElements();
+		this.pMethod_section = new Method_sectionElements();
 		this.pField_list = new Field_listElements();
 		this.pFixed_part = new Fixed_partElements();
 		this.pVariable_identifier_list = new Variable_identifier_listElements();
@@ -3947,7 +3986,7 @@ public class DemoFkdGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		return getVariableAccess().getRule();
 	}
 	
-	//var_: //TODO: REMOVED LEFT RECURSION (ERA COMPONENT_VARIABLE)
+	//var_:
 	//    ( "[" expressions=expression_list "]" array=var_ | accessor?="." name=ID variable=var_ | "^" pointer=var_ ) ?
 	//;
 	public Var_Elements getVar_Access() {
@@ -3969,7 +4008,7 @@ public class DemoFkdGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		return getExpression_listAccess().getRule();
 	}
 	
-	//expression: //TODO: ADDED "=" PQ WAS NOT ACKNOWLEDGING IN RELATIONAL_OPERATOR
+	//expression:
 	//    expressions+=simple_expression ( ( operators+=RELATIONAL_OPERATOR | operators+="in" | operators+="=" ) expressions+=simple_expression ) ?
 	//;
 	public ExpressionElements getExpressionAccess() {
@@ -4461,7 +4500,7 @@ public class DemoFkdGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	}
 	
 	//method_part:
-	//    VISIBILITY_SUPPORTED procedure_and_function_declaration_part
+	//    visibility=VISIBILITY_SUPPORTED sections+=method_section ( ";" sections+=method_section ) *
 	//;
 	public Method_partElements getMethod_partAccess() {
 		return pMethod_part;
@@ -4469,6 +4508,17 @@ public class DemoFkdGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	
 	public ParserRule getMethod_partRule() {
 		return getMethod_partAccess().getRule();
+	}
+	
+	//method_section:
+	//    methods+=abstraction_heading
+	//;
+	public Method_sectionElements getMethod_sectionAccess() {
+		return pMethod_section;
+	}
+	
+	public ParserRule getMethod_sectionRule() {
+		return getMethod_sectionAccess().getRule();
 	}
 	
 	//field_list:
@@ -4857,6 +4907,7 @@ public class DemoFkdGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		return tDIGIT;
 	}
 	
+	//@Override
 	//terminal ML_COMMENT : '(*' -> '*)' | '{' -> '}';
 	public TerminalRule getML_COMMENTRule() {
 		return tML_COMMENT;

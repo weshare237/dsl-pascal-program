@@ -1185,10 +1185,10 @@ public class InternalDemoFkdLexer extends Lexer {
         try {
             int _type = RULE_VISIBILITY_SUPPORTED;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDemoFkd.g:6399:27: ( ( 'private' | 'public' | 'protected' ) )
-            // InternalDemoFkd.g:6399:29: ( 'private' | 'public' | 'protected' )
+            // InternalDemoFkd.g:6521:27: ( ( 'private' | 'public' | 'protected' ) )
+            // InternalDemoFkd.g:6521:29: ( 'private' | 'public' | 'protected' )
             {
-            // InternalDemoFkd.g:6399:29: ( 'private' | 'public' | 'protected' )
+            // InternalDemoFkd.g:6521:29: ( 'private' | 'public' | 'protected' )
             int alt1=3;
             int LA1_0 = input.LA(1);
 
@@ -1229,7 +1229,7 @@ public class InternalDemoFkdLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalDemoFkd.g:6399:30: 'private'
+                    // InternalDemoFkd.g:6521:30: 'private'
                     {
                     match("private"); 
 
@@ -1237,7 +1237,7 @@ public class InternalDemoFkdLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalDemoFkd.g:6399:40: 'public'
+                    // InternalDemoFkd.g:6521:40: 'public'
                     {
                     match("public"); 
 
@@ -1245,7 +1245,7 @@ public class InternalDemoFkdLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // InternalDemoFkd.g:6399:49: 'protected'
+                    // InternalDemoFkd.g:6521:49: 'protected'
                     {
                     match("protected"); 
 
@@ -1271,36 +1271,36 @@ public class InternalDemoFkdLexer extends Lexer {
         try {
             int _type = RULE_NUMERIC_SUBRANGE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDemoFkd.g:6401:23: ( ( RULE_INTEGER_NUMBER | RULE_REAL_NUMBER | RULE_SIGNED_INTEGER_NUMBER | RULE_SIGNED_REAL_NUMBER ) '..' )
-            // InternalDemoFkd.g:6401:25: ( RULE_INTEGER_NUMBER | RULE_REAL_NUMBER | RULE_SIGNED_INTEGER_NUMBER | RULE_SIGNED_REAL_NUMBER ) '..'
+            // InternalDemoFkd.g:6523:23: ( ( RULE_INTEGER_NUMBER | RULE_REAL_NUMBER | RULE_SIGNED_INTEGER_NUMBER | RULE_SIGNED_REAL_NUMBER ) '..' )
+            // InternalDemoFkd.g:6523:25: ( RULE_INTEGER_NUMBER | RULE_REAL_NUMBER | RULE_SIGNED_INTEGER_NUMBER | RULE_SIGNED_REAL_NUMBER ) '..'
             {
-            // InternalDemoFkd.g:6401:25: ( RULE_INTEGER_NUMBER | RULE_REAL_NUMBER | RULE_SIGNED_INTEGER_NUMBER | RULE_SIGNED_REAL_NUMBER )
+            // InternalDemoFkd.g:6523:25: ( RULE_INTEGER_NUMBER | RULE_REAL_NUMBER | RULE_SIGNED_INTEGER_NUMBER | RULE_SIGNED_REAL_NUMBER )
             int alt2=4;
             alt2 = dfa2.predict(input);
             switch (alt2) {
                 case 1 :
-                    // InternalDemoFkd.g:6401:26: RULE_INTEGER_NUMBER
+                    // InternalDemoFkd.g:6523:26: RULE_INTEGER_NUMBER
                     {
                     mRULE_INTEGER_NUMBER(); 
 
                     }
                     break;
                 case 2 :
-                    // InternalDemoFkd.g:6401:46: RULE_REAL_NUMBER
+                    // InternalDemoFkd.g:6523:46: RULE_REAL_NUMBER
                     {
                     mRULE_REAL_NUMBER(); 
 
                     }
                     break;
                 case 3 :
-                    // InternalDemoFkd.g:6401:63: RULE_SIGNED_INTEGER_NUMBER
+                    // InternalDemoFkd.g:6523:63: RULE_SIGNED_INTEGER_NUMBER
                     {
                     mRULE_SIGNED_INTEGER_NUMBER(); 
 
                     }
                     break;
                 case 4 :
-                    // InternalDemoFkd.g:6401:90: RULE_SIGNED_REAL_NUMBER
+                    // InternalDemoFkd.g:6523:90: RULE_SIGNED_REAL_NUMBER
                     {
                     mRULE_SIGNED_REAL_NUMBER(); 
 
@@ -1327,8 +1327,8 @@ public class InternalDemoFkdLexer extends Lexer {
         try {
             int _type = RULE_ADDITION_OPERATOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDemoFkd.g:6403:24: ( ( '+' | '-' ) )
-            // InternalDemoFkd.g:6403:26: ( '+' | '-' )
+            // InternalDemoFkd.g:6525:24: ( ( '+' | '-' ) )
+            // InternalDemoFkd.g:6525:26: ( '+' | '-' )
             {
             if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
                 input.consume();
@@ -1355,8 +1355,8 @@ public class InternalDemoFkdLexer extends Lexer {
         try {
             int _type = RULE_MULTIPLICATION_OPERATOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDemoFkd.g:6405:30: ( ( '*' | '/' ) )
-            // InternalDemoFkd.g:6405:32: ( '*' | '/' )
+            // InternalDemoFkd.g:6527:30: ( ( '*' | '/' ) )
+            // InternalDemoFkd.g:6527:32: ( '*' | '/' )
             {
             if ( input.LA(1)=='*'||input.LA(1)=='/' ) {
                 input.consume();
@@ -1383,10 +1383,10 @@ public class InternalDemoFkdLexer extends Lexer {
         try {
             int _type = RULE_RELATIONAL_OPERATOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDemoFkd.g:6407:26: ( ( '=' | '<>' | '<' | '<=' | '>' | '>=' ) )
-            // InternalDemoFkd.g:6407:28: ( '=' | '<>' | '<' | '<=' | '>' | '>=' )
+            // InternalDemoFkd.g:6529:26: ( ( '=' | '<>' | '<' | '<=' | '>' | '>=' ) )
+            // InternalDemoFkd.g:6529:28: ( '=' | '<>' | '<' | '<=' | '>' | '>=' )
             {
-            // InternalDemoFkd.g:6407:28: ( '=' | '<>' | '<' | '<=' | '>' | '>=' )
+            // InternalDemoFkd.g:6529:28: ( '=' | '<>' | '<' | '<=' | '>' | '>=' )
             int alt3=6;
             switch ( input.LA(1) ) {
             case '=':
@@ -1432,14 +1432,14 @@ public class InternalDemoFkdLexer extends Lexer {
 
             switch (alt3) {
                 case 1 :
-                    // InternalDemoFkd.g:6407:29: '='
+                    // InternalDemoFkd.g:6529:29: '='
                     {
                     match('='); 
 
                     }
                     break;
                 case 2 :
-                    // InternalDemoFkd.g:6407:33: '<>'
+                    // InternalDemoFkd.g:6529:33: '<>'
                     {
                     match("<>"); 
 
@@ -1447,14 +1447,14 @@ public class InternalDemoFkdLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // InternalDemoFkd.g:6407:38: '<'
+                    // InternalDemoFkd.g:6529:38: '<'
                     {
                     match('<'); 
 
                     }
                     break;
                 case 4 :
-                    // InternalDemoFkd.g:6407:42: '<='
+                    // InternalDemoFkd.g:6529:42: '<='
                     {
                     match("<="); 
 
@@ -1462,14 +1462,14 @@ public class InternalDemoFkdLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // InternalDemoFkd.g:6407:47: '>'
+                    // InternalDemoFkd.g:6529:47: '>'
                     {
                     match('>'); 
 
                     }
                     break;
                 case 6 :
-                    // InternalDemoFkd.g:6407:51: '>='
+                    // InternalDemoFkd.g:6529:51: '>='
                     {
                     match(">="); 
 
@@ -1495,8 +1495,8 @@ public class InternalDemoFkdLexer extends Lexer {
         try {
             int _type = RULE_SIGNED_INTEGER_NUMBER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDemoFkd.g:6409:28: ( RULE_ADDITION_OPERATOR RULE_INTEGER_NUMBER )
-            // InternalDemoFkd.g:6409:30: RULE_ADDITION_OPERATOR RULE_INTEGER_NUMBER
+            // InternalDemoFkd.g:6531:28: ( RULE_ADDITION_OPERATOR RULE_INTEGER_NUMBER )
+            // InternalDemoFkd.g:6531:30: RULE_ADDITION_OPERATOR RULE_INTEGER_NUMBER
             {
             mRULE_ADDITION_OPERATOR(); 
             mRULE_INTEGER_NUMBER(); 
@@ -1516,8 +1516,8 @@ public class InternalDemoFkdLexer extends Lexer {
         try {
             int _type = RULE_INTEGER_NUMBER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDemoFkd.g:6411:21: ( RULE_UNSIGNED_DIGIT_SEQUENCE )
-            // InternalDemoFkd.g:6411:23: RULE_UNSIGNED_DIGIT_SEQUENCE
+            // InternalDemoFkd.g:6533:21: ( RULE_UNSIGNED_DIGIT_SEQUENCE )
+            // InternalDemoFkd.g:6533:23: RULE_UNSIGNED_DIGIT_SEQUENCE
             {
             mRULE_UNSIGNED_DIGIT_SEQUENCE(); 
 
@@ -1536,8 +1536,8 @@ public class InternalDemoFkdLexer extends Lexer {
         try {
             int _type = RULE_SIGNED_REAL_NUMBER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDemoFkd.g:6413:25: ( RULE_ADDITION_OPERATOR RULE_REAL_NUMBER )
-            // InternalDemoFkd.g:6413:27: RULE_ADDITION_OPERATOR RULE_REAL_NUMBER
+            // InternalDemoFkd.g:6535:25: ( RULE_ADDITION_OPERATOR RULE_REAL_NUMBER )
+            // InternalDemoFkd.g:6535:27: RULE_ADDITION_OPERATOR RULE_REAL_NUMBER
             {
             mRULE_ADDITION_OPERATOR(); 
             mRULE_REAL_NUMBER(); 
@@ -1557,19 +1557,19 @@ public class InternalDemoFkdLexer extends Lexer {
         try {
             int _type = RULE_REAL_NUMBER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDemoFkd.g:6415:18: ( ( RULE_UNSIGNED_DIGIT_SEQUENCE '.' ( RULE_UNSIGNED_DIGIT_SEQUENCE )? ( ( 'E' | 'e' ) RULE_DIGIT_SEQUENCE )? | RULE_UNSIGNED_DIGIT_SEQUENCE ( 'E' | 'e' ) RULE_DIGIT_SEQUENCE ) )
-            // InternalDemoFkd.g:6415:20: ( RULE_UNSIGNED_DIGIT_SEQUENCE '.' ( RULE_UNSIGNED_DIGIT_SEQUENCE )? ( ( 'E' | 'e' ) RULE_DIGIT_SEQUENCE )? | RULE_UNSIGNED_DIGIT_SEQUENCE ( 'E' | 'e' ) RULE_DIGIT_SEQUENCE )
+            // InternalDemoFkd.g:6537:18: ( ( RULE_UNSIGNED_DIGIT_SEQUENCE '.' ( RULE_UNSIGNED_DIGIT_SEQUENCE )? ( ( 'E' | 'e' ) RULE_DIGIT_SEQUENCE )? | RULE_UNSIGNED_DIGIT_SEQUENCE ( 'E' | 'e' ) RULE_DIGIT_SEQUENCE ) )
+            // InternalDemoFkd.g:6537:20: ( RULE_UNSIGNED_DIGIT_SEQUENCE '.' ( RULE_UNSIGNED_DIGIT_SEQUENCE )? ( ( 'E' | 'e' ) RULE_DIGIT_SEQUENCE )? | RULE_UNSIGNED_DIGIT_SEQUENCE ( 'E' | 'e' ) RULE_DIGIT_SEQUENCE )
             {
-            // InternalDemoFkd.g:6415:20: ( RULE_UNSIGNED_DIGIT_SEQUENCE '.' ( RULE_UNSIGNED_DIGIT_SEQUENCE )? ( ( 'E' | 'e' ) RULE_DIGIT_SEQUENCE )? | RULE_UNSIGNED_DIGIT_SEQUENCE ( 'E' | 'e' ) RULE_DIGIT_SEQUENCE )
+            // InternalDemoFkd.g:6537:20: ( RULE_UNSIGNED_DIGIT_SEQUENCE '.' ( RULE_UNSIGNED_DIGIT_SEQUENCE )? ( ( 'E' | 'e' ) RULE_DIGIT_SEQUENCE )? | RULE_UNSIGNED_DIGIT_SEQUENCE ( 'E' | 'e' ) RULE_DIGIT_SEQUENCE )
             int alt6=2;
             alt6 = dfa6.predict(input);
             switch (alt6) {
                 case 1 :
-                    // InternalDemoFkd.g:6415:21: RULE_UNSIGNED_DIGIT_SEQUENCE '.' ( RULE_UNSIGNED_DIGIT_SEQUENCE )? ( ( 'E' | 'e' ) RULE_DIGIT_SEQUENCE )?
+                    // InternalDemoFkd.g:6537:21: RULE_UNSIGNED_DIGIT_SEQUENCE '.' ( RULE_UNSIGNED_DIGIT_SEQUENCE )? ( ( 'E' | 'e' ) RULE_DIGIT_SEQUENCE )?
                     {
                     mRULE_UNSIGNED_DIGIT_SEQUENCE(); 
                     match('.'); 
-                    // InternalDemoFkd.g:6415:54: ( RULE_UNSIGNED_DIGIT_SEQUENCE )?
+                    // InternalDemoFkd.g:6537:54: ( RULE_UNSIGNED_DIGIT_SEQUENCE )?
                     int alt4=2;
                     int LA4_0 = input.LA(1);
 
@@ -1578,7 +1578,7 @@ public class InternalDemoFkdLexer extends Lexer {
                     }
                     switch (alt4) {
                         case 1 :
-                            // InternalDemoFkd.g:6415:54: RULE_UNSIGNED_DIGIT_SEQUENCE
+                            // InternalDemoFkd.g:6537:54: RULE_UNSIGNED_DIGIT_SEQUENCE
                             {
                             mRULE_UNSIGNED_DIGIT_SEQUENCE(); 
 
@@ -1587,7 +1587,7 @@ public class InternalDemoFkdLexer extends Lexer {
 
                     }
 
-                    // InternalDemoFkd.g:6415:84: ( ( 'E' | 'e' ) RULE_DIGIT_SEQUENCE )?
+                    // InternalDemoFkd.g:6537:84: ( ( 'E' | 'e' ) RULE_DIGIT_SEQUENCE )?
                     int alt5=2;
                     int LA5_0 = input.LA(1);
 
@@ -1596,7 +1596,7 @@ public class InternalDemoFkdLexer extends Lexer {
                     }
                     switch (alt5) {
                         case 1 :
-                            // InternalDemoFkd.g:6415:85: ( 'E' | 'e' ) RULE_DIGIT_SEQUENCE
+                            // InternalDemoFkd.g:6537:85: ( 'E' | 'e' ) RULE_DIGIT_SEQUENCE
                             {
                             if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                                 input.consume();
@@ -1618,7 +1618,7 @@ public class InternalDemoFkdLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalDemoFkd.g:6415:117: RULE_UNSIGNED_DIGIT_SEQUENCE ( 'E' | 'e' ) RULE_DIGIT_SEQUENCE
+                    // InternalDemoFkd.g:6537:117: RULE_UNSIGNED_DIGIT_SEQUENCE ( 'E' | 'e' ) RULE_DIGIT_SEQUENCE
                     {
                     mRULE_UNSIGNED_DIGIT_SEQUENCE(); 
                     if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
@@ -1651,10 +1651,10 @@ public class InternalDemoFkdLexer extends Lexer {
     // $ANTLR start "RULE_UNSIGNED_DIGIT_SEQUENCE"
     public final void mRULE_UNSIGNED_DIGIT_SEQUENCE() throws RecognitionException {
         try {
-            // InternalDemoFkd.g:6417:39: ( ( RULE_DIGIT )+ )
-            // InternalDemoFkd.g:6417:41: ( RULE_DIGIT )+
+            // InternalDemoFkd.g:6539:39: ( ( RULE_DIGIT )+ )
+            // InternalDemoFkd.g:6539:41: ( RULE_DIGIT )+
             {
-            // InternalDemoFkd.g:6417:41: ( RULE_DIGIT )+
+            // InternalDemoFkd.g:6539:41: ( RULE_DIGIT )+
             int cnt7=0;
             loop7:
             do {
@@ -1668,7 +1668,7 @@ public class InternalDemoFkdLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalDemoFkd.g:6417:41: RULE_DIGIT
+            	    // InternalDemoFkd.g:6539:41: RULE_DIGIT
             	    {
             	    mRULE_DIGIT(); 
 
@@ -1696,10 +1696,10 @@ public class InternalDemoFkdLexer extends Lexer {
     // $ANTLR start "RULE_DIGIT_SEQUENCE"
     public final void mRULE_DIGIT_SEQUENCE() throws RecognitionException {
         try {
-            // InternalDemoFkd.g:6419:30: ( ( RULE_ADDITION_OPERATOR )? RULE_UNSIGNED_DIGIT_SEQUENCE )
-            // InternalDemoFkd.g:6419:32: ( RULE_ADDITION_OPERATOR )? RULE_UNSIGNED_DIGIT_SEQUENCE
+            // InternalDemoFkd.g:6541:30: ( ( RULE_ADDITION_OPERATOR )? RULE_UNSIGNED_DIGIT_SEQUENCE )
+            // InternalDemoFkd.g:6541:32: ( RULE_ADDITION_OPERATOR )? RULE_UNSIGNED_DIGIT_SEQUENCE
             {
-            // InternalDemoFkd.g:6419:32: ( RULE_ADDITION_OPERATOR )?
+            // InternalDemoFkd.g:6541:32: ( RULE_ADDITION_OPERATOR )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -1708,7 +1708,7 @@ public class InternalDemoFkdLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // InternalDemoFkd.g:6419:32: RULE_ADDITION_OPERATOR
+                    // InternalDemoFkd.g:6541:32: RULE_ADDITION_OPERATOR
                     {
                     mRULE_ADDITION_OPERATOR(); 
 
@@ -1730,8 +1730,8 @@ public class InternalDemoFkdLexer extends Lexer {
     // $ANTLR start "RULE_DIGIT"
     public final void mRULE_DIGIT() throws RecognitionException {
         try {
-            // InternalDemoFkd.g:6421:21: ( '0' .. '9' )
-            // InternalDemoFkd.g:6421:23: '0' .. '9'
+            // InternalDemoFkd.g:6543:21: ( '0' .. '9' )
+            // InternalDemoFkd.g:6543:23: '0' .. '9'
             {
             matchRange('0','9'); 
 
@@ -1748,10 +1748,10 @@ public class InternalDemoFkdLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDemoFkd.g:6423:17: ( ( '(*' ( options {greedy=false; } : . )* '*)' | '{' ( options {greedy=false; } : . )* '}' ) )
-            // InternalDemoFkd.g:6423:19: ( '(*' ( options {greedy=false; } : . )* '*)' | '{' ( options {greedy=false; } : . )* '}' )
+            // InternalDemoFkd.g:6545:17: ( ( '(*' ( options {greedy=false; } : . )* '*)' | '{' ( options {greedy=false; } : . )* '}' ) )
+            // InternalDemoFkd.g:6545:19: ( '(*' ( options {greedy=false; } : . )* '*)' | '{' ( options {greedy=false; } : . )* '}' )
             {
-            // InternalDemoFkd.g:6423:19: ( '(*' ( options {greedy=false; } : . )* '*)' | '{' ( options {greedy=false; } : . )* '}' )
+            // InternalDemoFkd.g:6545:19: ( '(*' ( options {greedy=false; } : . )* '*)' | '{' ( options {greedy=false; } : . )* '}' )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1769,11 +1769,11 @@ public class InternalDemoFkdLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // InternalDemoFkd.g:6423:20: '(*' ( options {greedy=false; } : . )* '*)'
+                    // InternalDemoFkd.g:6545:20: '(*' ( options {greedy=false; } : . )* '*)'
                     {
                     match("(*"); 
 
-                    // InternalDemoFkd.g:6423:25: ( options {greedy=false; } : . )*
+                    // InternalDemoFkd.g:6545:25: ( options {greedy=false; } : . )*
                     loop9:
                     do {
                         int alt9=2;
@@ -1798,7 +1798,7 @@ public class InternalDemoFkdLexer extends Lexer {
 
                         switch (alt9) {
                     	case 1 :
-                    	    // InternalDemoFkd.g:6423:53: .
+                    	    // InternalDemoFkd.g:6545:53: .
                     	    {
                     	    matchAny(); 
 
@@ -1816,10 +1816,10 @@ public class InternalDemoFkdLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalDemoFkd.g:6423:62: '{' ( options {greedy=false; } : . )* '}'
+                    // InternalDemoFkd.g:6545:62: '{' ( options {greedy=false; } : . )* '}'
                     {
                     match('{'); 
-                    // InternalDemoFkd.g:6423:66: ( options {greedy=false; } : . )*
+                    // InternalDemoFkd.g:6545:66: ( options {greedy=false; } : . )*
                     loop10:
                     do {
                         int alt10=2;
@@ -1835,7 +1835,7 @@ public class InternalDemoFkdLexer extends Lexer {
 
                         switch (alt10) {
                     	case 1 :
-                    	    // InternalDemoFkd.g:6423:94: .
+                    	    // InternalDemoFkd.g:6545:94: .
                     	    {
                     	    matchAny(); 
 
@@ -1870,10 +1870,10 @@ public class InternalDemoFkdLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDemoFkd.g:6425:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalDemoFkd.g:6425:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalDemoFkd.g:6547:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalDemoFkd.g:6547:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalDemoFkd.g:6425:11: ( '^' )?
+            // InternalDemoFkd.g:6547:11: ( '^' )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1882,7 +1882,7 @@ public class InternalDemoFkdLexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // InternalDemoFkd.g:6425:11: '^'
+                    // InternalDemoFkd.g:6547:11: '^'
                     {
                     match('^'); 
 
@@ -1900,7 +1900,7 @@ public class InternalDemoFkdLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalDemoFkd.g:6425:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalDemoFkd.g:6547:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop13:
             do {
                 int alt13=2;
@@ -1949,10 +1949,10 @@ public class InternalDemoFkdLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDemoFkd.g:6427:10: ( ( '0' .. '9' )+ )
-            // InternalDemoFkd.g:6427:12: ( '0' .. '9' )+
+            // InternalDemoFkd.g:6549:10: ( ( '0' .. '9' )+ )
+            // InternalDemoFkd.g:6549:12: ( '0' .. '9' )+
             {
-            // InternalDemoFkd.g:6427:12: ( '0' .. '9' )+
+            // InternalDemoFkd.g:6549:12: ( '0' .. '9' )+
             int cnt14=0;
             loop14:
             do {
@@ -1966,7 +1966,7 @@ public class InternalDemoFkdLexer extends Lexer {
 
                 switch (alt14) {
             	case 1 :
-            	    // InternalDemoFkd.g:6427:13: '0' .. '9'
+            	    // InternalDemoFkd.g:6549:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1998,10 +1998,10 @@ public class InternalDemoFkdLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDemoFkd.g:6429:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalDemoFkd.g:6429:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalDemoFkd.g:6551:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalDemoFkd.g:6551:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalDemoFkd.g:6429:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalDemoFkd.g:6551:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -2019,10 +2019,10 @@ public class InternalDemoFkdLexer extends Lexer {
             }
             switch (alt17) {
                 case 1 :
-                    // InternalDemoFkd.g:6429:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalDemoFkd.g:6551:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalDemoFkd.g:6429:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalDemoFkd.g:6551:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop15:
                     do {
                         int alt15=3;
@@ -2038,7 +2038,7 @@ public class InternalDemoFkdLexer extends Lexer {
 
                         switch (alt15) {
                     	case 1 :
-                    	    // InternalDemoFkd.g:6429:21: '\\\\' .
+                    	    // InternalDemoFkd.g:6551:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -2046,7 +2046,7 @@ public class InternalDemoFkdLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalDemoFkd.g:6429:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalDemoFkd.g:6551:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2071,10 +2071,10 @@ public class InternalDemoFkdLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalDemoFkd.g:6429:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalDemoFkd.g:6551:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalDemoFkd.g:6429:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalDemoFkd.g:6551:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop16:
                     do {
                         int alt16=3;
@@ -2090,7 +2090,7 @@ public class InternalDemoFkdLexer extends Lexer {
 
                         switch (alt16) {
                     	case 1 :
-                    	    // InternalDemoFkd.g:6429:54: '\\\\' .
+                    	    // InternalDemoFkd.g:6551:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -2098,7 +2098,7 @@ public class InternalDemoFkdLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalDemoFkd.g:6429:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalDemoFkd.g:6551:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2141,12 +2141,12 @@ public class InternalDemoFkdLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDemoFkd.g:6431:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalDemoFkd.g:6431:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalDemoFkd.g:6553:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalDemoFkd.g:6553:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalDemoFkd.g:6431:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalDemoFkd.g:6553:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop18:
             do {
                 int alt18=2;
@@ -2159,7 +2159,7 @@ public class InternalDemoFkdLexer extends Lexer {
 
                 switch (alt18) {
             	case 1 :
-            	    // InternalDemoFkd.g:6431:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalDemoFkd.g:6553:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -2179,7 +2179,7 @@ public class InternalDemoFkdLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalDemoFkd.g:6431:40: ( ( '\\r' )? '\\n' )?
+            // InternalDemoFkd.g:6553:40: ( ( '\\r' )? '\\n' )?
             int alt20=2;
             int LA20_0 = input.LA(1);
 
@@ -2188,9 +2188,9 @@ public class InternalDemoFkdLexer extends Lexer {
             }
             switch (alt20) {
                 case 1 :
-                    // InternalDemoFkd.g:6431:41: ( '\\r' )? '\\n'
+                    // InternalDemoFkd.g:6553:41: ( '\\r' )? '\\n'
                     {
-                    // InternalDemoFkd.g:6431:41: ( '\\r' )?
+                    // InternalDemoFkd.g:6553:41: ( '\\r' )?
                     int alt19=2;
                     int LA19_0 = input.LA(1);
 
@@ -2199,7 +2199,7 @@ public class InternalDemoFkdLexer extends Lexer {
                     }
                     switch (alt19) {
                         case 1 :
-                            // InternalDemoFkd.g:6431:41: '\\r'
+                            // InternalDemoFkd.g:6553:41: '\\r'
                             {
                             match('\r'); 
 
@@ -2231,10 +2231,10 @@ public class InternalDemoFkdLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDemoFkd.g:6433:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalDemoFkd.g:6433:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalDemoFkd.g:6555:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalDemoFkd.g:6555:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalDemoFkd.g:6433:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalDemoFkd.g:6555:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt21=0;
             loop21:
             do {
@@ -2288,8 +2288,8 @@ public class InternalDemoFkdLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalDemoFkd.g:6435:16: ( . )
-            // InternalDemoFkd.g:6435:18: .
+            // InternalDemoFkd.g:6557:16: ( . )
+            // InternalDemoFkd.g:6557:18: .
             {
             matchAny(); 
 
@@ -2850,7 +2850,7 @@ public class InternalDemoFkdLexer extends Lexer {
             this.transition = DFA2_transition;
         }
         public String getDescription() {
-            return "6401:25: ( RULE_INTEGER_NUMBER | RULE_REAL_NUMBER | RULE_SIGNED_INTEGER_NUMBER | RULE_SIGNED_REAL_NUMBER )";
+            return "6523:25: ( RULE_INTEGER_NUMBER | RULE_REAL_NUMBER | RULE_SIGNED_INTEGER_NUMBER | RULE_SIGNED_REAL_NUMBER )";
         }
     }
     static final String DFA6_eotS =
@@ -2902,7 +2902,7 @@ public class InternalDemoFkdLexer extends Lexer {
             this.transition = DFA6_transition;
         }
         public String getDescription() {
-            return "6415:20: ( RULE_UNSIGNED_DIGIT_SEQUENCE '.' ( RULE_UNSIGNED_DIGIT_SEQUENCE )? ( ( 'E' | 'e' ) RULE_DIGIT_SEQUENCE )? | RULE_UNSIGNED_DIGIT_SEQUENCE ( 'E' | 'e' ) RULE_DIGIT_SEQUENCE )";
+            return "6537:20: ( RULE_UNSIGNED_DIGIT_SEQUENCE '.' ( RULE_UNSIGNED_DIGIT_SEQUENCE )? ( ( 'E' | 'e' ) RULE_DIGIT_SEQUENCE )? | RULE_UNSIGNED_DIGIT_SEQUENCE ( 'E' | 'e' ) RULE_DIGIT_SEQUENCE )";
         }
     }
     static final String DFA22_eotS =

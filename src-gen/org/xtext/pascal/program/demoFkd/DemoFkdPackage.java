@@ -2366,13 +2366,59 @@ public interface DemoFkdPackage extends EPackage
   int METHOD_PART = 57;
 
   /**
+   * The feature id for the '<em><b>Visibility</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int METHOD_PART__VISIBILITY = 0;
+
+  /**
+   * The feature id for the '<em><b>Sections</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int METHOD_PART__SECTIONS = 1;
+
+  /**
    * The number of structural features of the '<em>method part</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int METHOD_PART_FEATURE_COUNT = 0;
+  int METHOD_PART_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.pascal.program.demoFkd.impl.method_sectionImpl <em>method section</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.pascal.program.demoFkd.impl.method_sectionImpl
+   * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getmethod_section()
+   * @generated
+   */
+  int METHOD_SECTION = 58;
+
+  /**
+   * The feature id for the '<em><b>Methods</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int METHOD_SECTION__METHODS = 0;
+
+  /**
+   * The number of structural features of the '<em>method section</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int METHOD_SECTION_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.pascal.program.demoFkd.impl.field_listImpl <em>field list</em>}' class.
@@ -2382,7 +2428,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getfield_list()
    * @generated
    */
-  int FIELD_LIST = 58;
+  int FIELD_LIST = 59;
 
   /**
    * The feature id for the '<em><b>Fixed</b></em>' containment reference.
@@ -2419,7 +2465,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getfixed_part()
    * @generated
    */
-  int FIXED_PART = 59;
+  int FIXED_PART = 60;
 
   /**
    * The feature id for the '<em><b>Sections</b></em>' containment reference list.
@@ -2447,7 +2493,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getvariable_identifier_list()
    * @generated
    */
-  int VARIABLE_IDENTIFIER_LIST = 60;
+  int VARIABLE_IDENTIFIER_LIST = 61;
 
   /**
    * The feature id for the '<em><b>Names</b></em>' attribute list.
@@ -2475,7 +2521,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getvariable_section()
    * @generated
    */
-  int VARIABLE_SECTION = 61;
+  int VARIABLE_SECTION = 62;
 
   /**
    * The feature id for the '<em><b>Identifiers</b></em>' containment reference.
@@ -2512,7 +2558,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getrecord_section()
    * @generated
    */
-  int RECORD_SECTION = 62;
+  int RECORD_SECTION = 63;
 
   /**
    * The feature id for the '<em><b>Identifiers</b></em>' containment reference.
@@ -2549,7 +2595,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getvariant_part()
    * @generated
    */
-  int VARIANT_PART = 63;
+  int VARIANT_PART = 64;
 
   /**
    * The feature id for the '<em><b>Tag</b></em>' containment reference.
@@ -2595,7 +2641,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#gettag_field()
    * @generated
    */
-  int TAG_FIELD = 64;
+  int TAG_FIELD = 65;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2623,7 +2669,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getvariant()
    * @generated
    */
-  int VARIANT = 65;
+  int VARIANT = 66;
 
   /**
    * The feature id for the '<em><b>Labels</b></em>' containment reference.
@@ -2660,7 +2706,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getset_type()
    * @generated
    */
-  int SET_TYPE = 66;
+  int SET_TYPE = 67;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -2688,7 +2734,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getfile_type()
    * @generated
    */
-  int FILE_TYPE = 67;
+  int FILE_TYPE = 68;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -2716,7 +2762,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getpointer_type()
    * @generated
    */
-  int POINTER_TYPE = 68;
+  int POINTER_TYPE = 69;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -2744,7 +2790,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getvariable_declaration_part()
    * @generated
    */
-  int VARIABLE_DECLARATION_PART = 69;
+  int VARIABLE_DECLARATION_PART = 70;
 
   /**
    * The feature id for the '<em><b>Sections</b></em>' containment reference list.
@@ -2772,7 +2818,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getprocedure_and_function_declaration_part()
    * @generated
    */
-  int PROCEDURE_AND_FUNCTION_DECLARATION_PART = 70;
+  int PROCEDURE_AND_FUNCTION_DECLARATION_PART = 71;
 
   /**
    * The feature id for the '<em><b>Procedures</b></em>' containment reference list.
@@ -2781,7 +2827,7 @@ public interface DemoFkdPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROCEDURE_AND_FUNCTION_DECLARATION_PART__PROCEDURES = METHOD_PART_FEATURE_COUNT + 0;
+  int PROCEDURE_AND_FUNCTION_DECLARATION_PART__PROCEDURES = 0;
 
   /**
    * The feature id for the '<em><b>Functions</b></em>' containment reference list.
@@ -2790,7 +2836,7 @@ public interface DemoFkdPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROCEDURE_AND_FUNCTION_DECLARATION_PART__FUNCTIONS = METHOD_PART_FEATURE_COUNT + 1;
+  int PROCEDURE_AND_FUNCTION_DECLARATION_PART__FUNCTIONS = 1;
 
   /**
    * The number of structural features of the '<em>procedure and function declaration part</em>' class.
@@ -2799,7 +2845,7 @@ public interface DemoFkdPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROCEDURE_AND_FUNCTION_DECLARATION_PART_FEATURE_COUNT = METHOD_PART_FEATURE_COUNT + 2;
+  int PROCEDURE_AND_FUNCTION_DECLARATION_PART_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.pascal.program.demoFkd.impl.abstraction_declarationImpl <em>abstraction declaration</em>}' class.
@@ -2809,7 +2855,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getabstraction_declaration()
    * @generated
    */
-  int ABSTRACTION_DECLARATION = 71;
+  int ABSTRACTION_DECLARATION = 72;
 
   /**
    * The feature id for the '<em><b>Heading</b></em>' containment reference.
@@ -2855,7 +2901,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getabstraction_heading()
    * @generated
    */
-  int ABSTRACTION_HEADING = 72;
+  int ABSTRACTION_HEADING = 73;
 
   /**
    * The feature id for the '<em><b>Heading</b></em>' containment reference.
@@ -2928,7 +2974,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getformal_parameter_list()
    * @generated
    */
-  int FORMAL_PARAMETER_LIST = 73;
+  int FORMAL_PARAMETER_LIST = 74;
 
   /**
    * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
@@ -2956,7 +3002,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getformal_parameter_section()
    * @generated
    */
-  int FORMAL_PARAMETER_SECTION = 74;
+  int FORMAL_PARAMETER_SECTION = 75;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -3011,7 +3057,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getvalue_parameter_section()
    * @generated
    */
-  int VALUE_PARAMETER_SECTION = 75;
+  int VALUE_PARAMETER_SECTION = 76;
 
   /**
    * The feature id for the '<em><b>Identifiers</b></em>' containment reference.
@@ -3048,7 +3094,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getparameter_type()
    * @generated
    */
-  int PARAMETER_TYPE = 76;
+  int PARAMETER_TYPE = 77;
 
   /**
    * The feature id for the '<em><b>Array</b></em>' containment reference.
@@ -3085,7 +3131,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getconformant_array_schema()
    * @generated
    */
-  int CONFORMANT_ARRAY_SCHEMA = 77;
+  int CONFORMANT_ARRAY_SCHEMA = 78;
 
   /**
    * The feature id for the '<em><b>Packed</b></em>' containment reference.
@@ -3122,7 +3168,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getpacked_conformant_array_schema()
    * @generated
    */
-  int PACKED_CONFORMANT_ARRAY_SCHEMA = 78;
+  int PACKED_CONFORMANT_ARRAY_SCHEMA = 79;
 
   /**
    * The feature id for the '<em><b>Bound</b></em>' containment reference.
@@ -3159,7 +3205,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getbound_specification()
    * @generated
    */
-  int BOUND_SPECIFICATION = 79;
+  int BOUND_SPECIFICATION = 80;
 
   /**
    * The feature id for the '<em><b>Initial</b></em>' attribute.
@@ -3205,7 +3251,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getunpacked_conformant_array_schema()
    * @generated
    */
-  int UNPACKED_CONFORMANT_ARRAY_SCHEMA = 80;
+  int UNPACKED_CONFORMANT_ARRAY_SCHEMA = 81;
 
   /**
    * The feature id for the '<em><b>Bounds</b></em>' containment reference list.
@@ -3242,7 +3288,7 @@ public interface DemoFkdPackage extends EPackage
    * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getvariable_parameter_section()
    * @generated
    */
-  int VARIABLE_PARAMETER_SECTION = 81;
+  int VARIABLE_PARAMETER_SECTION = 82;
 
   /**
    * The feature id for the '<em><b>Identifiers</b></em>' containment reference.
@@ -5325,6 +5371,49 @@ public interface DemoFkdPackage extends EPackage
    * @generated
    */
   EClass getmethod_part();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.pascal.program.demoFkd.method_part#getVisibility <em>Visibility</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Visibility</em>'.
+   * @see org.xtext.pascal.program.demoFkd.method_part#getVisibility()
+   * @see #getmethod_part()
+   * @generated
+   */
+  EAttribute getmethod_part_Visibility();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.pascal.program.demoFkd.method_part#getSections <em>Sections</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Sections</em>'.
+   * @see org.xtext.pascal.program.demoFkd.method_part#getSections()
+   * @see #getmethod_part()
+   * @generated
+   */
+  EReference getmethod_part_Sections();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.pascal.program.demoFkd.method_section <em>method section</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>method section</em>'.
+   * @see org.xtext.pascal.program.demoFkd.method_section
+   * @generated
+   */
+  EClass getmethod_section();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.pascal.program.demoFkd.method_section#getMethods <em>Methods</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Methods</em>'.
+   * @see org.xtext.pascal.program.demoFkd.method_section#getMethods()
+   * @see #getmethod_section()
+   * @generated
+   */
+  EReference getmethod_section_Methods();
 
   /**
    * Returns the meta object for class '{@link org.xtext.pascal.program.demoFkd.field_list <em>field list</em>}'.
@@ -7746,6 +7835,40 @@ public interface DemoFkdPackage extends EPackage
      * @generated
      */
     EClass METHOD_PART = eINSTANCE.getmethod_part();
+
+    /**
+     * The meta object literal for the '<em><b>Visibility</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute METHOD_PART__VISIBILITY = eINSTANCE.getmethod_part_Visibility();
+
+    /**
+     * The meta object literal for the '<em><b>Sections</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference METHOD_PART__SECTIONS = eINSTANCE.getmethod_part_Sections();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.pascal.program.demoFkd.impl.method_sectionImpl <em>method section</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.pascal.program.demoFkd.impl.method_sectionImpl
+     * @see org.xtext.pascal.program.demoFkd.impl.DemoFkdPackageImpl#getmethod_section()
+     * @generated
+     */
+    EClass METHOD_SECTION = eINSTANCE.getmethod_section();
+
+    /**
+     * The meta object literal for the '<em><b>Methods</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference METHOD_SECTION__METHODS = eINSTANCE.getmethod_section_Methods();
 
     /**
      * The meta object literal for the '{@link org.xtext.pascal.program.demoFkd.impl.field_listImpl <em>field list</em>}' class.

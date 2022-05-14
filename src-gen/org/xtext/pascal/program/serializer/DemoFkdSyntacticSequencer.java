@@ -37,21 +37,9 @@ public class DemoFkdSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (ruleCall.getRule() == grammarAccess.getVISIBILITY_SUPPORTEDRule())
-			return getVISIBILITY_SUPPORTEDToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
-	/**
-	 * terminal VISIBILITY_SUPPORTED:
-	 * 	"private" | "public" | "protected"
-	 * ;
-	 */
-	protected String getVISIBILITY_SUPPORTEDToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "private";
-	}
 	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {

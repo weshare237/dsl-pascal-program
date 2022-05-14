@@ -254,7 +254,13 @@
     <genClasses ecoreClass="DemoFkd.ecore#//property_list">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DemoFkd.ecore#//property_list/names"/>
     </genClasses>
-    <genClasses ecoreClass="DemoFkd.ecore#//method_part"/>
+    <genClasses ecoreClass="DemoFkd.ecore#//method_part">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DemoFkd.ecore#//method_part/visibility"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//method_part/sections"/>
+    </genClasses>
+    <genClasses ecoreClass="DemoFkd.ecore#//method_section">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//method_section/methods"/>
+    </genClasses>
     <genClasses ecoreClass="DemoFkd.ecore#//field_list">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//field_list/fixed"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//field_list/variants"/>
