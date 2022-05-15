@@ -3,7 +3,6 @@
  */
 package org.xtext.pascal.program.demoFkd;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface program extends EObject
+public interface program extends AbstractElement
 {
   /**
    * Returns the value of the '<em><b>Heading</b></em>' containment reference.

@@ -3,9 +3,31 @@ grammar org.xtext.pascal.program.DemoFkd with org.eclipse.xtext.common.Terminals
 generate demoFkd "http://www.xtext.org/pascal/program/DemoFkd"
 
 
+//pascal:
+//	program += program
+//; 
+
 pascal:
-	program += program
-; 
+    (program+=AbstractElement)*;
+ 
+
+PackageDeclaration:
+    'package' name=QualifiedName '{'
+        (program+=AbstractElement)*
+    '}';
+ 
+AbstractElement:
+    PackageDeclaration | program | Import;
+    
+QualifiedName:
+    ID ('.' ID)*;
+    
+    
+Import:
+    'import' importedNamespace=QualifiedNameWithWildcard;
+ 
+QualifiedNameWithWildcard:
+    QualifiedName '.*'?;
 
 program:
 	heading=program_heading_block block=block "." 

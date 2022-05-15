@@ -10,7 +10,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.pascal.program.demoFkd.DemoFkdPackage;
 import org.xtext.pascal.program.demoFkd.block;
@@ -31,7 +30,7 @@ import org.xtext.pascal.program.demoFkd.program_heading_block;
  *
  * @generated
  */
-public class programImpl extends MinimalEObjectImpl.Container implements program
+public class programImpl extends AbstractElementImpl implements program
 {
   /**
    * The cached value of the '{@link #getHeading() <em>Heading</em>}' containment reference.

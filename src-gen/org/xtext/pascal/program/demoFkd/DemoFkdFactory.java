@@ -33,6 +33,33 @@ public interface DemoFkdFactory extends EFactory
   pascal createpascal();
 
   /**
+   * Returns a new object of class '<em>Package Declaration</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Package Declaration</em>'.
+   * @generated
+   */
+  PackageDeclaration createPackageDeclaration();
+
+  /**
+   * Returns a new object of class '<em>Abstract Element</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Abstract Element</em>'.
+   * @generated
+   */
+  AbstractElement createAbstractElement();
+
+  /**
+   * Returns a new object of class '<em>Import</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Import</em>'.
+   * @generated
+   */
+  Import createImport();
+
+  /**
    * Returns a new object of class '<em>program</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

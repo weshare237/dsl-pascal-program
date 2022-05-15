@@ -81,6 +81,21 @@ public class DemoFkdAdapterFactory extends AdapterFactoryImpl
         return createpascalAdapter();
       }
       @Override
+      public Adapter casePackageDeclaration(PackageDeclaration object)
+      {
+        return createPackageDeclarationAdapter();
+      }
+      @Override
+      public Adapter caseAbstractElement(AbstractElement object)
+      {
+        return createAbstractElementAdapter();
+      }
+      @Override
+      public Adapter caseImport(Import object)
+      {
+        return createImportAdapter();
+      }
+      @Override
       public Adapter caseprogram(program object)
       {
         return createprogramAdapter();
@@ -523,6 +538,51 @@ public class DemoFkdAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createpascalAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.pascal.program.demoFkd.PackageDeclaration <em>Package Declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.pascal.program.demoFkd.PackageDeclaration
+   * @generated
+   */
+  public Adapter createPackageDeclarationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.pascal.program.demoFkd.AbstractElement <em>Abstract Element</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.pascal.program.demoFkd.AbstractElement
+   * @generated
+   */
+  public Adapter createAbstractElementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.pascal.program.demoFkd.Import <em>Import</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.pascal.program.demoFkd.Import
+   * @generated
+   */
+  public Adapter createImportAdapter()
   {
     return null;
   }

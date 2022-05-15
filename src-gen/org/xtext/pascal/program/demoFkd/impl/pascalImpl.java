@@ -17,9 +17,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.xtext.pascal.program.demoFkd.AbstractElement;
 import org.xtext.pascal.program.demoFkd.DemoFkdPackage;
 import org.xtext.pascal.program.demoFkd.pascal;
-import org.xtext.pascal.program.demoFkd.program;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,7 +44,7 @@ public class pascalImpl extends MinimalEObjectImpl.Container implements pascal
    * @generated
    * @ordered
    */
-  protected EList<program> program;
+  protected EList<AbstractElement> program;
 
   /**
    * <!-- begin-user-doc -->
@@ -73,11 +73,11 @@ public class pascalImpl extends MinimalEObjectImpl.Container implements pascal
    * @generated
    */
   @Override
-  public EList<program> getProgram()
+  public EList<AbstractElement> getProgram()
   {
     if (program == null)
     {
-      program = new EObjectContainmentEList<program>(program.class, this, DemoFkdPackage.PASCAL__PROGRAM);
+      program = new EObjectContainmentEList<AbstractElement>(AbstractElement.class, this, DemoFkdPackage.PASCAL__PROGRAM);
     }
     return program;
   }
@@ -127,7 +127,7 @@ public class pascalImpl extends MinimalEObjectImpl.Container implements pascal
     {
       case DemoFkdPackage.PASCAL__PROGRAM:
         getProgram().clear();
-        getProgram().addAll((Collection<? extends program>)newValue);
+        getProgram().addAll((Collection<? extends AbstractElement>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

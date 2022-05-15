@@ -10,8 +10,11 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.xtext.pascal.program.demoFkd.AbstractElement;
 import org.xtext.pascal.program.demoFkd.DemoFkdFactory;
 import org.xtext.pascal.program.demoFkd.DemoFkdPackage;
+import org.xtext.pascal.program.demoFkd.Import;
+import org.xtext.pascal.program.demoFkd.PackageDeclaration;
 import org.xtext.pascal.program.demoFkd.abstraction_declaration;
 import org.xtext.pascal.program.demoFkd.abstraction_heading;
 import org.xtext.pascal.program.demoFkd.any_number;
@@ -110,6 +113,27 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
    * @generated
    */
   private EClass pascalEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass packageDeclarationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass abstractElementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass importEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -768,6 +792,72 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
   public EReference getpascal_Program()
   {
     return (EReference)pascalEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getPackageDeclaration()
+  {
+    return packageDeclarationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getPackageDeclaration_Name()
+  {
+    return (EAttribute)packageDeclarationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getPackageDeclaration_Program()
+  {
+    return (EReference)packageDeclarationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getAbstractElement()
+  {
+    return abstractElementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getImport()
+  {
+    return importEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getImport_ImportedNamespace()
+  {
+    return (EAttribute)importEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3708,6 +3798,15 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
     pascalEClass = createEClass(PASCAL);
     createEReference(pascalEClass, PASCAL__PROGRAM);
 
+    packageDeclarationEClass = createEClass(PACKAGE_DECLARATION);
+    createEAttribute(packageDeclarationEClass, PACKAGE_DECLARATION__NAME);
+    createEReference(packageDeclarationEClass, PACKAGE_DECLARATION__PROGRAM);
+
+    abstractElementEClass = createEClass(ABSTRACT_ELEMENT);
+
+    importEClass = createEClass(IMPORT);
+    createEAttribute(importEClass, IMPORT__IMPORTED_NAMESPACE);
+
     programEClass = createEClass(PROGRAM);
     createEReference(programEClass, PROGRAM__HEADING);
     createEReference(programEClass, PROGRAM__BLOCK);
@@ -4084,12 +4183,24 @@ public class DemoFkdPackageImpl extends EPackageImpl implements DemoFkdPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    packageDeclarationEClass.getESuperTypes().add(this.getAbstractElement());
+    importEClass.getESuperTypes().add(this.getAbstractElement());
+    programEClass.getESuperTypes().add(this.getAbstractElement());
     properties_partEClass.getESuperTypes().add(this.getmember_list());
     abstraction_headingEClass.getESuperTypes().add(this.getabstraction_declaration());
 
     // Initialize classes and features; add operations and parameters
     initEClass(pascalEClass, pascal.class, "pascal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getpascal_Program(), this.getprogram(), null, "program", null, 0, -1, pascal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getpascal_Program(), this.getAbstractElement(), null, "program", null, 0, -1, pascal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(packageDeclarationEClass, PackageDeclaration.class, "PackageDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPackageDeclaration_Name(), ecorePackage.getEString(), "name", null, 0, 1, PackageDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPackageDeclaration_Program(), this.getAbstractElement(), null, "program", null, 0, -1, PackageDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(abstractElementEClass, AbstractElement.class, "AbstractElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(importEClass, Import.class, "Import", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getImport_ImportedNamespace(), ecorePackage.getEString(), "importedNamespace", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(programEClass, program.class, "program", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getprogram_Heading(), this.getprogram_heading_block(), null, "heading", null, 0, 1, program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

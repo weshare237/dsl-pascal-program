@@ -66,6 +66,9 @@ public class DemoFkdFactoryImpl extends EFactoryImpl implements DemoFkdFactory
     switch (eClass.getClassifierID())
     {
       case DemoFkdPackage.PASCAL: return createpascal();
+      case DemoFkdPackage.PACKAGE_DECLARATION: return createPackageDeclaration();
+      case DemoFkdPackage.ABSTRACT_ELEMENT: return createAbstractElement();
+      case DemoFkdPackage.IMPORT: return createImport();
       case DemoFkdPackage.PROGRAM: return createprogram();
       case DemoFkdPackage.PROGRAM_HEADING_BLOCK: return createprogram_heading_block();
       case DemoFkdPackage.IDENTIFIER_LIST: return createidentifier_list();
@@ -163,6 +166,42 @@ public class DemoFkdFactoryImpl extends EFactoryImpl implements DemoFkdFactory
   {
     pascalImpl pascal = new pascalImpl();
     return pascal;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PackageDeclaration createPackageDeclaration()
+  {
+    PackageDeclarationImpl packageDeclaration = new PackageDeclarationImpl();
+    return packageDeclaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public AbstractElement createAbstractElement()
+  {
+    AbstractElementImpl abstractElement = new AbstractElementImpl();
+    return abstractElement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Import createImport()
+  {
+    ImportImpl import_ = new ImportImpl();
+    return import_;
   }
 
   /**

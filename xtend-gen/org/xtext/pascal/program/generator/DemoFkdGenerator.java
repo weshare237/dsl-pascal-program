@@ -3,10 +3,19 @@
  */
 package org.xtext.pascal.program.generator;
 
+import com.google.common.base.Objects;
+import com.google.common.collect.Iterables;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
+import org.eclipse.xtext.xbase.lib.IteratorExtensions;
+import org.xtext.pascal.program.demoFkd.constant_definition;
+import org.xtext.pascal.program.demoFkd.program;
+import org.xtext.pascal.program.demoFkd.variable_section;
 
 /**
  * Generates code from your model files on save.
@@ -17,5 +26,99 @@ import org.eclipse.xtext.generator.IGeneratorContext;
 public class DemoFkdGenerator extends AbstractGenerator {
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
+    Iterable<program> _filter = Iterables.<program>filter(IteratorExtensions.<EObject>toIterable(resource.getAllContents()), program.class);
+    for (final program p : _filter) {
+      String _name = p.getHeading().getName();
+      String _plus = ("programs/" + _name);
+      String _plus_1 = (_plus + ".java");
+      fsa.generateFile(_plus_1, this.compile(p));
+    }
+  }
+  
+  public CharSequence compile(final program p) {
+    CharSequence _xblockexpression = null;
+    {
+      EList<constant_definition> consts = p.getBlock().getConstant().getConsts();
+      EList<variable_section> vars = p.getBlock().getVariable().getSections();
+      StringConcatenation _builder = new StringConcatenation();
+      _builder.append("package DemoFkd;");
+      _builder.newLine();
+      _builder.newLine();
+      _builder.append("public class ");
+      String _name = p.getHeading().getName();
+      _builder.append(_name);
+      _builder.append(" {");
+      _builder.newLineIfNotEmpty();
+      _builder.append("\t\t\t\t\t\t\t\t\t\t");
+      _builder.newLine();
+      {
+        for(final constant_definition c : consts) {
+          {
+            String _real = c.getConst().getNumber().getNumber().getReal();
+            boolean _tripleEquals = (_real == null);
+            if (_tripleEquals) {
+              _builder.append("\t");
+              _builder.append("static int ");
+              String _name_1 = c.getName();
+              _builder.append(_name_1, "\t");
+              _builder.append(" = ");
+              String _integer = c.getConst().getNumber().getNumber().getInteger();
+              _builder.append(_integer, "\t");
+              _builder.append(";");
+              _builder.newLineIfNotEmpty();
+            } else {
+              _builder.append("\t");
+              _builder.append("static float ");
+              String _name_2 = c.getName();
+              _builder.append(_name_2, "\t");
+              _builder.append(" = ");
+              String _real_1 = c.getConst().getNumber().getNumber().getReal();
+              _builder.append(_real_1, "\t");
+              _builder.append(";");
+              _builder.newLineIfNotEmpty();
+            }
+          }
+        }
+      }
+      _builder.append("\t");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("public static void main(String[] args) {");
+      _builder.newLine();
+      {
+        for(final variable_section varSection : vars) {
+          {
+            String _name_3 = varSection.getType().getSimple().getName();
+            boolean _equals = Objects.equal(_name_3, "integer");
+            if (_equals) {
+              _builder.append("\t\t");
+              _builder.append("int ");
+              String _join = String.join(",", varSection.getIdentifiers().getNames());
+              _builder.append(_join, "\t\t");
+              _builder.append(";");
+              _builder.newLineIfNotEmpty();
+            } else {
+              String _name_4 = varSection.getType().getSimple().getName();
+              boolean _equals_1 = Objects.equal(_name_4, "real");
+              if (_equals_1) {
+                _builder.append("\t\t");
+                _builder.append("float ");
+                String _join_1 = String.join(",", varSection.getIdentifiers().getNames());
+                _builder.append(_join_1, "\t\t");
+                _builder.append(";");
+                _builder.newLineIfNotEmpty();
+              }
+            }
+          }
+        }
+      }
+      _builder.append("\t");
+      _builder.append("}");
+      _builder.newLine();
+      _builder.append("}");
+      _builder.newLine();
+      _xblockexpression = _builder;
+    }
+    return _xblockexpression;
   }
 }

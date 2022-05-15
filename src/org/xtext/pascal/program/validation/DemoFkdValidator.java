@@ -6,7 +6,9 @@ package org.xtext.pascal.program.validation;
 import org.eclipse.xtext.validation.Check;
 import org.xtext.pascal.program.demoFkd.DemoFkdPackage;
 import org.xtext.pascal.program.demoFkd.constant_definition;
+import org.xtext.pascal.program.demoFkd.pascal;
 import org.xtext.pascal.program.demoFkd.program_heading_block;
+import org.xtext.pascal.program.demoFkd.statement;
 import org.xtext.pascal.program.demoFkd.variable;
 import org.xtext.pascal.program.demoFkd.variable_identifier_list;
 
@@ -48,6 +50,5 @@ public class DemoFkdValidator extends AbstractDemoFkdValidator {
 			}
 		}
 		
-	}
-	
+	}	
 }

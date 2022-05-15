@@ -15,6 +15,8 @@ import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.xtext.pascal.program.demoFkd.DemoFkdPackage;
+import org.xtext.pascal.program.demoFkd.Import;
+import org.xtext.pascal.program.demoFkd.PackageDeclaration;
 import org.xtext.pascal.program.demoFkd.abstraction_declaration;
 import org.xtext.pascal.program.demoFkd.abstraction_heading;
 import org.xtext.pascal.program.demoFkd.any_number;
@@ -114,6 +116,12 @@ public class DemoFkdSemanticSequencer extends AbstractDelegatingSemanticSequence
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == DemoFkdPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
+			case DemoFkdPackage.IMPORT:
+				sequence_Import(context, (Import) semanticObject); 
+				return; 
+			case DemoFkdPackage.PACKAGE_DECLARATION:
+				sequence_PackageDeclaration(context, (PackageDeclaration) semanticObject); 
+				return; 
 			case DemoFkdPackage.ABSTRACTION_DECLARATION:
 				sequence_function_declaration(context, (abstraction_declaration) semanticObject); 
 				return; 
@@ -401,6 +409,42 @@ public class DemoFkdSemanticSequencer extends AbstractDelegatingSemanticSequence
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     AbstractElement returns Import
+	 *     Import returns Import
+	 *
+	 * Constraint:
+	 *     importedNamespace=QualifiedNameWithWildcard
+	 * </pre>
+	 */
+	protected void sequence_Import(ISerializationContext context, Import semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, DemoFkdPackage.Literals.IMPORT__IMPORTED_NAMESPACE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DemoFkdPackage.Literals.IMPORT__IMPORTED_NAMESPACE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getImportAccess().getImportedNamespaceQualifiedNameWithWildcardParserRuleCall_1_0(), semanticObject.getImportedNamespace());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     PackageDeclaration returns PackageDeclaration
+	 *     AbstractElement returns PackageDeclaration
+	 *
+	 * Constraint:
+	 *     (name=QualifiedName program+=AbstractElement*)
+	 * </pre>
+	 */
+	protected void sequence_PackageDeclaration(ISerializationContext context, PackageDeclaration semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
 	
 	/**
 	 * <pre>
@@ -1118,7 +1162,7 @@ public class DemoFkdSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     pascal returns pascal
 	 *
 	 * Constraint:
-	 *     program+=program
+	 *     program+=AbstractElement+
 	 * </pre>
 	 */
 	protected void sequence_pascal(ISerializationContext context, pascal semanticObject) {
@@ -1206,6 +1250,7 @@ public class DemoFkdSemanticSequencer extends AbstractDelegatingSemanticSequence
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     AbstractElement returns program
 	 *     program returns program
 	 *
 	 * Constraint:

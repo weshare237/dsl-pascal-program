@@ -27,7 +27,7 @@ public interface pascal extends EObject
 {
   /**
    * Returns the value of the '<em><b>Program</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.pascal.program.demoFkd.program}.
+   * The list contents are of type {@link org.xtext.pascal.program.demoFkd.AbstractElement}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Program</em>' containment reference list.
@@ -35,6 +35,6 @@ public interface pascal extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<program> getProgram();
+  EList<AbstractElement> getProgram();
 
 } // pascal

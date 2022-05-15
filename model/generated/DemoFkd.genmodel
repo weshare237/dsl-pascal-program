@@ -9,6 +9,14 @@
     <genClasses ecoreClass="DemoFkd.ecore#//pascal">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//pascal/program"/>
     </genClasses>
+    <genClasses ecoreClass="DemoFkd.ecore#//PackageDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DemoFkd.ecore#//PackageDeclaration/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//PackageDeclaration/program"/>
+    </genClasses>
+    <genClasses ecoreClass="DemoFkd.ecore#//AbstractElement"/>
+    <genClasses ecoreClass="DemoFkd.ecore#//Import">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DemoFkd.ecore#//Import/importedNamespace"/>
+    </genClasses>
     <genClasses ecoreClass="DemoFkd.ecore#//program">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//program/heading"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DemoFkd.ecore#//program/block"/>

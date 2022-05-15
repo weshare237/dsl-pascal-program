@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
+import org.xtext.pascal.program.demoFkd.program
 
 /**
  * Generates code from your model files on save.
@@ -21,5 +22,43 @@ class DemoFkdGenerator extends AbstractGenerator {
 //				.filter(Greeting)
 //				.map[name]
 //				.join(', '))
+
+		for(p : resource.allContents.toIterable.filter(program)) {
+			fsa.generateFile("programs/" + p.getHeading().getName() + ".java", p.compile);
+		}
+
 	}
+	
+	def compile(program p) {
+		var consts = p.getBlock().getConstant().getConsts();
+		var vars = p.getBlock().getVariable().getSections();
+		
+		'''
+			package DemoFkd;
+			
+			public class «p.getHeading().getName()» {
+				««« Constants
+									
+				«FOR c : consts»
+					«IF c.getConst().getNumber().getNumber().real === null»
+						static int «c.getName()» = «c.getConst().getNumber().getNumber().getInteger()»;
+					«ELSE»
+						static float «c.getName()» = «c.getConst().getNumber().getNumber().getReal()»;
+					«ENDIF»
+				«ENDFOR»
+				
+				public static void main(String[] args) {
+					«FOR varSection : vars»
+						«IF varSection.getType().getSimple().getName() == "integer"»
+							int «String.join(",", varSection.getIdentifiers().getNames())»;
+						«ELSEIF varSection.getType().getSimple().getName() == "real"»
+							float «String.join(",", varSection.getIdentifiers().getNames())»;
+			            «ENDIF» 
+					«ENDFOR»
+				}
+			}
+		'''
+	}
+	
+
 }

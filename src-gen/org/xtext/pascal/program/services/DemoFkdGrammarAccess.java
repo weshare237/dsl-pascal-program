@@ -25,18 +25,155 @@ public class DemoFkdGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	public class PascalElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.pascal.program.DemoFkd.pascal");
 		private final Assignment cProgramAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cProgramProgramParserRuleCall_0 = (RuleCall)cProgramAssignment.eContents().get(0);
+		private final RuleCall cProgramAbstractElementParserRuleCall_0 = (RuleCall)cProgramAssignment.eContents().get(0);
 		
+		////pascal:
+		////    program += program
+		////;
 		//pascal:
-		//    program += program
-		//;
+		//    (program+=AbstractElement)*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//program += program
+		//(program+=AbstractElement)*
 		public Assignment getProgramAssignment() { return cProgramAssignment; }
 		
+		//AbstractElement
+		public RuleCall getProgramAbstractElementParserRuleCall_0() { return cProgramAbstractElementParserRuleCall_0; }
+	}
+	public class PackageDeclarationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.pascal.program.DemoFkd.PackageDeclaration");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cPackageKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameQualifiedNameParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cProgramAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cProgramAbstractElementParserRuleCall_3_0 = (RuleCall)cProgramAssignment_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//PackageDeclaration:
+		//    'package' name=QualifiedName '{'
+		//        (program+=AbstractElement)*
+		//    '}';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'package' name=QualifiedName '{'
+		//    (program+=AbstractElement)*
+		//'}'
+		public Group getGroup() { return cGroup; }
+		
+		//'package'
+		public Keyword getPackageKeyword_0() { return cPackageKeyword_0; }
+		
+		//name=QualifiedName
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//QualifiedName
+		public RuleCall getNameQualifiedNameParserRuleCall_1_0() { return cNameQualifiedNameParserRuleCall_1_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		
+		//(program+=AbstractElement)*
+		public Assignment getProgramAssignment_3() { return cProgramAssignment_3; }
+		
+		//AbstractElement
+		public RuleCall getProgramAbstractElementParserRuleCall_3_0() { return cProgramAbstractElementParserRuleCall_3_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+	}
+	public class AbstractElementElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.pascal.program.DemoFkd.AbstractElement");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cPackageDeclarationParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cProgramParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cImportParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		
+		//AbstractElement:
+		//    PackageDeclaration | program | Import;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//PackageDeclaration | program | Import
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//PackageDeclaration
+		public RuleCall getPackageDeclarationParserRuleCall_0() { return cPackageDeclarationParserRuleCall_0; }
+		
 		//program
-		public RuleCall getProgramProgramParserRuleCall_0() { return cProgramProgramParserRuleCall_0; }
+		public RuleCall getProgramParserRuleCall_1() { return cProgramParserRuleCall_1; }
+		
+		//Import
+		public RuleCall getImportParserRuleCall_2() { return cImportParserRuleCall_2; }
+	}
+	public class QualifiedNameElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.pascal.program.DemoFkd.QualifiedName");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		
+		//QualifiedName:
+		//    ID ('.' ID)*;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//ID ('.' ID)*
+		public Group getGroup() { return cGroup; }
+		
+		//ID
+		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
+		
+		//('.' ID)*
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//'.'
+		public Keyword getFullStopKeyword_1_0() { return cFullStopKeyword_1_0; }
+		
+		//ID
+		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
+	}
+	public class ImportElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.pascal.program.DemoFkd.Import");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cImportKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cImportedNamespaceAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cImportedNamespaceQualifiedNameWithWildcardParserRuleCall_1_0 = (RuleCall)cImportedNamespaceAssignment_1.eContents().get(0);
+		
+		//Import:
+		//    'import' importedNamespace=QualifiedNameWithWildcard;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'import' importedNamespace=QualifiedNameWithWildcard
+		public Group getGroup() { return cGroup; }
+		
+		//'import'
+		public Keyword getImportKeyword_0() { return cImportKeyword_0; }
+		
+		//importedNamespace=QualifiedNameWithWildcard
+		public Assignment getImportedNamespaceAssignment_1() { return cImportedNamespaceAssignment_1; }
+		
+		//QualifiedNameWithWildcard
+		public RuleCall getImportedNamespaceQualifiedNameWithWildcardParserRuleCall_1_0() { return cImportedNamespaceQualifiedNameWithWildcardParserRuleCall_1_0; }
+	}
+	public class QualifiedNameWithWildcardElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.pascal.program.DemoFkd.QualifiedNameWithWildcard");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cQualifiedNameParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Keyword cFullStopAsteriskKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		
+		//QualifiedNameWithWildcard:
+		//    QualifiedName '.*'?;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//QualifiedName '.*'?
+		public Group getGroup() { return cGroup; }
+		
+		//QualifiedName
+		public RuleCall getQualifiedNameParserRuleCall_0() { return cQualifiedNameParserRuleCall_0; }
+		
+		//'.*'?
+		public Keyword getFullStopAsteriskKeyword_1() { return cFullStopAsteriskKeyword_1; }
 	}
 	public class ProgramElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.pascal.program.DemoFkd.program");
@@ -3595,6 +3732,11 @@ public class DemoFkdGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	
 	
 	private final PascalElements pPascal;
+	private final PackageDeclarationElements pPackageDeclaration;
+	private final AbstractElementElements pAbstractElement;
+	private final QualifiedNameElements pQualifiedName;
+	private final ImportElements pImport;
+	private final QualifiedNameWithWildcardElements pQualifiedNameWithWildcard;
 	private final ProgramElements pProgram;
 	private final Program_heading_blockElements pProgram_heading_block;
 	private final Identifier_listElements pIdentifier_list;
@@ -3707,6 +3849,11 @@ public class DemoFkdGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pPascal = new PascalElements();
+		this.pPackageDeclaration = new PackageDeclarationElements();
+		this.pAbstractElement = new AbstractElementElements();
+		this.pQualifiedName = new QualifiedNameElements();
+		this.pImport = new ImportElements();
+		this.pQualifiedNameWithWildcard = new QualifiedNameWithWildcardElements();
 		this.pProgram = new ProgramElements();
 		this.pProgram_heading_block = new Program_heading_blockElements();
 		this.pIdentifier_list = new Identifier_listElements();
@@ -3837,15 +3984,69 @@ public class DemoFkdGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	}
 
 	
+	////pascal:
+	////    program += program
+	////;
 	//pascal:
-	//    program += program
-	//;
+	//    (program+=AbstractElement)*;
 	public PascalElements getPascalAccess() {
 		return pPascal;
 	}
 	
 	public ParserRule getPascalRule() {
 		return getPascalAccess().getRule();
+	}
+	
+	//PackageDeclaration:
+	//    'package' name=QualifiedName '{'
+	//        (program+=AbstractElement)*
+	//    '}';
+	public PackageDeclarationElements getPackageDeclarationAccess() {
+		return pPackageDeclaration;
+	}
+	
+	public ParserRule getPackageDeclarationRule() {
+		return getPackageDeclarationAccess().getRule();
+	}
+	
+	//AbstractElement:
+	//    PackageDeclaration | program | Import;
+	public AbstractElementElements getAbstractElementAccess() {
+		return pAbstractElement;
+	}
+	
+	public ParserRule getAbstractElementRule() {
+		return getAbstractElementAccess().getRule();
+	}
+	
+	//QualifiedName:
+	//    ID ('.' ID)*;
+	public QualifiedNameElements getQualifiedNameAccess() {
+		return pQualifiedName;
+	}
+	
+	public ParserRule getQualifiedNameRule() {
+		return getQualifiedNameAccess().getRule();
+	}
+	
+	//Import:
+	//    'import' importedNamespace=QualifiedNameWithWildcard;
+	public ImportElements getImportAccess() {
+		return pImport;
+	}
+	
+	public ParserRule getImportRule() {
+		return getImportAccess().getRule();
+	}
+	
+	//QualifiedNameWithWildcard:
+	//    QualifiedName '.*'?;
+	public QualifiedNameWithWildcardElements getQualifiedNameWithWildcardAccess() {
+		return pQualifiedNameWithWildcard;
+	}
+	
+	public ParserRule getQualifiedNameWithWildcardRule() {
+		return getQualifiedNameWithWildcardAccess().getRule();
 	}
 	
 	//program:
